@@ -1,5 +1,6 @@
 import { ChangeTheme } from "@/src/context/ThemeContext";
 import Head from "next/head";
+import Layout from "../src/layout/Layout";
 
 const checkout = () => {
   const { theme } = ChangeTheme();
@@ -13,7 +14,9 @@ const checkout = () => {
         <link rel="icon" href="/favicon.svg" />
       </Head>
 
-      <div className={`checkout ${theme}`}>checkout</div>
+      <Layout>
+        <div className={`checkout ${theme}`}>checkout</div>
+      </Layout>
     </>
   );
 };

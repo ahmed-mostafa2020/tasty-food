@@ -1,5 +1,6 @@
 import { ChangeTheme } from "@/src/context/ThemeContext";
 import Head from "next/head";
+import Layout from "../src/layout/Layout";
 
 const register = () => {
   const { theme } = ChangeTheme();
@@ -13,7 +14,9 @@ const register = () => {
         <link rel="icon" href="/favicon.svg" />
       </Head>
 
-      <div className={`register ${theme}`}>register</div>
+      <Layout>
+        <div className={`register ${theme}`}>register</div>
+      </Layout>
     </>
   );
 };

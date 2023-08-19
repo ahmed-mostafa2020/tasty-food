@@ -1,5 +1,6 @@
 import { ChangeTheme } from "@/src/context/ThemeContext";
 import Head from "next/head";
+import Layout from "../src/layout/Layout";
 
 const orders = () => {
   const { theme } = ChangeTheme();
@@ -13,7 +14,9 @@ const orders = () => {
         <link rel="icon" href="/favicon.svg" />
       </Head>
 
-      <div className={`order ${theme}`}>orders</div>
+      <Layout>
+        <div className={`order ${theme}`}>orders</div>
+      </Layout>
     </>
   );
 };

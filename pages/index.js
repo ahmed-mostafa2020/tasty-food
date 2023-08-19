@@ -1,5 +1,6 @@
 import { ChangeTheme } from "@/src/context/ThemeContext";
 import Head from "next/head";
+import HomeLayout from "../src/layout/HomeLayout";
 
 export default function Home() {
   const { theme } = ChangeTheme();
@@ -12,7 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
 
-      <main className={`home ${theme}`}>hi</main>
+      <HomeLayout>
+        <main className={`home ${theme}`}>hi</main>
+      </HomeLayout>
     </>
   );
 }

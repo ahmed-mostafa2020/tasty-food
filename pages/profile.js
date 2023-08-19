@@ -1,5 +1,6 @@
 import { ChangeTheme } from "@/src/context/ThemeContext";
 import Head from "next/head";
+import Layout from "../src/layout/Layout";
 
 const profile = () => {
   const { theme } = ChangeTheme();
@@ -12,8 +13,9 @@ const profile = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-
-      <div className={`profile ${theme}`}>profile</div>
+      <Layout>
+        <div className={`profile ${theme}`}>profile</div>
+      </Layout>
     </>
   );
 };
