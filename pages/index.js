@@ -14,7 +14,11 @@ export default function Home() {
       </Head>
 
       <HomeLayout>
-        <main className={`home ${theme}`}>hi</main>
+        <main className={`home ${theme}`}>
+          <h1>okkkkkkkkkkkk</h1>
+          <h2>noooooooooooo</h2>
+          <h3>yessssssssssss</h3>
+        </main>
       </HomeLayout>
     </>
   );
