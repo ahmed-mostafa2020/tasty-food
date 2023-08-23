@@ -6,15 +6,16 @@ const Navbar = () => {
   const { myMode, setMyMode } = ChangeTheme();
   console.log(myMode);
 
+  const handleClick = () => {
+    localStorage.setItem("currentMode", myMode === "light" ? "dark" : "light");
+    setMyMode(myMode === "light" ? "dark" : "light");
+  };
+
   return (
     <div className="navbar">
       <h1>Hii, i am navbar</h1>
 
-      <Button
-        sx={{ ml: 1 }}
-        onClick={() => setMyMode(myMode === "light" ? "dark" : "light")}
-        color="inherit"
-      >
+      <Button sx={{ ml: 1 }} onClick={handleClick} color="inherit">
         {myMode === "dark" ? (
           <Brightness7 sx={{ color: "orange" }} />
         ) : (

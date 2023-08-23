@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const DarkThemeContext = createContext();
 
@@ -8,7 +8,15 @@ export const ChangeTheme = () => {
 };
 
 const DarkThemeProvider = ({ children }) => {
-  const [myMode, setMyMode] = useState("light");
+  const [myMode, setMyMode] = useState("");
+
+  useEffect(() => {
+    let currentMode;
+    // Get the value from local storage if it exists
+    currentMode = localStorage.getItem("currentMode") || "light";
+    setMyMode(currentMode);
+  }, []);
+
   return (
     <DarkThemeContext.Provider
       // Values provider will provide
