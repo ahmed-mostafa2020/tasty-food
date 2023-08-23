@@ -1,10 +1,10 @@
 import { Button } from "@mui/material";
 import { ChangeTheme } from "../context/ThemeContext";
 import { Brightness7, Brightness4 } from "@mui/icons-material";
+import i18n from "../i18n";
 
 const Navbar = () => {
   const { myMode, setMyMode } = ChangeTheme();
-  console.log(myMode);
 
   const handleClick = () => {
     localStorage.setItem("currentMode", myMode === "light" ? "dark" : "light");
@@ -14,6 +14,29 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <h1>Hii, i am navbar</h1>
+      {/* Lang */}
+
+      {i18n.language == "en" && (
+        <Button
+          onClick={() => {
+            i18n.changeLanguage("ar");
+          }}
+        >
+          ar
+        </Button>
+      )}
+
+      {i18n.language == "ar" && (
+        <Button
+          onClick={() => {
+            i18n.changeLanguage("en");
+          }}
+        >
+          en
+        </Button>
+      )}
+
+      {/* Theme */}
 
       <Button sx={{ ml: 1 }} onClick={handleClick} color="inherit">
         {myMode === "dark" ? (

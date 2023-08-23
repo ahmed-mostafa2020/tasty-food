@@ -1,7 +1,12 @@
 import Head from "next/head";
 import HomeLayout from "../src/layout/HomeLayout";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import i18n from "@/src/i18n";
 
 export default function Home() {
+  const { t, i18n } = useTranslation();
+
   return (
     <>
       <Head>
@@ -13,9 +18,10 @@ export default function Home() {
 
       <HomeLayout>
         <main className="home">
-          <h1>okkkkkkkkkkkk</h1>
-          <h2>noooooooooooo</h2>
-          <h3>yessssssssssss</h3>
+          <h1>{t("React")} </h1>
+          <h2>{t("Home")}</h2>
+          <h3>{t("Contact")}</h3>
+          <h3>{t("About")}</h3> <Link href="/profile"> Profile</Link>
         </main>
       </HomeLayout>
     </>

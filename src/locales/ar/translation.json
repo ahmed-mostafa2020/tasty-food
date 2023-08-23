@@ -1,0 +1,16 @@
+{
+  "React": "مرحبا بك في رياكت",
+  "Home": "الرئيسية",
+  "Contact": "تواصل معنا",
+  "About": "من نحن",
+  "username": {
+    "label": "بيليلب",
+    "placeholder": "بيلبيبل..."
+  },
+  "password": {
+    "label": "بلبيبلب",
+    "placeholder": "بلبيبلب..."
+  },
+  "location": "بلبيلبل",
+  "Address": "بليليبليبلي"
+}
