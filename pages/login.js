@@ -1,10 +1,7 @@
-import { ChangeTheme } from "@/src/context/ThemeContext";
 import Head from "next/head";
 import Layout from "../src/layout/Layout";
 
 const login = () => {
-  const { theme } = ChangeTheme();
-
   return (
     <>
       <Head>
@@ -15,7 +12,7 @@ const login = () => {
       </Head>
 
       <Layout>
-        <div className={`login ${theme}`}>login</div>
+        <div className="login">login</div>
       </Layout>
     </>
   );

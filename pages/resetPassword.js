@@ -1,10 +1,7 @@
-import { ChangeTheme } from "@/src/context/ThemeContext";
 import Head from "next/head";
 import Layout from "../src/layout/Layout";
 
 const ResetPassword = () => {
-  const { theme } = ChangeTheme();
-
   return (
     <>
       <Head>
@@ -15,7 +12,7 @@ const ResetPassword = () => {
       </Head>
 
       <Layout>
-        <div className={`resetPassword ${theme}`}>Reset Password</div>
+        <div className="resetPassword">Reset Password</div>
       </Layout>
     </>
   );

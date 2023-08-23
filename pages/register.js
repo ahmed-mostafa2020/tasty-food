@@ -1,10 +1,7 @@
-import { ChangeTheme } from "@/src/context/ThemeContext";
 import Head from "next/head";
 import Layout from "../src/layout/Layout";
 
 const register = () => {
-  const { theme } = ChangeTheme();
-
   return (
     <>
       <Head>
@@ -15,7 +12,7 @@ const register = () => {
       </Head>
 
       <Layout>
-        <div className={`register ${theme}`}>register</div>
+        <div className="register">register</div>
       </Layout>
     </>
   );

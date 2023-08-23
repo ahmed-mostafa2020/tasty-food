@@ -1,10 +1,7 @@
-import { ChangeTheme } from "@/src/context/ThemeContext";
 import Head from "next/head";
 import Layout from "../src/layout/Layout";
 
 const orders = () => {
-  const { theme } = ChangeTheme();
-
   return (
     <>
       <Head>
@@ -15,7 +12,7 @@ const orders = () => {
       </Head>
 
       <Layout>
-        <div className={`order ${theme}`}>orders</div>
+        <div className="orders">orders</div>
       </Layout>
     </>
   );

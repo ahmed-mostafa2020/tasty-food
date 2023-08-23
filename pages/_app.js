@@ -1,11 +1,11 @@
 import "../styles/sass/_global.scss";
-import ThemeProvider from "../src/context/ThemeContext";
+import DarkThemeProvider from "../src/context/ThemeContext";
 
 const App = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider>
+    <DarkThemeProvider>
       <Component {...pageProps} />
-    </ThemeProvider>
+    </DarkThemeProvider>
   );
 };
 

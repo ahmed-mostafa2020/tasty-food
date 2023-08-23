@@ -3,8 +3,6 @@ import Head from "next/head";
 import Layout from "../src/layout/Layout";
 
 const checkout = () => {
-  const { theme } = ChangeTheme();
-
   return (
     <>
       <Head>
@@ -15,7 +13,7 @@ const checkout = () => {
       </Head>
 
       <Layout>
-        <div className={`checkout ${theme}`}>checkout</div>
+        <div className="checkout">checkout</div>
       </Layout>
     </>
   );

@@ -1,10 +1,7 @@
-import { ChangeTheme } from "@/src/context/ThemeContext";
 import Head from "next/head";
 import Layout from "../src/layout/Layout";
 
 const verifyAccount = () => {
-  const { theme } = ChangeTheme();
-
   return (
     <>
       <Head>
@@ -15,7 +12,7 @@ const verifyAccount = () => {
       </Head>
 
       <Layout>
-        <div className={`verifyAccount ${theme}`}>verifyAccount</div>
+        <div className="verifyAccount">verifyAccount</div>
       </Layout>
     </>
   );

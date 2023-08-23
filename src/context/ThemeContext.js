@@ -1,22 +1,22 @@
 import { createContext, useContext, useState } from "react";
 
-const ThemeContext = createContext();
+const DarkThemeContext = createContext();
 
 // Func will be called to fetch any data from passed values by construction
 export const ChangeTheme = () => {
-  return useContext(ThemeContext);
+  return useContext(DarkThemeContext);
 };
 
-const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("light");
+const DarkThemeProvider = ({ children }) => {
+  const [myMode, setMyMode] = useState("dark");
   return (
-    <ThemeContext.Provider
+    <DarkThemeContext.Provider
       // Values provider will provide
-      value={{ theme, setTheme }}
+      value={{ myMode, setMyMode }}
     >
       {children}
-    </ThemeContext.Provider>
+    </DarkThemeContext.Provider>
   );
 };
 
-export default ThemeProvider;
+export default DarkThemeProvider;
