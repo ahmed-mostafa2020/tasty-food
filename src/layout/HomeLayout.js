@@ -30,6 +30,7 @@ const HomeLayout = ({ children }) => {
       },
     },
   });
+
   return (
     <ThemeProvider theme={myMode === "light" ? themeLight : themeDark}>
       <CssBaseline />

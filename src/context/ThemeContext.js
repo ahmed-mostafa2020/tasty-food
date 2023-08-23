@@ -8,7 +8,7 @@ export const ChangeTheme = () => {
 };
 
 const DarkThemeProvider = ({ children }) => {
-  const [myMode, setMyMode] = useState("dark");
+  const [myMode, setMyMode] = useState("light");
   return (
     <DarkThemeContext.Provider
       // Values provider will provide

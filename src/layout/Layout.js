@@ -8,7 +8,8 @@ import { CssBaseline } from "@mui/material";
 import { ChangeTheme } from "../context/ThemeContext";
 
 const Layout = ({ children }) => {
-  const { light } = ChangeTheme();
+  const { myMode } = ChangeTheme();
+  console.log(myMode);
 
   const themeLight = createTheme({
     palette: {
@@ -33,7 +34,7 @@ const Layout = ({ children }) => {
   });
 
   return (
-    <ThemeProvider theme={light === "light" ? themeLight : themeDark}>
+    <ThemeProvider theme={myMode === "light" ? themeLight : themeDark}>
       <CssBaseline />
       <section className="layout">
         <div className="topPartWrapper">
@@ -43,6 +44,7 @@ const Layout = ({ children }) => {
         </div>
 
         <section className="wrapper_pages">{children}</section>
+
         <Footer />
         <CopyRights />
       </section>

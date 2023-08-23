@@ -4,6 +4,7 @@ import { Brightness7, Brightness4 } from "@mui/icons-material";
 
 const Navbar = () => {
   const { myMode, setMyMode } = ChangeTheme();
+  console.log(myMode);
 
   return (
     <div className="navbar">
