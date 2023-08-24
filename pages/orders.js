@@ -18,4 +18,4 @@ const Orders = () => {
   );
 };
 
-export default orders;
+export default Orders;

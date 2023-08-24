@@ -18,4 +18,4 @@ const VerifyAccount = () => {
   );
 };
 
-export default verifyAccount;
+export default VerifyAccount;
