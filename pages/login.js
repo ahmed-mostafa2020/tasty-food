@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "../src/layout/Layout";
 
-const login = () => {
+const Login = () => {
   return (
     <>
       <Head>

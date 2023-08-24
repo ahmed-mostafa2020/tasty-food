@@ -9,7 +9,6 @@ import { ChangeTheme } from "../context/ThemeContext";
 
 const Layout = ({ children }) => {
   const { myMode } = ChangeTheme();
-  console.log(myMode);
 
   const themeLight = createTheme({
     palette: {

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "../src/layout/Layout";
 
-const orders = () => {
+const Orders = () => {
   return (
     <>
       <Head>

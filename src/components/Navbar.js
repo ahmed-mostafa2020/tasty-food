@@ -22,25 +22,6 @@ const Navbar = () => {
       <h1>Hii, i am navbar</h1>
 
       {/* Lang */}
-      {/* {i18n.language == "en" && (
-        <Button
-          onClick={() => {
-            i18n.changeLanguage("ar");
-          }}
-        >
-          ar
-        </Button>
-      )}
-
-      {i18n.language == "ar" && (
-        <Button
-          onClick={() => {
-            i18n.changeLanguage("en");
-          }}
-        >
-          en
-        </Button>
-      )} */}
 
       {i18n.language === "en" ? (
         <Button onClick={handleLang}>ar</Button>

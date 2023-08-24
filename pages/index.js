@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import i18n from "@/src/i18n";
 
-export default function Home() {
+const Home = () => {
   const { t, i18n } = useTranslation();
 
   return (
@@ -26,4 +26,5 @@ export default function Home() {
       </HomeLayout>
     </>
   );
-}
+};
+export default Home;

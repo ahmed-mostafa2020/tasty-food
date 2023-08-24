@@ -1,7 +1,11 @@
 import Head from "next/head";
 import Layout from "../src/layout/Layout";
+import { useTranslation } from "react-i18next";
+import i18n from "@/src/i18n";
 
-const profile = () => {
+const Profile = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <>
       <Head>
@@ -11,7 +15,12 @@ const profile = () => {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <Layout>
-        <div className="profile">profile</div>
+        <div className="profile">
+          profile
+          <h1>{t("React")} </h1>
+          <h2>{t("Home")}</h2>
+          <h3>{t("Contact")}</h3>
+        </div>
       </Layout>
     </>
   );

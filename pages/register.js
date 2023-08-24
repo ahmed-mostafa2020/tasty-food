@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "../src/layout/Layout";
 
-const register = () => {
+const Register = () => {
   return (
     <>
       <Head>
