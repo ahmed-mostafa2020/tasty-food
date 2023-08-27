@@ -6,6 +6,7 @@ import CopyRights from "../components/CopyRights";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import { ChangeTheme } from "../context/ThemeContext";
+import i18n from "../i18n";
 
 const Layout = ({ children }) => {
   const { myMode } = ChangeTheme();
@@ -35,7 +36,7 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={myMode === "light" ? themeLight : themeDark}>
       <CssBaseline />
-      <section className="layout">
+      <section className="layout" dir={i18n.language === "en" ? "ltr" : "rtl"}>
         <div className="topPartWrapper">
           <Header />
           <Navbar />
