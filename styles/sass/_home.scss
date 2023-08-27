@@ -4,7 +4,11 @@
 .home {
 }
 
-.home.light {
+.home[dir="rtl"] {
+  h1 {
+    color: red;
+    margin-block-start: 5px;
+  }
 }
 
 .home.dark {

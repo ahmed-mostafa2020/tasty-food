@@ -17,7 +17,7 @@ const Home = () => {
       </Head>
 
       <HomeLayout>
-        <main className="home">
+        <main className="home" dir={i18n.language === "en" ? "ltr" : "rtl"}>
           <h1>{t("React")} </h1>
           <h2>{t("Home")}</h2>
           <h3>{t("Contact")}</h3>

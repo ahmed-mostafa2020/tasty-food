@@ -20,6 +20,9 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <h1>Hii, i am navbar</h1>
+      <h1>Hii, i am navbar1</h1>
+      <h1>Hii, i am navbar2</h1>
+      <h1>Hii, i am navbar3</h1>
 
       {/* Lang */}
 
