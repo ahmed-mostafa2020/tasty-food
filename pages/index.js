@@ -3,9 +3,11 @@ import HomeLayout from "../src/layout/HomeLayout";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { API_URLS } from "../src/util/API_URL";
 
-const Home = () => {
+const Home = ({ data }) => {
   const { t } = useTranslation();
+  console.log(data.data);
 
   return (
     <>
@@ -19,9 +21,7 @@ const Home = () => {
       <HomeLayout>
         <main className="home">
           <h1>{t("React")} </h1>
-          <h2>{t("Home")}</h2>
-          <h3>{t("Contact")}</h3>
-          <h3>{t("About")}</h3>
+
           <Link href="/profile"> Profile</Link>
         </main>
       </HomeLayout>
@@ -30,9 +30,12 @@ const Home = () => {
 };
 export default Home;
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
+  const res = await fetch(API_URLS.HOME, API_URLS.HEADER_GET);
+  const data = await res.json();
   return {
     props: {
+      data,
       ...(await serverSideTranslations(locale, ["common"])),
     },
   };

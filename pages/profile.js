@@ -3,10 +3,12 @@ import Layout from "../src/layout/Layout";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
+import { API_URLS } from "../src/util/API_URL";
 
-const Profile = () => {
+const Profile = ({ data }) => {
   const { t } = useTranslation();
 
+  console.log("aaaaaaaaaaaa" + data.data);
   return (
     <>
       <Head>
@@ -30,9 +32,12 @@ const Profile = () => {
 
 export default Profile;
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
+  const res = await fetch(API_URLS.HOME, API_URLS.HEADER_GET);
+  const data = await res.json();
   return {
     props: {
+      data,
       ...(await serverSideTranslations(locale, ["common"])),
     },
   };

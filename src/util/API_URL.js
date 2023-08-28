@@ -1,20 +1,22 @@
-const BASE = "https://watawanu.com/api/";
+const BASE = "https://market.amrbdr.com/public/api/";
 
 export const API_URLS = {
   BASE,
   REGISTER: BASE + "user/register",
   LOGIN: BASE + "user/login",
+  HOME: BASE + "home",
 
-  HEADERGET: {
+  HEADER_GET: {
     method: "GET",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
+      Authorization: "Bearer  cc1a39ecdca4bcfcad8336eb5484e134",
     },
     redirect: "follow",
   },
 
-  HEADERPOST: {
+  HEADER_POST: {
     method: "POST",
     headers: {
       Accept: "application/json",
