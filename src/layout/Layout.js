@@ -6,10 +6,11 @@ import CopyRights from "../components/CopyRights";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import { ChangeTheme } from "../context/ThemeContext";
-import i18n from "../i18n";
+import { useTranslation } from "next-i18next";
 
 const Layout = ({ children }) => {
   const { myMode } = ChangeTheme();
+  const { i18n } = useTranslation();
 
   const themeLight = createTheme({
     palette: {

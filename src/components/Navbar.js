@@ -1,16 +1,21 @@
 import { Button } from "@mui/material";
 import { ChangeTheme } from "../context/ThemeContext";
 import { Brightness7, Brightness4 } from "@mui/icons-material";
-import i18n from "../i18n";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const Navbar = () => {
   const { myMode, setMyMode } = ChangeTheme();
+  const { i18n } = useTranslation();
 
-  const handleLang = () => {
-    i18n.language == "en"
-      ? i18n.changeLanguage("ar")
-      : i18n.changeLanguage("en");
-  };
+  const router = useRouter();
+
+  // const handleLang = () => {
+  //   i18n.language == "en"
+  //     ? i18n.changeLanguage("ar")
+  //     : i18n.changeLanguage("en");
+  // };
 
   const handleTheme = () => {
     localStorage.setItem("currentMode", myMode === "light" ? "dark" : "light");
@@ -27,9 +32,13 @@ const Navbar = () => {
       {/* Lang */}
 
       {i18n.language === "en" ? (
-        <Button onClick={handleLang}>ar</Button>
+        <Link href={router.pathname} locale="ar">
+          <Button>ar</Button>
+        </Link>
       ) : (
-        <Button onClick={handleLang}>en</Button>
+        <Link href={router.pathname} locale="en">
+          <Button>en</Button>
+        </Link>
       )}
 
       {/* Theme */}

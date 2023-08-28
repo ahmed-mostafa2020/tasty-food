@@ -1,11 +1,11 @@
 import Head from "next/head";
 import HomeLayout from "../src/layout/HomeLayout";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import i18n from "@/src/i18n";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Home = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -21,10 +21,19 @@ const Home = () => {
           <h1>{t("React")} </h1>
           <h2>{t("Home")}</h2>
           <h3>{t("Contact")}</h3>
-          <h3>{t("About")}</h3> <Link href="/profile"> Profile</Link>
+          <h3>{t("About")}</h3>
+          <Link href="/profile"> Profile</Link>
         </main>
       </HomeLayout>
     </>
   );
 };
 export default Home;
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
