@@ -2,6 +2,7 @@
 @import "./responsive";
 
 .layout {
+  width: -webkit-fill-available;
 }
 
 .layout.light {

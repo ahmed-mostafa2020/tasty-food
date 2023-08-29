@@ -2,6 +2,8 @@
 @import "./responsive";
 
 .homeLayout {
+  width: -webkit-fill-available;
+
   .topPartWrapper {
     background: url("../../public/assets/images/Banner\ Texture\ img\ 01.png"),
       no-repeat;
