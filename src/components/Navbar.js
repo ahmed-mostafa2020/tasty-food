@@ -1,12 +1,25 @@
-import { Button } from "@mui/material";
-import { ChangeTheme } from "../context/ThemeContext";
-import { Brightness7, Brightness4 } from "@mui/icons-material";
-import { useRouter } from "next/router";
-import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import { API_URLS } from "../util/API_URL";
+import { getApi } from "../util/getApi?n=nkl";
+import { useEffect, useState } from "react";
 
-const Navbar = () => {
-  return <div className="navbar"></div>;
-};
+export default function Navbar() {
+  const [data, setData] = useState("");
+  const { t } = useTranslation();
 
-export default Navbar;
+  const gettingData = async () => {
+    const fetchedData = await getApi(API_URLS.HOME, API_URLS.HEADER_GET);
+    setData(fetchedData);
+  };
+
+  useEffect(() => {
+    gettingData();
+  }, []);
+
+  return (
+    <div className="navbar">
+      <p>{t("React")}</p>
+      <p>{data.message}</p>
+    </div>
+  );
+}

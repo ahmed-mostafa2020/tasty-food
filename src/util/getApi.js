@@ -1,14 +1,29 @@
-// import { API_URLS } from "./API_URL";
+import { Alert } from "react-bootstrap";
 
-// async function getServerSideProps({ locale, url, header }) {
-//   const res = await fetch(url, header);
-//   const data = await res.json();
-//   return {
-//     props: {
-//       data,
-//       ...(await serverSideTranslations(locale, ["common"])),
-//     },
-//   };
-// }
+export const getApi = async (url, header) => {
+  try {
+    const data = await fetch(url, header, { cache: "no-store" }).then((res) =>
+      res.json()
+    );
 
-// export default getServerSideProps;
+    switch (data.code) {
+      case 302:
+      case 303:
+        console.log("redirect login");
+        break;
+      case 308:
+        console.log("redirect account verification");
+        break;
+      case 309:
+        <Alert variant="danger" className="mt-3  text-center">
+          {"please try again"}
+        </Alert>;
+        break;
+    }
+    return data;
+  } catch (err) {
+    <Alert variant="danger" className="mt-3  text-center">
+      {"please try again" + err}
+    </Alert>;
+  }
+};
