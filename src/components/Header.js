@@ -7,20 +7,21 @@ import { useTranslation } from "next-i18next";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 const Header = () => {
+  const router = useRouter();
   const { myMode, setMyMode } = ChangeTheme();
   const { i18n } = useTranslation();
-
-  const router = useRouter();
 
   const handleTheme = () => {
     localStorage.setItem("currentMode", myMode === "light" ? "dark" : "light");
     setMyMode(myMode === "light" ? "dark" : "light");
   };
+
   return (
     <header className={`header ${myMode}`}>
       <Container fixed className="flex">
         <div className="work-date">
           <AccessTimeIcon />
+
           <p>Mon-Fri:8am - 11pm, Sat-Sun:8am-12pm</p>
         </div>
 
