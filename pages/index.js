@@ -7,7 +7,6 @@ import { API_URLS } from "../src/util/API_URL";
 
 const Home = ({ data }) => {
   const { t } = useTranslation();
-  console.log(data.data);
 
   return (
     <>

@@ -2,6 +2,14 @@
 @import "./responsive";
 
 .homeLayout {
+  .topPartWrapper {
+    background: url("../../public/assets/images/Banner\ Texture\ img\ 01.png"),
+      no-repeat;
+    padding-bottom: 70px;
+  }
+  svg.bg-image {
+    margin-top: -35px;
+  }
 }
 
 .homeLayout.light {
