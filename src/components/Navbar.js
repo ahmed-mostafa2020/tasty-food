@@ -9,12 +9,11 @@ import Image from "next/image";
 import lightLogo from "../../public/assets/images/lightLogo.png";
 import darkLogo from "../../public/assets/images/darkLogo.png";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
-// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Navbar = () => {
   const [data, setData] = useState("");
   const { myMode, myPalette } = ChangeTheme();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const gettingData = async () => {
     const fetchedData = await getApi(API_URLS.HOME, API_URLS.HEADER_GET);
@@ -49,24 +48,18 @@ const Navbar = () => {
         </div>
 
         <div className="call flex-jc">
-          <AddIcCallIcon className="phone-icon" />
+          <AddIcCallIcon
+            className={`phone-icon ${i18n.language == "ar" && "right"}  `}
+          />
           <div className="text">
             <p>{t("Call")}</p>
             <p>+1-555-157-5651</p>
           </div>
         </div>
       </Container>
-      <p>{t("React")}</p>
+      <p>{t("Contact")}</p>
       {/* <p>{data.message}</p> */}
     </div>
   );
 };
 export default Navbar;
-
-// export async function getServerSideProps({ locale }) {
-//   return {
-//     props: {
-//       ...(await serverSideTranslations(locale, ["common"])),
-//     },
-//   };
-// }

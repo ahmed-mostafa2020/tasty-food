@@ -29,10 +29,12 @@
 
     .call {
       gap: 10px;
-      direction: initial;
 
       .phone-icon {
         font-size: 35px;
+      }
+      .phone-icon.right {
+        transform: rotateY(180deg);
       }
 
       .text {
