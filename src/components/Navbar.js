@@ -1,6 +1,6 @@
 import { useTranslation } from "next-i18next";
 import { API_URLS } from "../util/API_URL";
-import { getApi } from "../util/getApi?n=nkl";
+import { getApi } from "../util/getApi?n=nklj";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {

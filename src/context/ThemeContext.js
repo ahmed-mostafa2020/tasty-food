@@ -19,6 +19,9 @@ const DarkThemeProvider = ({ children }) => {
       text: {
         primary: "#131313",
       },
+      divider: {
+        primary: "#dddcdc",
+      },
     },
   });
 
@@ -29,6 +32,9 @@ const DarkThemeProvider = ({ children }) => {
       },
       text: {
         primary: "#E7E8E8",
+      },
+      divider: {
+        primary: "#5c5a5a",
       },
     },
   });
