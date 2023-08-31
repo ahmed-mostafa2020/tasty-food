@@ -1,5 +1,5 @@
-const AtomicButton = () => {
-  return <button className="atomicButton">AtomicButton</button>;
+const AtomicButton = ({ content }) => {
+  return <button className="atomicButton">{content}</button>;
 };
 
 export default AtomicButton;
