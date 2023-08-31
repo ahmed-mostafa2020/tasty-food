@@ -11,6 +11,31 @@ export const ChangeTheme = () => {
 const DarkThemeProvider = ({ children }) => {
   const [myMode, setMyMode] = useState("");
 
+  const myPalette =
+    myMode == "light"
+      ? {
+          background: {
+            default: "#FFFFFF",
+          },
+          text: {
+            primary: "#131313",
+          },
+          divider: {
+            primary: "#dddcdc",
+          },
+        }
+      : {
+          background: {
+            default: "#131313",
+          },
+          text: {
+            primary: "#E7E8E8",
+          },
+          divider: {
+            primary: "#5c5a5a",
+          },
+        };
+
   const lightTheme = createTheme({
     palette: {
       background: {
@@ -49,7 +74,7 @@ const DarkThemeProvider = ({ children }) => {
   return (
     <DarkThemeContext.Provider
       // Values provider will provide
-      value={{ myMode, setMyMode, lightTheme, darkTheme }}
+      value={{ myMode, setMyMode, lightTheme, darkTheme, myPalette }}
     >
       {children}
     </DarkThemeContext.Provider>
