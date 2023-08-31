@@ -13,6 +13,7 @@ export const API_URLS = {
       "Content-Type": "application/json",
       Authorization: "Bearer  cc1a39ecdca4bcfcad8336eb5484e134",
     },
+
     redirect: "follow",
   },
 
@@ -22,7 +23,9 @@ export const API_URLS = {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
-    body: [],
+    body: {
+      // lang: test,
+    },
     redirect: "follow",
   },
 };

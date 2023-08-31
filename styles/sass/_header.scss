@@ -3,6 +3,7 @@
 
 .header {
   padding: 10px 0;
+  border-bottom: 1px solid;
   .work-date {
     display: flex;
     gap: 10px;
@@ -13,10 +14,10 @@
   }
 }
 
-.header.light {
-  border-bottom: 1px solid #dddcdc;
-}
+// .header.light {
+//   border-bottom: 1px solid #dddcdc;
+// }
 
-.header.dark {
-  border-bottom: 1px solid #5c5a5a;
-}
+// .header.dark {
+//   border-bottom: 1px solid #5c5a5a;
+// }

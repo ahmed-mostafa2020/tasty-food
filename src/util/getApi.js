@@ -2,9 +2,7 @@ import { Alert } from "react-bootstrap";
 
 export const getApi = async (url, header) => {
   try {
-    const data = await fetch(url, header, { cache: "no-store" }).then((res) =>
-      res.json()
-    );
+    const data = await fetch(url, header).then((res) => res.json());
 
     switch (data.code) {
       case 302:
