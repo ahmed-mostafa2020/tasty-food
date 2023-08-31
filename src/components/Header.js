@@ -8,7 +8,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 const Header = () => {
   const router = useRouter();
-  const { myMode, setMyMode, lightTheme, darkTheme } = ChangeTheme();
+  const { myMode, setMyMode, myPalette } = ChangeTheme();
   const { i18n } = useTranslation();
 
   const handleTheme = () => {
@@ -20,10 +20,7 @@ const Header = () => {
     <header
       className={`header ${myMode}`}
       style={{
-        borderColor:
-          myMode === "light"
-            ? ` ${lightTheme.palette.divider.primary}`
-            : ` ${darkTheme.palette.divider.primary}`,
+        borderColor: `${myPalette.divider.primary}`,
       }}
     >
       <Container fixed className="flex">
