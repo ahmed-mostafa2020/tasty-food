@@ -51,7 +51,12 @@ p {
 button {
   cursor: pointer;
 }
-.flex {
+.flex-jc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-jb {
   display: flex;
   justify-content: space-between;
   align-items: center;
