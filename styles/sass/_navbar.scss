@@ -2,7 +2,58 @@
 @import "./responsive";
 
 .navbar {
-  margin-inline-start: 20px;
+  padding: 20px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      object-fit: contain;
+    }
+
+    .links {
+      display: flex;
+      gap: 20px;
+      a {
+        font-family: $text-font;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 20px;
+        transition: all 0.15s ease-in-out;
+        &:hover {
+          color: $main-color !important;
+        }
+      }
+    }
+
+    .call {
+      gap: 10px;
+      direction: initial;
+
+      .phone-icon {
+        font-size: 35px;
+      }
+
+      .text {
+        p {
+          &:first-child {
+            font-family: $text-font;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+          }
+          &:last-child {
+            color: $sec-color;
+            font-family: $text-font;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
 }
 
 .navbar.light {

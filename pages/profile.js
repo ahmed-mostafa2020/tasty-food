@@ -8,7 +8,7 @@ import { API_URLS } from "../src/util/API_URL";
 const Profile = ({ data }) => {
   const { t } = useTranslation();
 
-  console.log("aaaaaaaaaaaa" + data.data);
+  // console.log("aaaaaaaaaaaa" + data.data);
   return (
     <>
       <Head>

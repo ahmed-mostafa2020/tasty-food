@@ -23,6 +23,9 @@ const DarkThemeProvider = ({ children }) => {
           divider: {
             primary: "#dddcdc",
           },
+          hint: {
+            primary: "#5A5A5A",
+          },
         }
       : {
           background: {
@@ -34,6 +37,9 @@ const DarkThemeProvider = ({ children }) => {
           divider: {
             primary: "#5c5a5a",
           },
+          // hint: {
+          //   primary: "#5A5A5A",
+          // },
         };
 
   const lightTheme = createTheme({

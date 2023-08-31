@@ -15,6 +15,9 @@
     align-items: center;
     .themes {
       display: flex;
+      a {
+        color: $main-color;
+      }
     }
   }
 }

@@ -34,11 +34,11 @@ const Header = () => {
           {/* Lang */}
           {i18n.language === "en" ? (
             <Link href={router.pathname} locale="ar">
-              <Button>ar</Button>
+              <Button color="inherit">ar</Button>
             </Link>
           ) : (
             <Link href={router.pathname} locale="en">
-              <Button>en</Button>
+              <Button color="inherit">en</Button>
             </Link>
           )}
 
