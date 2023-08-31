@@ -23,7 +23,7 @@ const Header = () => {
         borderColor: `${myPalette.divider.primary}`,
       }}
     >
-      <Container fixed className="flex">
+      <Container fixed className="container">
         <div className="work-date">
           <AccessTimeIcon />
 

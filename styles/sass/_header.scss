@@ -9,7 +9,12 @@
     gap: 10px;
     align-items: center;
   }
-  .themes {
+  .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    .themes {
+      display: flex;
+    }
   }
 }
