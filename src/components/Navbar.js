@@ -49,7 +49,7 @@ const Navbar = () => {
 
         <div className="call flex-jc">
           <AddIcCallIcon
-            className={`phone-icon ${i18n.language == "ar" && "right"}  `}
+            className={`phone-icon ${i18n.language == "ar" && "right"}`}
           />
           <div className="text">
             <p>{t("Call")}</p>
@@ -57,7 +57,6 @@ const Navbar = () => {
           </div>
         </div>
       </Container>
-      <p>{t("Contact")}</p>
       {/* <p>{data.message}</p> */}
     </div>
   );
