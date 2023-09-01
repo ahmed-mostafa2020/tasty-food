@@ -15,7 +15,7 @@ const Slide = () => {
       <Container className="container">
         <div className="text">
           <h1>
-            Welcome To <br /> Our Tasty{" "}
+            Welcome To <br /> Our Tasty
             <span>
               Foods <Image src={underLine} alt="underLine" />
             </span>
@@ -26,12 +26,14 @@ const Slide = () => {
           <div className="buttons">
             <AtomicButton
               content={"Order Now"}
+              href={"./orders"}
               bgColor={myPalette.background.secColor}
               borderColor={myPalette.background.secColor}
               textColor={lightTheme.palette.text.primary}
             />
             <AtomicButton
               content={"Book a Table"}
+              href={"./"}
               bgColor={"transparent"}
               borderColor={myPalette.border.primary}
             />

@@ -1,8 +1,14 @@
 import { Alert } from "react-bootstrap";
 
-export const getApi = async (url, header) => {
+export const getApi = async (url, postedData, lang) => {
+  if (postedData.method == "GET") {
+    url = url + `?lang=${lang}`;
+  } else {
+    postedData.body.lang = lang;
+  }
+
   try {
-    const data = await fetch(url, header).then((res) => res.json());
+    const data = await fetch(url, postedData).then((res) => res.json());
 
     switch (data.code) {
       case 302:

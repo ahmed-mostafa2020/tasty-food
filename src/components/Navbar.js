@@ -16,13 +16,18 @@ const Navbar = () => {
   const { t, i18n } = useTranslation();
 
   const gettingData = async () => {
-    const fetchedData = await getApi(API_URLS.HOME, API_URLS.HEADER_GET);
+    const fetchedData = await getApi(
+      API_URLS.HOME,
+      API_URLS.HEADER_GET,
+      i18n.language
+    );
     setData(fetchedData);
   };
+  console.log();
 
   useEffect(() => {
     gettingData();
-  }, []);
+  }, [i18n.language]);
 
   return (
     <div className="navbar">
