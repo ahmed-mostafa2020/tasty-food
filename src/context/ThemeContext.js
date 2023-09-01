@@ -16,6 +16,8 @@ const DarkThemeProvider = ({ children }) => {
       ? {
           background: {
             default: "#FFFFFF",
+            mainColor: "#e60000",
+            secColor: "#fec223",
           },
           text: {
             primary: "#131313",
@@ -23,13 +25,15 @@ const DarkThemeProvider = ({ children }) => {
           divider: {
             primary: "#dddcdc",
           },
-          hint: {
-            primary: "#5A5A5A",
+          border: {
+            primary: "#898989",
           },
         }
       : {
           background: {
             default: "#131313",
+            mainColor: "#e60000",
+            secColor: "#fec223",
           },
           text: {
             primary: "#E7E8E8",
@@ -37,9 +41,9 @@ const DarkThemeProvider = ({ children }) => {
           divider: {
             primary: "#5c5a5a",
           },
-          // hint: {
-          //   primary: "#5A5A5A",
-          // },
+          border: {
+            primary: "#898989",
+          },
         };
 
   const lightTheme = createTheme({

@@ -2,7 +2,7 @@
 @import "./responsive";
 
 .slide {
-  padding: 90px 0;
+  padding: 50px 0;
   .container {
     display: flex;
     align-items: center;
@@ -38,19 +38,6 @@
     .buttons {
       display: flex;
       gap: 20px;
-      button {
-        outline: none;
-        border: none;
-        padding: 15px 30px;
-        display: flex;
-        border-radius: 50px;
-        text-align: center;
-        font-family: $text-font;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 20px;
-      }
     }
   }
 }

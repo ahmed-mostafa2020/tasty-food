@@ -4,9 +4,11 @@ import { Container } from "@mui/material";
 import Image from "next/image";
 import imageBase from "../../public/assets/images/Burger-base.png";
 import underLine from "../../public/assets/images/underLine.svg";
+import { ChangeTheme } from "../context/ThemeContext";
 
 const Slide = () => {
   const { t, i18n } = useTranslation();
+  const { lightTheme, myPalette } = ChangeTheme();
 
   return (
     <div className="slide">
@@ -22,8 +24,17 @@ const Slide = () => {
           <p> {t("Welcome")}</p>
 
           <div className="buttons">
-            <AtomicButton content={"Order Now"} />
-            <AtomicButton content={"Book a Table"} />
+            <AtomicButton
+              content={"Order Now"}
+              bgColor={myPalette.background.secColor}
+              borderColor={myPalette.background.secColor}
+              textColor={lightTheme.palette.text.primary}
+            />
+            <AtomicButton
+              content={"Book a Table"}
+              bgColor={"transparent"}
+              borderColor={myPalette.border.primary}
+            />
           </div>
         </div>
 
