@@ -21,6 +21,8 @@ const DarkThemeProvider = ({ children }) => {
           },
           text: {
             primary: "#131313",
+            mainColor: "#e60000",
+            secColor: "#fec223",
           },
           divider: {
             primary: "#dddcdc",
@@ -32,11 +34,13 @@ const DarkThemeProvider = ({ children }) => {
       : {
           background: {
             default: "#131313",
-            mainColor: "#e60000",
-            secColor: "#fec223",
+            secColor: "#e60000",
+            mainColor: "#fec223",
           },
           text: {
             primary: "#E7E8E8",
+            mainColor: "#e60000",
+            secColor: "#fec223",
           },
           divider: {
             primary: "#5c5a5a",

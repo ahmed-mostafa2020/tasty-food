@@ -2,6 +2,70 @@
 @import "./responsive";
 
 .footer {
+  padding: 50px 0;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .column {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+
+      .opening-hours {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+
+        h6 {
+          font-family: $topic-font;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 20px;
+        }
+
+        & > p {
+          font-family: $text-font;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 20px;
+        }
+      }
+
+      h6 {
+        font-family: $topic-font;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+
+      .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+
+        a {
+          font-family: $text-font;
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 30px;
+          letter-spacing: 0.5px;
+          width: 100%;
+          transition: all 0.15s ease-in-out;
+          &:hover {
+            color: $main-color !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 .footer.light {

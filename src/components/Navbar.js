@@ -15,7 +15,7 @@ const Navbar = () => {
   const { myMode, myPalette } = ChangeTheme();
   const { t, i18n } = useTranslation();
 
-  const gettingData = async () => {
+  const fetchData = async () => {
     const fetchedData = await getApi(
       API_URLS.HOME,
       API_URLS.HEADER_GET,
@@ -23,10 +23,9 @@ const Navbar = () => {
     );
     setData(fetchedData);
   };
-  console.log();
 
   useEffect(() => {
-    gettingData();
+    fetchData();
   }, [i18n.language]);
 
   return (

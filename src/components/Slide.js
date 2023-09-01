@@ -1,18 +1,18 @@
 import { useTranslation } from "next-i18next";
-import AtomicButton from "../atoms/AtomicButton";
+// import AtomicButton from "../atoms/AtomicButton";
 import { Container } from "@mui/material";
 import Image from "next/image";
 import imageBase from "../../public/assets/images/Burger-base.png";
 import underLine from "../../public/assets/images/underLine.svg";
-import { ChangeTheme } from "../context/ThemeContext";
+// import { ChangeTheme } from "../context/ThemeContext";
 
 const Slide = () => {
   const { t, i18n } = useTranslation();
-  const { lightTheme, myPalette } = ChangeTheme();
+  // const { lightTheme, myPalette } = ChangeTheme();
 
   return (
     <div className="slide">
-      <Container className="container">
+      <Container fixed className="container">
         <div className="text">
           <h1>
             Welcome To <br /> Our Tasty
