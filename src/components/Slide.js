@@ -17,13 +17,14 @@ const Slide = () => {
           <h1>
             Welcome To <br /> Our Tasty
             <span>
+              {" "}
               Foods <Image src={underLine} alt="underLine" />
             </span>
           </h1>
 
           <p> {t("Welcome")}</p>
 
-          <div className="buttons">
+          {/* <div className="buttons">
             <AtomicButton
               content={"Order Now"}
               href={"./orders"}
@@ -37,7 +38,7 @@ const Slide = () => {
               bgColor={"transparent"}
               borderColor={myPalette.border.primary}
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="image">

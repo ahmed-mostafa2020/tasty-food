@@ -4,22 +4,23 @@
 .homeLayout {
   width: -webkit-fill-available;
 
-  .topPartWrapper {
+  .topWrapper {
     background: url("../../public/assets/images/Banner\ Texture\ img\ 01.png"),
       no-repeat;
     padding-bottom: 70px;
   }
-  svg.bg-image {
+  svg.top-bg-image {
     margin-top: -35px;
+    width: 100%;
   }
-}
 
-.homeLayout.light {
-  .topPartWrapper {
+  .bottomWrapper {
+    background: url("../../public/assets/images/Banner\ Texture\ img\ 01.png"),
+      no-repeat;
   }
-}
 
-.homeLayout.dark {
-  .topPartWrapper {
+  svg.bottom-bg-image {
+    margin-top: -10px;
+    width: 100%;
   }
 }
