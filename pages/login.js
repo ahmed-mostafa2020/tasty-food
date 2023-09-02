@@ -7,6 +7,8 @@ import { Container } from "@mui/material";
 import LayoutTopWrapper from "../src/components/LayoutTopWrapper";
 
 const Login = ({ data }) => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
