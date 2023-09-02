@@ -4,7 +4,7 @@ import { API_URLS } from "../src/util/API_URL";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Container } from "@mui/material";
-import LayoutTopWrapper from "../src/components/LayoutTopWrapper";
+import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
 
 const ForgetPassword = ({ data }) => {
   const { t } = useTranslation();

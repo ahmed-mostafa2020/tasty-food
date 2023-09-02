@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import { ChangeTheme } from "../context/ThemeContext";
+import { ChangeTheme } from "../../context/ThemeContext";
 
 const Banner = ({ title, subTitle }) => {
   const { myPalette } = ChangeTheme();

@@ -54,15 +54,8 @@ const Navbar = () => {
             {t("Checkout")}
           </Link>
 
-          <Link
-            href={"./forgetPassword"}
-            style={{ color: myPalette.text.primary }}
-          >
-            {t("Forget-password")}
-          </Link>
-
-          <Link href={"./login"} style={{ color: myPalette.text.primary }}>
-            {t("Login")}
+          <Link href={"./orders"} style={{ color: myPalette.text.primary }}>
+            {t("Orders")}
           </Link>
 
           <Link href={"./profile"} style={{ color: myPalette.text.primary }}>
@@ -74,21 +67,28 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href={"./resetPassword"}
-            style={{ color: myPalette.text.primary }}
-          >
-            {t("Reset-password")}
-          </Link>
-
-          <Link
             href={"./verifyAccount"}
             style={{ color: myPalette.text.primary }}
           >
             {t("Verify-account")}
           </Link>
 
-          <Link href={"./orders"} style={{ color: myPalette.text.primary }}>
-            {t("Orders")}
+          <Link href={"./login"} style={{ color: myPalette.text.primary }}>
+            {t("Login")}
+          </Link>
+
+          <Link
+            href={"./forgetPassword"}
+            style={{ color: myPalette.text.primary }}
+          >
+            {t("Forget-password")}
+          </Link>
+
+          <Link
+            href={"./resetPassword"}
+            style={{ color: myPalette.text.primary }}
+          >
+            {t("Reset-password")}
           </Link>
         </div>
 

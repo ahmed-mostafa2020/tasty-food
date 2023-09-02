@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./Header";
-import Navbar from "./Navbar";
+import Header from "../../components/Header";
+import Navbar from "../../components/Navbar";
 import Banner from "../atoms/Banner";
-import { ChangeTheme } from "../context/ThemeContext";
+import { ChangeTheme } from "../../context/ThemeContext";
 
 const LayoutTopWrapper = ({ title, subTitle }) => {
   const { myPalette } = ChangeTheme();

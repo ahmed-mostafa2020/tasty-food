@@ -1,4 +1,4 @@
-import { Alert } from "react-bootstrap";
+import { Alert } from "@mui/material";
 
 export const getApi = async (url, postedData, lang) => {
   if (postedData.method == "GET") {
@@ -21,9 +21,7 @@ export const getApi = async (url, postedData, lang) => {
         console.log("redirect account verification");
         break;
       case 309:
-        <Alert variant="danger" className="mt-3  text-center">
-          {"please try again"}
-        </Alert>;
+        <Alert severity="error">please try again</Alert>;
         break;
     }
     return data;
