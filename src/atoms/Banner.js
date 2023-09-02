@@ -17,10 +17,7 @@ const Banner = ({ title, subTitle }) => {
   };
 
   return (
-    <section
-      className="banner flex-jc"
-      style={{ marginTop: "-190px", width: "100%" }}
-    >
+    <section className="banner" style={{ padding: "20px 0 100px" }}>
       <Container fixed style={{ textAlign: "center" }}>
         <h2 style={titleStyle}>
           {title} <span style={subTitleStyle}>{subTitle}</span>

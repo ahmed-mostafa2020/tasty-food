@@ -3,8 +3,8 @@ import Layout from "../src/layout/Layout";
 import { API_URLS } from "../src/util/API_URL";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Banner from "../src/atoms/Banner";
 import { Container } from "@mui/material";
+import LayoutTopWrapper from "../src/components/LayoutTopWrapper";
 
 const About = ({ data }) => {
   const { t } = useTranslation();
@@ -19,10 +19,10 @@ const About = ({ data }) => {
       </Head>
 
       <Layout>
+        <LayoutTopWrapper title={"About"} subTitle={"Us"} />
         <div className="about">
-          {/* <Banner title={"Foods"} subTitle={"Details"} /> */}
           <Container fixed className="container">
-            hi
+            about
           </Container>
         </div>
       </Layout>
