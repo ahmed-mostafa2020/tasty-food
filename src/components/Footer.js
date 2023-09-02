@@ -8,7 +8,9 @@ import { useTranslation } from "next-i18next";
 import { API_URLS } from "../util/API_URL";
 import { getApi } from "../util/getApi";
 import { useEffect, useState } from "react";
-
+import FmdGoodIcon from "@mui/icons-material/FmdGood";
+import AddIcCallIcon from "@mui/icons-material/AddIcCall";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 const Footer = () => {
   const [data, setData] = useState("");
   const { myMode, myPalette } = ChangeTheme();
@@ -22,6 +24,7 @@ const Footer = () => {
     );
     setData(fetchedData);
   };
+  console.log(data);
 
   useEffect(() => {
     fetchData();
@@ -37,7 +40,7 @@ const Footer = () => {
           rowSpacing={5}
           columnSpacing={{ sm: 1, md: 2, lg: 3 }}
         >
-          <Grid item xs={12} sm={6} md={6} lg={3}>
+          <Grid className="grid-box" item xs={12} sm={6} md={6} lg={3}>
             <div className="column">
               <Link href={"./"}>
                 <Image
@@ -52,14 +55,14 @@ const Footer = () => {
               <div className="opening-hours">
                 <h6> {t("Opening-hours")} </h6>
 
-                <p style={{ color: myPalette.text.mainColor }}>
+                {/* <p style={{ color: myPalette.text.mainColor }}>
                   {data.data.brand.working_hours}
-                </p>
+                </p> */}
               </div>
             </div>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={6} lg={3}>
+          <Grid className="grid-box" item xs={12} sm={6} md={6} lg={3}>
             <div className="column">
               <h6>{t("Quick-links")}</h6>
               <div className="links">
@@ -89,7 +92,7 @@ const Footer = () => {
             </div>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={6} lg={3}>
+          <Grid className="grid-box" item xs={12} sm={6} md={6} lg={3}>
             <div className="column">
               <h6>{t("Our-menu")}</h6>
               <div className="links">
@@ -119,8 +122,36 @@ const Footer = () => {
             </div>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={6} lg={3}>
-            <div className="column">hi</div>
+          <Grid className="grid-box" item xs={12} sm={6} md={6} lg={3}>
+            <div className="column">
+              <h6>{t("Get-in-touch")}</h6>
+
+              <div className="get-in-touch">
+                <div className="box">
+                  <div className="icon-box">
+                    <FmdGoodIcon className="icon" />
+                  </div>
+
+                  <p>{data.data.brand.address}</p>
+                </div>
+
+                <div className="box">
+                  <div className="icon-box">
+                    <AddIcCallIcon className="icon" />
+                  </div>
+
+                  <p> {data.data.brand.mobile}</p>
+                </div>
+
+                <div className="box">
+                  <div className="icon-box">
+                    <MailOutlineIcon className="icon" />
+                  </div>
+
+                  <p>{data.data.brand.email}</p>
+                </div>
+              </div>
+            </div>
           </Grid>
         </Grid>
       </Container>

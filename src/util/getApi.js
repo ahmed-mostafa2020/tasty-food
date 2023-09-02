@@ -8,7 +8,9 @@ export const getApi = async (url, postedData, lang) => {
   }
 
   try {
-    const data = await fetch(url, postedData).then((res) => res.json());
+    const data = await fetch(url, postedData, { cache: "no-store" }).then(
+      (res) => res.json()
+    );
 
     switch (data.code) {
       case 302:

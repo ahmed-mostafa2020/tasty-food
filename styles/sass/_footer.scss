@@ -10,24 +10,34 @@
 
     .column {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start;
+      align-items: flex-start;
       flex-direction: column;
       gap: 30px;
+      width: 100%;
+      @include xl {
+        justify-content: center;
+        align-items: center;
+      }
+
+      h6 {
+        font-family: $topic-font;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        @include xl {
+          justify-content: center;
+          align-items: center;
+        }
+      }
 
       .opening-hours {
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
         gap: 5px;
-
-        h6 {
-          font-family: $topic-font;
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 20px;
-        }
 
         & > p {
           font-family: $text-font;
@@ -37,19 +47,8 @@
         }
       }
 
-      h6 {
-        font-family: $topic-font;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 20px;
-      }
-
       .links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 5px;
+        @extend .opening-hours;
 
         a {
           font-family: $text-font;
@@ -64,12 +63,34 @@
           }
         }
       }
+
+      .get-in-touch {
+        @extend .opening-hours;
+        gap: 25px;
+        @include xl {
+          margin-left: 19%;
+        }
+
+        .box {
+          display: flex;
+          gap: 10px;
+
+          .icon-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $main-color;
+
+            .icon {
+              color: $dark-text;
+              font-size: 18px;
+            }
+          }
+        }
+      }
     }
   }
-}
-
-.footer.light {
-}
-
-.footer.dark {
 }
