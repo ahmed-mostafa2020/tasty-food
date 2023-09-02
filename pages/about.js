@@ -3,6 +3,8 @@ import Layout from "../src/layout/Layout";
 import { API_URLS } from "../src/util/API_URL";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Banner from "../src/atoms/Banner";
+import { Container } from "@mui/material";
 
 const About = ({ data }) => {
   const { t } = useTranslation();
@@ -17,7 +19,12 @@ const About = ({ data }) => {
       </Head>
 
       <Layout>
-        <div className="about">About</div>
+        <div className="about">
+          {/* <Banner title={"Foods"} subTitle={"Details"} /> */}
+          <Container fixed className="container">
+            hi
+          </Container>
+        </div>
       </Layout>
     </>
   );

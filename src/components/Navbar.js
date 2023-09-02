@@ -49,6 +49,14 @@ const Navbar = () => {
           <Link href={"./about"} style={{ color: myPalette.text.primary }}>
             {t("About")}
           </Link>
+
+          <Link href={"./"} style={{ color: myPalette.text.primary }}>
+            {t("Contact")}
+          </Link>
+
+          <Link href={"./"} style={{ color: myPalette.text.primary }}>
+            {t("Menu")}
+          </Link>
         </div>
 
         <div className="call flex-jc">

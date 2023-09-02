@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { API_URLS } from "../util/API_URL";
 import { getApi } from "../util/getApi";
 import { ChangeTheme } from "../context/ThemeContext";
-import { useTranslation } from "react-i18next";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const CopyRights = () => {
   const [data, setData] = useState("");

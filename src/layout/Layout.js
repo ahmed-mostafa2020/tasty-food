@@ -1,6 +1,5 @@
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import CopyRights from "../components/CopyRights";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -19,7 +18,6 @@ const Layout = ({ children }) => {
         <div className="topWrapper">
           <Header />
           <Navbar />
-          <Banner />
         </div>
         <svg
           className="top-bg-image"
