@@ -16,5 +16,13 @@
   "Pizza": "Pizza",
   "Pasta": "Pasta",
   "Cold Drinks": "Cold Drinks",
-  "Get-in-touch": "Get In Touch"
+  "Get-in-touch": "Get In Touch",
+  "Checkout": "Checkout",
+  "Forget-password": "Forget Password",
+  "Sign-up": "Sign-up",
+  "Login": "Login",
+  "Profile": "Profile",
+  "Reset-password": "Reset Password",
+  "Verify-account": "Verify Account",
+  "Orders": "Orders"
 }

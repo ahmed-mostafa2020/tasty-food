@@ -20,11 +20,14 @@ const About = ({ data }) => {
 
       <Layout>
         <LayoutTopWrapper title={t("About")} subTitle={t("Us")} />
-        <div className="about">
+        <main
+          className="about"
+          style={{ textAlign: "center", padding: "40px 0" }}
+        >
           <Container fixed className="container">
             about
           </Container>
-        </div>
+        </main>
       </Layout>
     </>
   );

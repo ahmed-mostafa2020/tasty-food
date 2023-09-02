@@ -1,14 +1,15 @@
 import Head from "next/head";
 import Layout from "../src/layout/Layout";
+import { API_URLS } from "../src/util/API_URL";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Container } from "@mui/material";
+import LayoutTopWrapper from "../src/components/LayoutTopWrapper";
 import Link from "next/link";
-import { API_URLS } from "../src/util/API_URL";
 
 const Profile = ({ data }) => {
   const { t } = useTranslation();
 
-  // console.log("aaaaaaaaaaaa" + data.data);
   return (
     <>
       <Head>
@@ -17,14 +18,17 @@ const Profile = ({ data }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
+
       <Layout>
-        <div className="profile">
-          profile
-          <h1>{t("React")} </h1>
-          <h2>{t("Home")}</h2>
-          <h3>{t("Contact")}</h3>
-          <Link href={"./"}>Home</Link>
-        </div>
+        <LayoutTopWrapper title={t("Profile")} />
+        <main
+          className="profile"
+          style={{ textAlign: "center", padding: "40px 0" }}
+        >
+          <Container fixed className="container">
+            profile
+          </Container>
+        </main>
       </Layout>
     </>
   );

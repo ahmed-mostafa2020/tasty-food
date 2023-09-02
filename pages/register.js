@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Layout from "../src/layout/Layout";
 import { API_URLS } from "../src/util/API_URL";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Container } from "@mui/material";
+import LayoutTopWrapper from "../src/components/LayoutTopWrapper";
 
 const Register = ({ data }) => {
   const { t } = useTranslation();
@@ -17,7 +19,15 @@ const Register = ({ data }) => {
       </Head>
 
       <Layout>
-        <div className="register">register</div>
+        <LayoutTopWrapper title={t("Sign-up")} />
+        <main
+          className="register"
+          style={{ textAlign: "center", padding: "40px 0" }}
+        >
+          <Container fixed className="container">
+            register
+          </Container>
+        </main>
       </Layout>
     </>
   );

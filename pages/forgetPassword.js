@@ -1,7 +1,14 @@
 import Head from "next/head";
 import Layout from "../src/layout/Layout";
+import { API_URLS } from "../src/util/API_URL";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Container } from "@mui/material";
+import LayoutTopWrapper from "../src/components/LayoutTopWrapper";
 
-const ForgetPassword = () => {
+const ForgetPassword = ({ data }) => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
@@ -12,10 +19,29 @@ const ForgetPassword = () => {
       </Head>
 
       <Layout>
-        <div className="forgetPassword">ForgetPassword</div>
+        <LayoutTopWrapper title={t("Forget-password")} />
+        <main
+          className="forgetPassword"
+          style={{ textAlign: "center", padding: "40px 0" }}
+        >
+          <Container fixed className="container">
+            forgetPassword
+          </Container>
+        </main>
       </Layout>
     </>
   );
 };
 
 export default ForgetPassword;
+
+export async function getServerSideProps({ locale }) {
+  const res = await fetch(API_URLS.HOME, API_URLS.HEADER_GET);
+  const data = await res.json();
+  return {
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}

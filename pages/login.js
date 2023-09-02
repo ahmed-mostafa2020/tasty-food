@@ -1,7 +1,12 @@
 import Head from "next/head";
 import Layout from "../src/layout/Layout";
+import { API_URLS } from "../src/util/API_URL";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Container } from "@mui/material";
+import LayoutTopWrapper from "../src/components/LayoutTopWrapper";
 
-const Login = () => {
+const Login = ({ data }) => {
   return (
     <>
       <Head>
@@ -12,10 +17,29 @@ const Login = () => {
       </Head>
 
       <Layout>
-        <div className="login">login</div>
+        <LayoutTopWrapper title={t("Login")} />
+        <main
+          className="login"
+          style={{ textAlign: "center", padding: "40px 0" }}
+        >
+          <Container fixed className="container">
+            login
+          </Container>
+        </main>
       </Layout>
     </>
   );
 };
 
 export default Login;
+
+export async function getServerSideProps({ locale }) {
+  const res = await fetch(API_URLS.HOME, API_URLS.HEADER_GET);
+  const data = await res.json();
+  return {
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
