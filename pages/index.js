@@ -18,7 +18,7 @@ const Home = ({ data }) => {
       </Head>
 
       <HomeLayout>
-        <main className="home">
+        <main className="home" style={{ textAlign: "center" }}>
           <h1>{t("React")} </h1>
         </main>
       </HomeLayout>
