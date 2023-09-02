@@ -18,6 +18,7 @@ const DarkThemeProvider = ({ children }) => {
             default: "#FFFFFF",
             mainColor: "#e60000",
             secColor: "#fec223",
+            copy_rights: "rgba(230, 230, 230, 0.25)",
           },
           text: {
             primary: "#131313",
@@ -36,11 +37,12 @@ const DarkThemeProvider = ({ children }) => {
             default: "#131313",
             mainColor: "#e60000",
             secColor: "#fec223",
+            copy_rights: "rgba(231, 232, 232, 0.08)",
           },
           text: {
             primary: "#E7E8E8",
-            secColor: "#e60000",
             mainColor: "#fec223",
+            secColor: "#e60000",
           },
           divider: {
             primary: "#5c5a5a",

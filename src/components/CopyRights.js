@@ -25,7 +25,10 @@ const CopyRights = () => {
   }, [i18n.language]);
 
   return (
-    <section className={`copyRights ${myMode}`}>
+    <section
+      className="copyRights"
+      style={{ background: `${myPalette.background.copy_rights}` }}
+    >
       <Container fixed className="container">
         <div className="rights">{data && data.data.brand.copy_rights}</div>
 
