@@ -24,13 +24,12 @@ const Footer = () => {
     );
     setData(fetchedData);
   };
-  console.log(data);
+  // console.log(data);
 
   useEffect(() => {
     fetchData();
   }, [i18n.language]);
 
-  console.log(data);
   return (
     <footer className="footer">
       <Container fixed className="container">
@@ -40,7 +39,7 @@ const Footer = () => {
           rowSpacing={5}
           columnSpacing={{ sm: 1, md: 2, lg: 3 }}
         >
-          <Grid className="grid-box" item xs={12} sm={6} md={6} lg={3}>
+          <Grid item xs={12} sm={6} md={6} lg={3}>
             <div className="column">
               <Link href={"./"}>
                 <Image
@@ -55,9 +54,9 @@ const Footer = () => {
               <div className="opening-hours">
                 <h6> {t("Opening-hours")} </h6>
 
-                {/* <p style={{ color: myPalette.text.mainColor }}>
-                  {data.data.brand.working_hours}
-                </p> */}
+                <p style={{ color: myPalette.text.mainColor }}>
+                  {data && data.data.brand.working_hours}
+                </p>
               </div>
             </div>
           </Grid>
@@ -132,7 +131,7 @@ const Footer = () => {
                     <FmdGoodIcon className="icon" />
                   </div>
 
-                  <p>{data.data.brand.address}</p>
+                  <p>{data && data.data.brand.address}</p>
                 </div>
 
                 <div className="box">
@@ -140,7 +139,7 @@ const Footer = () => {
                     <AddIcCallIcon className="icon" />
                   </div>
 
-                  <p> {data.data.brand.mobile}</p>
+                  <p> {data && data.data.brand.mobile}</p>
                 </div>
 
                 <div className="box">
@@ -148,7 +147,7 @@ const Footer = () => {
                     <MailOutlineIcon className="icon" />
                   </div>
 
-                  <p>{data.data.brand.email}</p>
+                  <p>{data && data.data.brand.email}</p>
                 </div>
               </div>
             </div>
