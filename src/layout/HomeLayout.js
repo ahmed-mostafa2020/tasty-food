@@ -41,7 +41,12 @@ const HomeLayout = ({ children }) => {
 
         <section className="wrapper_home">{children}</section>
 
-        <div className="bottomWrapper">
+        <div
+          className="bottomWrapper"
+          style={{
+            backgroundColor: `${myPalette.background.footer}`,
+          }}
+        >
           <svg
             className="bottom-bg-image"
             src="http://www.w3.org/2000/svg"

@@ -9,7 +9,12 @@ const LayoutTopWrapper = ({ title, subTitle }) => {
 
   return (
     <>
-      <div className="layoutTopWrapper">
+      <div
+        className="layoutTopWrapper"
+        style={{
+          backgroundColor: `${myPalette.background.footer}`,
+        }}
+      >
         <Header />
         <Navbar />
         <Banner title={title} subTitle={subTitle} />
