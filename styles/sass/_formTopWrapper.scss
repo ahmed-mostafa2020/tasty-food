@@ -1,0 +1,14 @@
+@import "./variables";
+@import "./responsive";
+
+.formTopWrapper {
+  padding-bottom: 70px;
+}
+
+.formTopWrapper.light {
+  background: url("../../public/assets/images/Banner\ Texture\ img\ 01.png"),
+    no-repeat;
+}
+
+.formTopWrapper.dark {
+}

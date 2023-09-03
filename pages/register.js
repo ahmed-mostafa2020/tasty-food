@@ -5,6 +5,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Container } from "@mui/material";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
+import FormTopWrapper from "../src/atomicDesign/organisms/FormTopWrapper";
 
 const Register = ({ data }) => {
   const { t } = useTranslation();
@@ -19,15 +20,17 @@ const Register = ({ data }) => {
       </Head>
 
       <Layout>
-        <LayoutTopWrapper title={t("Sign-up")} />
-        <main
-          className="register"
-          style={{ textAlign: "center", padding: "40px 0" }}
-        >
-          <Container fixed className="container">
-            register
-          </Container>
-        </main>
+        {/* <LayoutTopWrapper title={t("Sign-up")} /> */}
+        <FormTopWrapper title={t("Sign-up")}>
+          <main
+            className="register"
+            style={{ textAlign: "center", padding: "40px 0" }}
+          >
+            <Container fixed className="container">
+              register
+            </Container>
+          </main>
+        </FormTopWrapper>
       </Layout>
     </>
   );
