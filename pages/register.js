@@ -7,7 +7,7 @@ import { Container } from "@mui/material";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
 import FormTopWrapper from "../src/atomicDesign/organisms/FormTopWrapper";
 
-const Register = ({ data }) => {
+const Register = ({ data, formPage }) => {
   const { t } = useTranslation();
 
   return (
@@ -20,7 +20,6 @@ const Register = ({ data }) => {
       </Head>
 
       <Layout>
-        {/* <LayoutTopWrapper title={t("Sign-up")} /> */}
         <FormTopWrapper title={t("Sign-up")}>
           <main
             className="register"

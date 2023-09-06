@@ -54,9 +54,13 @@ const Footer = () => {
               <div className="opening-hours">
                 <h6> {t("Opening-hours")} </h6>
 
-                <p style={{ color: myPalette.text.mainColor }}>
-                  {data && data.data.brand.working_hours}
-                </p>
+                {data ? (
+                  <p style={{ color: myPalette.text.mainColor }}>
+                    {data.data.brand.working_hours}
+                  </p>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
           </Grid>
