@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={myMode === "light" ? lightTheme : darkTheme}>
       <CssBaseline />
       <div className="layout" dir={i18n.language === "en" ? "ltr" : "rtl"}>
-        <section className="wrapper_pages">{children}</section>
+        {children}
 
         <div
           className="bottomWrapper"
