@@ -1,7 +1,7 @@
 @import "./variables";
 @import "./responsive";
 
-.slide {
+.heroSection {
   padding: 50px 0;
   .container {
     display: flex;
@@ -44,9 +44,4 @@
       gap: 20px;
     }
   }
-}
-.slide.light {
-}
-
-.slide.dark {
 }

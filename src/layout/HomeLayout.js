@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Slide from "../components/Slide";
+import HeroSection from "../components/HeroSection";
 import CopyRights from "../components/CopyRights";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
@@ -26,7 +26,7 @@ const HomeLayout = ({ children }) => {
         <div className="topWrapper">
           <Header />
           <Navbar />
-          <Slide />
+          <HeroSection />
         </div>
 
         <UpShapedBorder />

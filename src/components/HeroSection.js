@@ -6,12 +6,12 @@ import imageBase from "../../public/assets/images/Burger-base.png";
 import underLine from "../../public/assets/images/underLine.svg";
 // import { ChangeTheme } from "../context/ThemeContext";
 
-const Slide = () => {
+const HeroSection = () => {
   const { t, i18n } = useTranslation();
   // const { lightTheme, myPalette } = ChangeTheme();
 
   return (
-    <div className="slide">
+    <div className="heroSection">
       <Container fixed className="container">
         <div className="text">
           <h1>
@@ -49,4 +49,4 @@ const Slide = () => {
   );
 };
 
-export default Slide;
+export default HeroSection;
