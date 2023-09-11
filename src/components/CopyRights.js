@@ -31,7 +31,7 @@ const CopyRights = () => {
     >
       {data ? (
         <Container fixed className="container">
-          <div className="rights">{data.data.brand.copy_rights}</div>
+          <p className="rights">{data.data.brand.copy_rights}</p>
 
           <Link href={"./"} style={{ color: myPalette.text.primary }}>
             {data.data.terms_slug}

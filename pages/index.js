@@ -4,9 +4,14 @@ import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { API_URLS } from "../src/util/API_URL";
+import { Container, Grid } from "@mui/material";
+import Image from "next/image";
+import category1 from "../public/assets/images/map-pin.png";
 
 const Home = ({ data }) => {
   const { t } = useTranslation();
+
+  const allCategories = data.data.category;
 
   return (
     <>
@@ -18,8 +23,45 @@ const Home = ({ data }) => {
       </Head>
 
       <HomeLayout>
-        <main className="home" style={{ textAlign: "center" }}>
-          <h1>{t("React")} </h1>
+        <main className="home">
+          <Container fixed className="container">
+            <Grid
+              item
+              container
+              rowSpacing={5}
+              columnSpacing={{ sm: 1, md: 2, lg: 3 }}
+            >
+              {data &&
+                allCategories.map((category) => (
+                  <Grid
+                    className="column"
+                    item
+                    xs={12}
+                    sm={6}
+                    md={6}
+                    lg={4}
+                    key={category.name}
+                  >
+                    <Link href={`./category/${category.slug}`}>
+                      <div className="category-box">
+                        <Image
+                          className="category-img"
+                          loader={() => `${category.image}`}
+                          src={`${category.image}`}
+                          alt="category"
+                          width={370}
+                          height={220}
+                        />
+
+                        <div className="category-info">
+                          <h4>{category.name}</h4>
+                        </div>
+                      </div>
+                    </Link>
+                  </Grid>
+                ))}
+            </Grid>
+          </Container>
         </main>
       </HomeLayout>
     </>

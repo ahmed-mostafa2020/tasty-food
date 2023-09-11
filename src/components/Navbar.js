@@ -47,7 +47,8 @@ const Navbar = () => {
           </Link>
 
           <Link href={"./about"} style={{ color: myPalette.text.primary }}>
-            {t("About")}
+            {t("About")} {""}
+            {t("Us")}
           </Link>
 
           <Link href={"./checkout"} style={{ color: myPalette.text.primary }}>
