@@ -1,5 +1,7 @@
 import { ChangeTheme } from "../context/ThemeContext";
 
+// working on it
+
 const AtomicInput = ({ type, label }) => {
   const { myMode, myPalette } = ChangeTheme();
 
