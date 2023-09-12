@@ -41,7 +41,7 @@ const Footer = () => {
         >
           <Grid item xs={12} sm={6} md={6} lg={3}>
             <div className="column">
-              <Link href={"./"}>
+              <Link href={"/"}>
                 <Image
                   className="logo"
                   src={myMode == "light" ? lightLogo : darkLogo}
@@ -69,26 +69,23 @@ const Footer = () => {
             <div className="column">
               <h6>{t("Quick-links")}</h6>
               <div className="links">
-                <Link
-                  href={"./about"}
-                  style={{ color: myPalette.text.primary }}
-                >
+                <Link href={"/about"} style={{ color: myPalette.text.primary }}>
                   {t("About")}
                 </Link>
 
-                <Link href={"./"} style={{ color: myPalette.text.primary }}>
+                <Link href={"/"} style={{ color: myPalette.text.primary }}>
                   {t("Menu")}
                 </Link>
 
-                <Link href={"./"} style={{ color: myPalette.text.primary }}>
+                <Link href={"/"} style={{ color: myPalette.text.primary }}>
                   {t("Testimonial")}
                 </Link>
 
-                <Link href={"./"} style={{ color: myPalette.text.primary }}>
+                <Link href={"/"} style={{ color: myPalette.text.primary }}>
                   {t("Blog")}
                 </Link>
 
-                <Link href={"./"} style={{ color: myPalette.text.primary }}>
+                <Link href={"/"} style={{ color: myPalette.text.primary }}>
                   {t("Contact")}
                 </Link>
               </div>
@@ -99,26 +96,23 @@ const Footer = () => {
             <div className="column">
               <h6>{t("Our-menu")}</h6>
               <div className="links">
-                <Link
-                  href={"./about"}
-                  style={{ color: myPalette.text.primary }}
-                >
+                <Link href={"/about"} style={{ color: myPalette.text.primary }}>
                   {t("Burgers")}
                 </Link>
 
-                <Link href={"./"} style={{ color: myPalette.text.primary }}>
+                <Link href={"/"} style={{ color: myPalette.text.primary }}>
                   {t("Desserts")}
                 </Link>
 
-                <Link href={"./"} style={{ color: myPalette.text.primary }}>
+                <Link href={"/"} style={{ color: myPalette.text.primary }}>
                   {t("Pizza")}
                 </Link>
 
-                <Link href={"./"} style={{ color: myPalette.text.primary }}>
+                <Link href={"/"} style={{ color: myPalette.text.primary }}>
                   {t("Pasta")}
                 </Link>
 
-                <Link href={"./"} style={{ color: myPalette.text.primary }}>
+                <Link href={"/"} style={{ color: myPalette.text.primary }}>
                   {t("Cold Drinks")}
                 </Link>
               </div>

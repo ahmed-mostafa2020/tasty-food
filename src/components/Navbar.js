@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Container fixed className="container">
-        <Link href={"./"}>
+        <Link href={"/"}>
           <Image
             className="logo"
             src={myMode == "light" ? lightLogo : darkLogo}

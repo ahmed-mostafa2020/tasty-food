@@ -27,14 +27,14 @@ const HeroSection = () => {
           {/* <div className="buttons">
             <AtomicButton
               content={"Order Now"}
-              href={"./orders"}
+              href={"/orders"}
               bgColor={myPalette.background.secColor}
               borderColor={myPalette.background.secColor}
               textColor={lightTheme.palette.text.primary}
             />
             <AtomicButton
               content={"Book a Table"}
-              href={"./"}
+              href={"/"}
               bgColor={"transparent"}
               borderColor={myPalette.border.primary}
             />
