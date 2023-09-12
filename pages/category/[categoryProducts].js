@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Layout from "../src/layout/Layout";
-import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
+import Layout from "../../src/layout/Layout";
+import LayoutTopWrapper from "../../src/atomicDesign/organisms/LayoutTopWrapper";
 import { Container } from "@mui/material";
 import { useTranslation } from "next-i18next";
-import { API_URLS } from "../src/util/API_URL";
+import { API_URLS } from "../../src/util/API_URL";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const CategoryProducts = ({ data }) => {

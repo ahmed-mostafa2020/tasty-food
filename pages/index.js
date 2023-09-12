@@ -44,7 +44,7 @@ const Home = ({ data }) => {
                   >
                     <Link
                       href={{
-                        pathname: `./${category.slug}`,
+                        pathname: `/category/${category.slug}`,
                       }}
                     >
                       <div className="category-box">

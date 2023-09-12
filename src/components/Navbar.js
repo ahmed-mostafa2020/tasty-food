@@ -42,51 +42,51 @@ const Navbar = () => {
         </Link>
 
         <div className="links">
-          <Link href={"./"} style={{ color: myPalette.text.primary }}>
+          <Link href={"/"} style={{ color: myPalette.text.primary }}>
             {t("Home")}
           </Link>
 
-          <Link href={"./about"} style={{ color: myPalette.text.primary }}>
+          <Link href={"/about"} style={{ color: myPalette.text.primary }}>
             {t("About")} {""}
             {t("Us")}
           </Link>
 
-          <Link href={"./checkout"} style={{ color: myPalette.text.primary }}>
+          <Link href={"/checkout"} style={{ color: myPalette.text.primary }}>
             {t("Checkout")}
           </Link>
 
-          <Link href={"./orders"} style={{ color: myPalette.text.primary }}>
+          <Link href={"/orders"} style={{ color: myPalette.text.primary }}>
             {t("Orders")}
           </Link>
 
-          <Link href={"./profile"} style={{ color: myPalette.text.primary }}>
+          <Link href={"/profile"} style={{ color: myPalette.text.primary }}>
             {t("Profile")}
           </Link>
 
-          <Link href={"./register"} style={{ color: myPalette.text.primary }}>
+          <Link href={"/register"} style={{ color: myPalette.text.primary }}>
             {t("Sign-up")}
           </Link>
 
           <Link
-            href={"./verifyAccount"}
+            href={"/verifyAccount"}
             style={{ color: myPalette.text.primary }}
           >
             {t("Verify-account")}
           </Link>
 
-          <Link href={"./login"} style={{ color: myPalette.text.primary }}>
+          <Link href={"/login"} style={{ color: myPalette.text.primary }}>
             {t("Login")}
           </Link>
 
           <Link
-            href={"./forgetPassword"}
+            href={"/forgetPassword"}
             style={{ color: myPalette.text.primary }}
           >
             {t("Forget-password")}
           </Link>
 
           <Link
-            href={"./resetPassword"}
+            href={"/resetPassword"}
             style={{ color: myPalette.text.primary }}
           >
             {t("Reset-password")}

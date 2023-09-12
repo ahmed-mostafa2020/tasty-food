@@ -6,6 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Container } from "@mui/material";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
 import FormTopWrapper from "../src/atomicDesign/organisms/FormTopWrapper";
+import AtomicInput from "../src/atomicDesign/molecules/AtomicInput";
 
 const Register = ({ data, formPage }) => {
   const { t } = useTranslation();
@@ -20,13 +21,20 @@ const Register = ({ data, formPage }) => {
       </Head>
 
       <Layout>
-        <FormTopWrapper title={t("Sign-up")}>
+        <FormTopWrapper
+          title={t("Sign-up")}
+          text={"Get access to exclusive features by creating account"}
+        >
           <main
             className="register"
-            style={{ textAlign: "center", padding: "40px 0" }}
+            style={{ textAlign: "center", paddingBottom: " 40px " }}
           >
             <Container fixed className="container">
-              register
+              <form>
+                <AtomicInput label={"sign up"} type={"text"} />
+
+                <button type="submit">create account</button>
+              </form>
             </Container>
           </main>
         </FormTopWrapper>

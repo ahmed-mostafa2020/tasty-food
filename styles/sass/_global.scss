@@ -19,9 +19,11 @@
 @import "./_copyRights.scss";
 
 // Atomic Design
+@import "./_banner.scss";
 @import "./_sectionTitle.scss";
 @import "./_layoutTopWrapper.scss";
 @import "./_formTopWrapper.scss";
+@import "./_atomicInput.scss";
 
 // Layout
 @import "./_homeLayout.scss";
