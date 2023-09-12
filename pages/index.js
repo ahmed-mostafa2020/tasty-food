@@ -42,7 +42,11 @@ const Home = ({ data }) => {
                     lg={4}
                     key={category.name}
                   >
-                    <Link href={`./category/${category.slug}`}>
+                    <Link
+                      href={{
+                        pathname: `./${category.slug}`,
+                      }}
+                    >
                       <div className="category-box">
                         <Image
                           className="category-img"
