@@ -5,30 +5,15 @@ import lightLogo from "../../public/assets/images/lightLogo.png";
 import darkLogo from "../../public/assets/images/darkLogo.png";
 import { ChangeTheme } from "../context/ThemeContext";
 import { useTranslation } from "next-i18next";
-import { API_URLS } from "../util/API_URL";
-import { getApi } from "../util/getApi";
-import { useEffect, useState } from "react";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+
 const Footer = () => {
-  const [data, setData] = useState("");
   const { myMode, myPalette } = ChangeTheme();
-  const { t, i18n } = useTranslation();
-
-  const fetchData = async () => {
-    const fetchedData = await getApi(
-      API_URLS.HOME,
-      API_URLS.HEADER_GET,
-      i18n.language
-    );
-    setData(fetchedData);
-  };
-  // console.log(data);
-
-  useEffect(() => {
-    fetchData();
-  }, [i18n.language]);
+  const { homeEndPointData } = FetchingAllEndPointsData();
+  const { t } = useTranslation();
 
   return (
     <footer className="footer">
@@ -54,9 +39,9 @@ const Footer = () => {
               <div className="opening-hours">
                 <h6> {t("Opening-hours")} </h6>
 
-                {data ? (
+                {homeEndPointData ? (
                   <p style={{ color: myPalette.text.mainColor }}>
-                    {data.data.brand.working_hours}
+                    {homeEndPointData.data.brand.working_hours}
                   </p>
                 ) : (
                   ""
@@ -129,7 +114,9 @@ const Footer = () => {
                     <FmdGoodIcon className="icon" />
                   </div>
 
-                  <p>{data && data.data.brand.address}</p>
+                  <p>
+                    {homeEndPointData && homeEndPointData.data.brand.address}
+                  </p>
                 </div>
 
                 <div className="box">
@@ -137,7 +124,10 @@ const Footer = () => {
                     <AddIcCallIcon className="icon" />
                   </div>
 
-                  <p> {data && data.data.brand.mobile}</p>
+                  <p>
+                    {" "}
+                    {homeEndPointData && homeEndPointData.data.brand.mobile}
+                  </p>
                 </div>
 
                 <div className="box">
@@ -145,7 +135,7 @@ const Footer = () => {
                     <MailOutlineIcon className="icon" />
                   </div>
 
-                  <p>{data && data.data.brand.email}</p>
+                  <p>{homeEndPointData && homeEndPointData.data.brand.email}</p>
                 </div>
               </div>
             </div>

@@ -11,22 +11,24 @@ import darkLogo from "../../public/assets/images/darkLogo.png";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 
 const Navbar = () => {
-  const [data, setData] = useState("");
+  // const [data, setData] = useState("");
   const { myMode, myPalette } = ChangeTheme();
   const { t, i18n } = useTranslation();
 
-  const fetchData = async () => {
-    const fetchedData = await getApi(
-      API_URLS.HOME,
-      API_URLS.HEADER_GET,
-      i18n.language
-    );
-    setData(fetchedData);
-  };
+  // No fetched data needed now
 
-  useEffect(() => {
-    fetchData();
-  }, [i18n.language]);
+  // const fetchData = async () => {
+  //   const fetchedData = await getApi(
+  //     API_URLS.HOME,
+  //     API_URLS.HEADER_GET,
+  //     i18n.language
+  //   );
+  //   setData(fetchedData);
+  // };
+
+  // useEffect(() => {
+  //   fetchData();
+  // }, [i18n.language]);
 
   return (
     <div className="navbar">
