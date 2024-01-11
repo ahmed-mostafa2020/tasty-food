@@ -1,6 +1,3 @@
-import { API_URLS } from "../util/API_URL";
-import { getApi } from "../util/getApi?n=nklj";
-import { useEffect, useState } from "react";
 import { ChangeTheme } from "../context/ThemeContext";
 import { useTranslation } from "next-i18next";
 import { Container } from "@mui/material";
@@ -11,24 +8,8 @@ import darkLogo from "../../public/assets/images/darkLogo.png";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 
 const Navbar = () => {
-  // const [data, setData] = useState("");
   const { myMode, myPalette } = ChangeTheme();
   const { t, i18n } = useTranslation();
-
-  // No fetched data needed now
-
-  // const fetchData = async () => {
-  //   const fetchedData = await getApi(
-  //     API_URLS.HOME,
-  //     API_URLS.HEADER_GET,
-  //     i18n.language
-  //   );
-  //   setData(fetchedData);
-  // };
-
-  // useEffect(() => {
-  //   fetchData();
-  // }, [i18n.language]);
 
   return (
     <div className="navbar">

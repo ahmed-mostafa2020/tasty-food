@@ -11,7 +11,7 @@ export const FetchingAllEndPointsData = () => {
 };
 
 const DataContextProvider = ({ children }) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const [homeEndPointData, setHomeEndPointData] = useState("");
 
