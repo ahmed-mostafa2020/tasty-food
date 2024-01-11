@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
             backgroundColor: `${myPalette.background.footer}`,
           }}
         >
-          <DownShapedBorder />
+          <DownShapedBorder fill={myPalette.background.default} />
 
           <Footer />
           <CopyRights />

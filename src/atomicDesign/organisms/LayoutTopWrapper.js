@@ -20,7 +20,7 @@ const LayoutTopWrapper = ({ title, subTitle }) => {
         <Banner title={title} subTitle={subTitle} />
       </div>
 
-      <UpShapedBorder />
+      <UpShapedBorder fill={myPalette.background.default} />
     </>
   );
 };

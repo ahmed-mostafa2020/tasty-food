@@ -20,6 +20,7 @@ const DarkThemeProvider = ({ children }) => {
             secColor: "#fec223",
             footer: "rgba(231, 232, 232, 0.6)",
             copy_rights: "rgba(255, 255, 255, 0.30)",
+            shaped_border: "#E7E8E8",
           },
           text: {
             primary: "#131313",
@@ -40,6 +41,7 @@ const DarkThemeProvider = ({ children }) => {
             secColor: "#fec223",
             footer: "rgba(19, 19, 19, 0.6)",
             copy_rights: "rgba(231, 232, 232, 0.08)",
+            shaped_border: "#131313",
           },
           text: {
             primary: "#E7E8E8",

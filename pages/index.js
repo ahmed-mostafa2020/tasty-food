@@ -6,9 +6,14 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { API_URLS } from "../src/util/API_URL";
 import { Container, Grid } from "@mui/material";
 import Image from "next/image";
+import Items from "../src/components/Items";
 import category1 from "../public/assets/images/map-pin.png";
+import DownShapedBorder from "@/src/atomicDesign/atoms/DownShapedBorder";
+import { ChangeTheme } from "@/src/context/ThemeContext";
 
 const Home = ({ data }) => {
+  const { myPalette } = ChangeTheme();
+
   const { t } = useTranslation();
 
   const allCategories = data.data.category;
@@ -24,8 +29,12 @@ const Home = ({ data }) => {
 
       <HomeLayout>
         <main className="home">
+          <Items />
+          <DownShapedBorder fill={myPalette.background.shaped_border} />
+
           <Container fixed className="container">
             <Grid
+              sx={{ marginTop: 0 }}
               item
               container
               rowSpacing={5}

@@ -34,7 +34,7 @@ const HomeLayout = ({ children }) => {
             <HeroSection />
           </div>
 
-          <UpShapedBorder />
+          <UpShapedBorder fill={myPalette.background.shaped_border} />
 
           {children}
 
@@ -44,7 +44,7 @@ const HomeLayout = ({ children }) => {
               backgroundColor: `${myPalette.background.footer}`,
             }}
           >
-            <DownShapedBorder />
+            <DownShapedBorder fill={myPalette.background.default} />
 
             <Footer />
             <CopyRights />
@@ -59,7 +59,7 @@ const HomeLayout = ({ children }) => {
             alignItems: "center",
           }}
         >
-          <CircularProgress color="secondary" fourColor={false} />
+          <CircularProgress />
         </Box>
       )}
     </ThemeProvider>
