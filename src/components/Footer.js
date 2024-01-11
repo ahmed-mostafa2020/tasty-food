@@ -39,13 +39,9 @@ const Footer = () => {
               <div className="opening-hours">
                 <h6> {t("Opening-hours")} </h6>
 
-                {homeEndPointData ? (
-                  <p style={{ color: myPalette.text.mainColor }}>
-                    {homeEndPointData.data.brand.working_hours}
-                  </p>
-                ) : (
-                  ""
-                )}
+                <p style={{ color: myPalette.text.mainColor }}>
+                  {homeEndPointData.data.brand.working_hours}
+                </p>
               </div>
             </div>
           </Grid>
@@ -114,9 +110,7 @@ const Footer = () => {
                     <FmdGoodIcon className="icon" />
                   </div>
 
-                  <p>
-                    {homeEndPointData && homeEndPointData.data.brand.address}
-                  </p>
+                  <p>{homeEndPointData.data.brand.address}</p>
                 </div>
 
                 <div className="box">
@@ -124,10 +118,7 @@ const Footer = () => {
                     <AddIcCallIcon className="icon" />
                   </div>
 
-                  <p>
-                    {" "}
-                    {homeEndPointData && homeEndPointData.data.brand.mobile}
-                  </p>
+                  <p>{homeEndPointData.data.brand.mobile}</p>
                 </div>
 
                 <div className="box">
@@ -135,7 +126,7 @@ const Footer = () => {
                     <MailOutlineIcon className="icon" />
                   </div>
 
-                  <p>{homeEndPointData && homeEndPointData.data.brand.email}</p>
+                  <p>{homeEndPointData.data.brand.email}</p>
                 </div>
               </div>
             </div>

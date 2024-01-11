@@ -14,17 +14,13 @@ const CopyRights = () => {
       className="copyRights"
       style={{ background: `${myPalette.background.copy_rights}` }}
     >
-      {homeEndPointData ? (
-        <Container fixed className="container">
-          <p className="rights">{homeEndPointData.data.brand.copy_rights}</p>
+      <Container fixed className="container">
+        <p className="rights">{homeEndPointData.data.brand.copy_rights}</p>
 
-          <Link href={"/"} style={{ color: myPalette.text.primary }}>
-            {homeEndPointData.data.terms_slug}
-          </Link>
-        </Container>
-      ) : (
-        ""
-      )}
+        <Link href={"/"} style={{ color: myPalette.text.primary }}>
+          {homeEndPointData.data.terms_slug}
+        </Link>
+      </Container>
     </section>
   );
 };

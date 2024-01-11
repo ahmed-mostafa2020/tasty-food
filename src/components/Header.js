@@ -30,7 +30,7 @@ const Header = () => {
         <div className="work-date">
           <AccessTimeIcon />
 
-          <p>{homeEndPointData && homeEndPointData.data.brand.working_hours}</p>
+          <p>{homeEndPointData.data.brand.working_hours}</p>
         </div>
 
         <div className="themes">
