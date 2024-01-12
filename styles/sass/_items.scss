@@ -2,5 +2,26 @@
 @import "./responsive";
 
 .items {
-  padding: 20px 0;
+  padding: 15px 0;
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .item-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 10px;
+    width: 170px;
+    figure {
+      padding: 20px 20px 10px 20px;
+    }
+    .item-name {
+      font-family: $topic-font;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
 }

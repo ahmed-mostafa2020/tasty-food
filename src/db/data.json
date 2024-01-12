@@ -1,0 +1,56 @@
+{
+  "status": true,
+  "code": "200",
+  "message": "Done",
+  "data": {
+    "current_order": [],
+    "category": [
+      {
+        "name": "Gathering Cakes",
+        "slug": "gathering-cakes",
+        "image": "https://market.amrbdr.com/public/images/1694551038.png"
+      },
+      {
+        "name": "Fresh Summer Flavors",
+        "slug": "fresh-summer-flavors",
+        "image": "https://market.amrbdr.com/public/images/1694551025.jpg"
+      },
+      {
+        "name": "FROZEN BITES",
+        "slug": "frozen-bites",
+        "image": "https://market.amrbdr.com/public/images/1694551034.jpg"
+      },
+      {
+        "name": "Mojito",
+        "slug": "mojito",
+        "image": "https://market.amrbdr.com/public/images/1694551036.jpg"
+      },
+      {
+        "name": "Cheesecake Box",
+        "slug": "cheesecake-box",
+        "image": "https://market.amrbdr.com/public/images/category/1694551246.jpg"
+      },
+      {
+        "name": "Cheesecake Box",
+        "slug": "cheesecake-box",
+        "image": "https://market.amrbdr.com/public/images/category/1694551246.jpg"
+      }
+    ],
+    "brand": {
+      "name": "Delivery Gate",
+      "logo": "https://market.amrbdr.com/public/storage",
+      "slogan": "Delivery Gate",
+      "address": "Delivery Gate",
+      "mobile": "01014778866",
+      "email": "amr.bdreldin@gmail.com",
+      "copy_rights": "all copy right reserved 2023",
+      "working_hours": "Mon-Fri:8am - 11pm"
+    },
+    "about": {
+      "title": "welcome in food testy",
+      "content": "Egestas amet facilisis cras suspendisse orci volutpat. Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuada massa proin cursus elit amet iaculis.",
+      "image": "images/1694462386.jpg"
+    },
+    "terms_slug": "terms"
+  }
+}
