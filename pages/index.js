@@ -8,6 +8,7 @@ import { Container, Grid } from "@mui/material";
 import Image from "next/image";
 import Items from "../src/components/Items";
 import Offers from "../src/components/Offers";
+import AboutUs from "../src/components/AboutUs";
 import category1 from "../public/assets/images/map-pin.png";
 import DownShapedBorder from "@/src/atomicDesign/atoms/DownShapedBorder";
 import { ChangeTheme } from "@/src/context/ThemeContext";
@@ -36,6 +37,8 @@ const Home = ({ data }) => {
 
           <Container fixed className="container">
             <Offers />
+
+            <AboutUs />
 
             <Grid
               sx={{ marginTop: 0 }}

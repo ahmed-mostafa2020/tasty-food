@@ -5,7 +5,7 @@ import offer3 from "../../public/assets/images/Combo 2.png";
 
 const Offers = () => {
   return (
-    <div className="offers">
+    <section className="offers">
       <Offer
         name={"Pasta"}
         discount={"20%"}
@@ -27,7 +27,7 @@ const Offers = () => {
         cost={"15.90"}
         image={offer3}
       />
-    </div>
+    </section>
   );
 };
 export default Offers;
