@@ -34,9 +34,16 @@
       }
     }
 
-    .image {
+    figure {
       display: flex;
+      justify-content: center;
+      align-items: center;
       flex: 1;
+
+      .baseImage {
+        position: absolute;
+        opacity: 0.35;
+      }
     }
 
     .buttons {

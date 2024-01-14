@@ -2,10 +2,7 @@
 @import "./responsive";
 
 .sectionTitle {
-}
-
-.sectionTitle.light {
-}
-
-.sectionTitle.dark {
+  font-family: $topic-font;
+  font-weight: 400;
+  font-size: 30px;
 }

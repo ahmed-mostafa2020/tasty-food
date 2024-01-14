@@ -2,7 +2,8 @@ import { useTranslation } from "next-i18next";
 // import AtomicButton from "../atoms/AtomicButton";
 import { Container } from "@mui/material";
 import Image from "next/image";
-import imageBase from "../../public/assets/images/Burger-base.png";
+import baseImage from "../../public/assets/images/Burger-base.png";
+import heroImage from "../../public/assets/images/Burger.png";
 import underLine from "../../public/assets/images/underLine.svg";
 // import { ChangeTheme } from "../context/ThemeContext";
 
@@ -41,9 +42,10 @@ const HeroSection = () => {
           </div> */}
         </div>
 
-        <div className="image">
-          <Image src={imageBase} alt="imageBase" />
-        </div>
+        <figure className="image">
+          <Image src={heroImage} alt="heroImage" />
+          <Image className="baseImage" src={baseImage} alt="baseImage" />
+        </figure>
       </Container>
     </div>
   );
