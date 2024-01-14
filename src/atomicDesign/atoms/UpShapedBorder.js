@@ -1,8 +1,4 @@
-import { ChangeTheme } from "../../context/ThemeContext";
-
 const UpShapedBorder = ({ fill }) => {
-  const { myPalette } = ChangeTheme();
-
   return (
     <svg
       style={{ marginBottom: " -7px", width: "100%" }}

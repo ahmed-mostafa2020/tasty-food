@@ -15,7 +15,7 @@ const About = () => {
       </figure>
 
       <div className="text">
-        <SectionTitle title={"About Tasty Foods"} />
+        <SectionTitle title={"About Tasty Foods"} fontSize={"35px"} />
 
         <article>
           Egestas amet facilisis cras suspendisse orci volutpat. Enim ut et amet

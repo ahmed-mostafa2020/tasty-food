@@ -25,10 +25,7 @@ const Navbar = () => {
         </Link>
 
         <div className="links">
-          <Link
-            href={"/"}
-            style={{ color: myPalette.text.primary, fontWeight: "bold" }}
-          >
+          <Link href={"/"} style={{ color: myPalette.text.primary }}>
             {t("Home")}
           </Link>
 

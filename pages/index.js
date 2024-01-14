@@ -9,9 +9,11 @@ import Image from "next/image";
 import Items from "../src/components/Items";
 import Offers from "../src/components/Offers";
 import AboutUs from "../src/components/AboutUs";
+import Delivery from "../src/components/Delivery";
 import category1 from "../public/assets/images/map-pin.png";
 import DownShapedBorder from "@/src/atomicDesign/atoms/DownShapedBorder";
 import { ChangeTheme } from "@/src/context/ThemeContext";
+import UpShapedBorder from "@/src/atomicDesign/atoms/UpShapedBorder";
 
 const Home = ({ data }) => {
   const { myPalette } = ChangeTheme();
@@ -39,7 +41,11 @@ const Home = ({ data }) => {
             <Offers />
 
             <AboutUs />
+          </Container>
 
+          <Delivery />
+
+          <Container fixed className="container">
             <Grid
               sx={{ marginTop: 0 }}
               item
