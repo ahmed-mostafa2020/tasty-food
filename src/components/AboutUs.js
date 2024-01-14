@@ -1,20 +1,17 @@
 import Image from "next/image";
 import SectionTitle from "../atomicDesign/atoms/SectionTitle";
+import BaseImage from "../atomicDesign/atoms/BaseImage";
 import aboutImg from "../../public/assets/images/about-1 1.png";
-import baseImage from "../../public/assets/images/Burger-base.png";
+import { FaCheckCircle } from "react-icons/fa";
+import { ChangeTheme } from "../context/ThemeContext";
 
 const About = () => {
+  const { myPalette } = ChangeTheme();
   return (
     <section className="aboutUs">
       <figure>
-        <Image src={aboutImg} alt="about" width={400} height={300} />
-        <Image
-          className="baseImage"
-          src={baseImage}
-          alt="baseImage"
-          width={400}
-          height={300}
-        />
+        <Image src={aboutImg} alt="about" width={450} height={350} />
+        <BaseImage width={450} height={350} />
       </figure>
 
       <div className="text">
@@ -28,7 +25,18 @@ const About = () => {
         </article>
 
         <ul>
-          <li></li>
+          <li>
+            <FaCheckCircle style={{ color: myPalette.background.mainColor }} />
+            <p>Delicious & Healthy Foods</p>
+          </li>
+          <li>
+            <FaCheckCircle style={{ color: myPalette.background.mainColor }} />
+            <p>Best Price & Offers</p>
+          </li>
+          <li>
+            <FaCheckCircle style={{ color: myPalette.background.mainColor }} />
+            <p>Made By Fresh Ingredients</p>
+          </li>
         </ul>
       </div>
     </section>

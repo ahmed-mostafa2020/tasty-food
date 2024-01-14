@@ -2,9 +2,9 @@ import { useTranslation } from "next-i18next";
 // import AtomicButton from "../atoms/AtomicButton";
 import { Container } from "@mui/material";
 import Image from "next/image";
-import baseImage from "../../public/assets/images/Burger-base.png";
 import heroImage from "../../public/assets/images/Burger.png";
 import underLine from "../../public/assets/images/underLine.svg";
+import BaseImage from "../atomicDesign/atoms/BaseImage";
 // import { ChangeTheme } from "../context/ThemeContext";
 
 const HeroSection = () => {
@@ -44,7 +44,7 @@ const HeroSection = () => {
 
         <figure className="image">
           <Image src={heroImage} alt="heroImage" />
-          <Image className="baseImage" src={baseImage} alt="baseImage" />
+          <BaseImage />
         </figure>
       </Container>
     </div>
