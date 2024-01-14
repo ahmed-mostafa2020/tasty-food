@@ -1,0 +1,43 @@
+@import "./variables";
+@import "./responsive";
+
+.offers {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 20px;
+  .offer {
+    display: flex;
+    justify-content: space-between;
+    color: $light-bg;
+    background-color: $sec-color;
+    padding: 20px 15px;
+
+    h2 {
+      font-family: $topic-font;
+      font-size: 28px;
+      font-weight: 400;
+    }
+    p {
+      font-family: $text-font;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      span {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+    h3 {
+      font-family: $text-font;
+      font-size: 20px;
+      font-weight: 800;
+      padding-top: 5px;
+    }
+  }
+  .offer:first-of-type {
+    background-color: $main-color;
+  }
+  .offer:last-of-type {
+    background-color: $dark-bg;
+  }
+}

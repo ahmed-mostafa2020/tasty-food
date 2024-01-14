@@ -7,6 +7,7 @@ import { API_URLS } from "../src/util/API_URL";
 import { Container, Grid } from "@mui/material";
 import Image from "next/image";
 import Items from "../src/components/Items";
+import Offers from "../src/components/Offers";
 import category1 from "../public/assets/images/map-pin.png";
 import DownShapedBorder from "@/src/atomicDesign/atoms/DownShapedBorder";
 import { ChangeTheme } from "@/src/context/ThemeContext";
@@ -30,9 +31,12 @@ const Home = ({ data }) => {
       <HomeLayout>
         <main className="home">
           <Items />
+
           <DownShapedBorder fill={myPalette.background.shaped_border} />
 
           <Container fixed className="container">
+            <Offers />
+
             <Grid
               sx={{ marginTop: 0 }}
               item
