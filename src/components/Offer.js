@@ -14,9 +14,9 @@ const Offer = ({ name, image, discount, order, cost }) => {
         <h3>${cost}</h3>
       </div>
 
-      <div>
-        <Image src={image} alt="discount" width={170} height={100} />
-      </div>
+      <figure>
+        <Image src={image} alt="discount" width={100} height={100} />
+      </figure>
     </div>
   );
 };
