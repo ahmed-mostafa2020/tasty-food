@@ -46,11 +46,9 @@ const Home = ({ data }) => {
 
           <Delivery />
 
-          <Feedback />
-
           <Container fixed className="container">
             <Grid
-              sx={{ marginTop: 0 }}
+              sx={{ marginTop: 0, padding: "30px 0 60px" }}
               item
               container
               rowSpacing={5}
@@ -91,6 +89,8 @@ const Home = ({ data }) => {
                 ))}
             </Grid>
           </Container>
+
+          <Feedback />
         </main>
       </HomeLayout>
     </>

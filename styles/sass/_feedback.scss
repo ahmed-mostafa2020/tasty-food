@@ -4,7 +4,6 @@
 .feedback {
   background: url("../../public/assets/images/L-Footer\ Texture\ img\ 01\ \(1\).png"),
     no-repeat;
-  margin: 100px 0;
 
   .container {
     display: flex;
@@ -13,17 +12,75 @@
     text-align: center;
     padding: 30px 0;
 
-    article {
+    & > p {
       width: 50%;
       margin: 0 auto;
     }
 
-    .box {
+    .testimonialBox {
       display: flex;
       justify-content: space-between;
-      padding: 40px 0;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 40px;
 
       .testimonial {
+        padding: 40px;
+        border-radius: 20px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+        flex: 1;
+        min-width: 290px;
+        position: relative;
+        overflow: hidden;
+
+        .sideImage {
+          position: absolute;
+          bottom: -15px;
+          right: 0;
+          object-fit: contain;
+        }
+
+        .quoteBox {
+          position: absolute;
+          display: flex;
+          gap: 5px;
+          padding: 30px;
+          left: -10px;
+          top: -10px;
+        }
+
+        ul.rating {
+          display: flex;
+          list-style: none;
+
+          li {
+            svg {
+              font-size: 20px;
+            }
+          }
+        }
+
+        article {
+          text-align: start;
+          font: 300 15px $text-font;
+          letter-spacing: 0.5px;
+          line-height: 30px;
+          width: 90%;
+        }
+
+        .by {
+          h6 {
+            font: 400 16px $topic-font;
+          }
+          p {
+            font: 300 14px $text-font;
+            color: $dark-text;
+            text-align: start;
+          }
+        }
       }
     }
   }
