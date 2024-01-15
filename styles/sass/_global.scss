@@ -22,7 +22,8 @@
 @import "./_aboutUs.scss";
 @import "./_delivery.scss";
 @import "./_feedback.scss";
-@import "./gallery.scss";
+@import "./_gallery.scss";
+@import "./_popular.scss";
 
 // Atomic Design
 @import "./_banner.scss";
@@ -60,16 +61,4 @@ p {
 }
 button {
   cursor: pointer;
-}
-
-// My Utility classes
-.flex-jc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.flex-jb {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }

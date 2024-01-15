@@ -76,7 +76,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="call flex-jc">
+        <div className="call">
           <AddIcCallIcon
             className={`phone-icon ${i18n.language == "ar" && "right"}`}
           />

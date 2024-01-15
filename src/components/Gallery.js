@@ -1,20 +1,15 @@
-import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
 import SectionTitle from "../atomicDesign/atoms/SectionTitle";
 import Image from "next/image";
 import galleryImage from "../../public/assets/images/01 image.png";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Gallery = () => {
   const { homeEndPointData } = FetchingAllEndPointsData();
   const allGallery = homeEndPointData && homeEndPointData.data.images;
-  {
-    console.log(allGallery);
-  }
 
   return (
     <section className="gallery">
