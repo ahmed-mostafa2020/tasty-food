@@ -16,8 +16,8 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 const HomeLayout = ({ children }) => {
   const { myMode, lightTheme, darkTheme, myPalette } = ChangeTheme();
-  const { homeEndPointData } = FetchingAllEndPointsData();
   const { i18n } = useTranslation();
+  const { homeEndPointData } = FetchingAllEndPointsData();
 
   return (
     <ThemeProvider theme={myMode === "light" ? lightTheme : darkTheme}>

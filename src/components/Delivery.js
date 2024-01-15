@@ -2,7 +2,7 @@ import Image from "next/image";
 import SectionTitle from "../atomicDesign/atoms/SectionTitle";
 import { Container } from "@mui/material";
 import { ChangeTheme } from "../context/ThemeContext";
-import delivery from "../../public/assets/images/Delivery-cuate.svg";
+import delivery from "../../public/assets/images/Image.png";
 import UpShapedBorder from "../atomicDesign/atoms/UpShapedBorder";
 import DownShapedBorder from "../atomicDesign/atoms/DownShapedBorder";
 
