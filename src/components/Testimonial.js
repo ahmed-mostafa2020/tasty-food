@@ -4,7 +4,7 @@ import Image from "next/image";
 import sideImage from "../../public/assets/images/pasta 4.png";
 import quote from "../../public/assets/images/Vector.svg";
 
-const Testimonial = ({ opinion, name, disc }) => {
+const Testimonial = ({ rating, opinion, name, disc }) => {
   const { myPalette } = ChangeTheme();
   return (
     <div
@@ -37,6 +37,7 @@ const Testimonial = ({ opinion, name, disc }) => {
       </figure>
 
       <ul className="rating">
+        {/* will be dynamic */}
         <li>
           <MdOutlineStar style={{ color: myPalette.background.secColor }} />
         </li>
