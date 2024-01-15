@@ -23,7 +23,7 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          <p> {t("Welcome")}</p>
+          <article> {t("Welcome")}</article>
 
           {/* <div className="buttons">
             <AtomicButton

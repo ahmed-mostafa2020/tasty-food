@@ -12,7 +12,7 @@ import Items from "../src/components/Items";
 import Offers from "../src/components/Offers";
 import AboutUs from "../src/components/AboutUs";
 import Delivery from "../src/components/Delivery";
-import Popular from "../src/components/Popular";
+import FilterGallery from "../src/components/FilterGallery";
 import Feedback from "../src/components/Feedback";
 import Gallery from "../src/components/Gallery";
 
@@ -46,7 +46,7 @@ const Home = ({ data }) => {
 
           <Delivery />
 
-          <Popular />
+          <FilterGallery />
 
           <Container fixed className="container">
             <Grid

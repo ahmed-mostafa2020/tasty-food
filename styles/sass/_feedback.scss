@@ -54,7 +54,6 @@
 
         ul.rating {
           display: flex;
-          list-style: none;
 
           li {
             svg {
@@ -77,7 +76,7 @@
           }
           p {
             font: 300 14px $text-font;
-            color: $dark-text;
+            color: $gary-dark-text;
             text-align: start;
           }
         }

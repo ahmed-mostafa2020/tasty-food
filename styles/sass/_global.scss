@@ -23,7 +23,7 @@
 @import "./_delivery.scss";
 @import "./_feedback.scss";
 @import "./_gallery.scss";
-@import "./_popular.scss";
+@import "./_filterGallery.scss";
 
 // Atomic Design
 @import "./_banner.scss";
@@ -31,6 +31,7 @@
 @import "./_layoutTopWrapper.scss";
 @import "./_formTopWrapper.scss";
 @import "./_atomicInput.scss";
+@import "./_filterButtons.scss";
 
 // Layout
 @import "./_homeLayout.scss";

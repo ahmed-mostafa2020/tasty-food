@@ -1,0 +1,20 @@
+@import "./variables";
+@import "./responsive";
+
+.filterGallery {
+  padding: 40px 0;
+  text-align: center;
+
+  article {
+    font: 300 16px $text-font;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+    width: 40%;
+    margin: 0 auto;
+    padding: 10px 0 15px;
+  }
+
+  .productsBox {
+    padding: 30px 0;
+  }
+}
