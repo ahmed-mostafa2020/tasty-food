@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={myMode === "light" ? lightTheme : darkTheme}>
       <CssBaseline />
-      {homeEndPointData ? (
+      {homeEndPointData && (
         <div className="layout" dir={i18n.language === "en" ? "ltr" : "rtl"}>
           {children}
 
@@ -31,17 +31,6 @@ const Layout = ({ children }) => {
             <CopyRights />
           </div>
         </div>
-      ) : (
-        <Box
-          sx={{
-            height: "100vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <CircularProgress />
-        </Box>
       )}
     </ThemeProvider>
   );
