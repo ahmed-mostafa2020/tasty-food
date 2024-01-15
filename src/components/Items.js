@@ -7,7 +7,6 @@ const Items = () => {
   const { myPalette } = ChangeTheme();
   const { homeEndPointData } = FetchingAllEndPointsData();
   const allItems = homeEndPointData && homeEndPointData.data.category;
-
   return (
     <section
       className="items"

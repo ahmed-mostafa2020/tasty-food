@@ -5,16 +5,15 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { API_URLS } from "../src/util/API_URL";
 import { Container, Grid } from "@mui/material";
+import { ChangeTheme } from "@/src/context/ThemeContext";
 import Image from "next/image";
+import DownShapedBorder from "@/src/atomicDesign/atoms/DownShapedBorder";
 import Items from "../src/components/Items";
 import Offers from "../src/components/Offers";
 import AboutUs from "../src/components/AboutUs";
 import Delivery from "../src/components/Delivery";
 import Feedback from "../src/components/Feedback";
-import category1 from "../public/assets/images/map-pin.png";
-import DownShapedBorder from "@/src/atomicDesign/atoms/DownShapedBorder";
-import { ChangeTheme } from "@/src/context/ThemeContext";
-import UpShapedBorder from "@/src/atomicDesign/atoms/UpShapedBorder";
+import Gallery from "../src/components/Gallery";
 
 const Home = ({ data }) => {
   const { myPalette } = ChangeTheme();
@@ -91,6 +90,8 @@ const Home = ({ data }) => {
           </Container>
 
           <Feedback />
+
+          <Gallery />
         </main>
       </HomeLayout>
     </>

@@ -1,0 +1,15 @@
+@import "./variables";
+@import "./responsive";
+
+.gallery {
+  padding: 40px 0;
+  text-align: center;
+
+  .swiper {
+    padding: 40px 0;
+
+    .swiper-slide {
+      cursor: grab;
+    }
+  }
+}
