@@ -1,14 +1,17 @@
 import Link from "next/link";
-import { ChangeTheme } from "../context/ThemeContext";
+import { ChangeTheme } from "../../context/ThemeContext";
 
 const AtomicButton = ({ content, bgColor, borderColor, textColor, href }) => {
   const { myPalette } = ChangeTheme();
 
   const style = {
-    padding: " 15px 30px",
+    padding: " 10px 20px",
     display: "flex",
+    justifyContent: "center",
+    width: "fit-content",
+    margin: "0 auto",
     textAlign: "center",
-    fontSize: "20px",
+    fontSize: "14px",
     fontWeight: "400",
     lineHeight: "20px",
     border: "1px solid",
@@ -19,7 +22,7 @@ const AtomicButton = ({ content, bgColor, borderColor, textColor, href }) => {
   };
 
   return (
-    <Link className="atomicButton" style={style} href={`${href}`}>
+    <Link style={style} href={`${href}`}>
       {content}
     </Link>
   );

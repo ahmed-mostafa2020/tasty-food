@@ -19,15 +19,21 @@
       position: absolute;
     }
 
-    h6 {
-      margin: 10px;
-      font: 600 20px $text-font;
-      letter-spacing: 0.5px;
-    }
+    .text {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
 
-    p {
-      font: 300 14px $text-font;
-      letter-spacing: 0.5px;
+      h6 {
+        font: 600 20px $text-font;
+        letter-spacing: 0.5px;
+      }
+
+      p {
+        font: 300 14px $text-font;
+        letter-spacing: 0.5px;
+      }
     }
   }
 }

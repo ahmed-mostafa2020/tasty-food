@@ -10,9 +10,10 @@ import errorImageDark from "../public/assets/images/404dark.png";
 import chiliImage from "../public/assets/images/red_chili 1.png";
 import chiliImageDark from "../public/assets/images/red_chiliDark.png";
 import { ChangeTheme } from "../src/context/ThemeContext";
+import AtomicButton from "../src/atomicDesign/atoms/AtomicButton";
 
 const Custom404 = ({ data }) => {
-  const { myMode } = ChangeTheme();
+  const { myMode, myPalette } = ChangeTheme();
 
   return (
     <>
@@ -41,12 +42,21 @@ const Custom404 = ({ data }) => {
               width={350}
               height={170}
             />
-            <div>
+            <div className="text">
               <h6>Oops! I think we just lost something.</h6>
+
               <p>
                 Much as we would love to serve it up to you, we’d suggest you go
                 back and try a different link.
               </p>
+
+              <AtomicButton
+                content={"Go Back To Home Page"}
+                href={"/"}
+                bgColor={myPalette.background.mainColor}
+                borderColor={myPalette.text.mainColor}
+                textColor={myPalette.divider.primary}
+              />
             </div>
           </Container>
         </main>
