@@ -42,6 +42,11 @@
 
       .text {
         padding: 0 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+
         h4 {
           font: 400 22px $topic-font;
           line-height: 30px;
@@ -50,8 +55,6 @@
           text-align: center;
           font: 300 14px $text-font;
           letter-spacing: 0.2px;
-          width: 75%;
-          margin: 0 auto;
           color: $gary-dark-text;
         }
         h5 {
