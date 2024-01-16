@@ -15,7 +15,7 @@
   }
 
   .productsBox {
-    padding: 30px 0 0;
+    padding: 30px;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -29,7 +29,7 @@
       gap: 7px;
       border-radius: 15px;
       border: 1px solid $dark-text;
-      width: 214px;
+      width: 254px;
       transition: all 0.15s ease-in-out;
 
       &:hover {
@@ -40,20 +40,24 @@
         object-fit: contain;
       }
 
-      h4 {
-        font: 400 22px $topic-font;
-      }
-      p {
-        text-align: center;
-        font: 300 14px $text-font;
-        letter-spacing: 0.2px;
-        width: 75%;
-        margin: 0 auto;
-        color: $gary-dark-text;
-      }
-      h5 {
-        font: 800 16px $text-font;
-        color: $main-color;
+      .text {
+        padding: 0 20px;
+        h4 {
+          font: 400 22px $topic-font;
+          line-height: 30px;
+        }
+        p {
+          text-align: center;
+          font: 300 14px $text-font;
+          letter-spacing: 0.2px;
+          width: 75%;
+          margin: 0 auto;
+          color: $gary-dark-text;
+        }
+        h5 {
+          font: 800 16px $text-font;
+          color: $main-color;
+        }
       }
     }
   }

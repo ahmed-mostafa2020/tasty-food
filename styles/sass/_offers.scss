@@ -17,13 +17,16 @@
   .offer {
     display: flex;
     justify-content: space-between;
-    width: 285px;
+    width: 300px;
     color: $light-bg;
     background-color: $gary-dark-bg;
 
     .text {
-      padding-inline-start: 15px;
-      padding-block: 25px;
+      padding: 0 20px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
 
       h2 {
         font-family: $topic-font;

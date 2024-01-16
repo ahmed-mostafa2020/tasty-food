@@ -6,7 +6,7 @@ import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 
 const FilterGallery = () => {
   const { homeEndPointData } = FetchingAllEndPointsData();
-  const allProducts = homeEndPointData.data.category;
+  const allData = homeEndPointData.data.category;
 
   return (
     <section className="filterGallery">
@@ -21,10 +21,10 @@ const FilterGallery = () => {
         <FilterButtons />
 
         <div className="productsBox">
-          {allProducts.map((products) =>
-            products.map((product) => (
+          {allData.map((category) =>
+            category.products.map((product, index) => (
               <Product
-                key={product.index}
+                key={index}
                 // image={""}
                 name={product.name}
                 description={product.description}

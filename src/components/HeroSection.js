@@ -11,7 +11,7 @@ const HeroSection = () => {
   const { homeEndPointData } = FetchingAllEndPointsData();
   const { t } = useTranslation();
 
-  const data = homeEndPointData.data.about;
+  const data = homeEndPointData.data.slider;
 
   return (
     <div className="heroSection">
@@ -27,7 +27,7 @@ const HeroSection = () => {
             <Image src={underLine} alt="underLine" />
           </h1>
 
-          <article> {data.content}</article>
+          <article> {data.description}</article>
 
           {/* <div className="buttons">
             <AtomicButton
