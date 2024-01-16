@@ -15,6 +15,8 @@ const Footer = () => {
   const { homeEndPointData } = FetchingAllEndPointsData();
   const { t } = useTranslation();
 
+  const data = homeEndPointData.data.brand;
+
   return (
     <footer className="footer">
       <Container fixed className="container">
@@ -40,7 +42,7 @@ const Footer = () => {
                 <h6> {t("Opening-hours")} </h6>
 
                 <p style={{ color: myPalette.text.mainColor }}>
-                  {homeEndPointData.data.brand.working_hours}
+                  {data.working_hours}
                 </p>
               </div>
             </div>
@@ -110,7 +112,7 @@ const Footer = () => {
                     <FmdGoodIcon className="icon" />
                   </div>
 
-                  <p>{homeEndPointData.data.brand.address}</p>
+                  <p>{data.address}</p>
                 </div>
 
                 <div className="box">
@@ -118,7 +120,7 @@ const Footer = () => {
                     <AddIcCallIcon className="icon" />
                   </div>
 
-                  <p>{homeEndPointData.data.brand.mobile}</p>
+                  <p>{data.mobile}</p>
                 </div>
 
                 <div className="box">
@@ -126,7 +128,7 @@ const Footer = () => {
                     <MailOutlineIcon className="icon" />
                   </div>
 
-                  <p>{homeEndPointData.data.brand.email}</p>
+                  <p>{data.email}</p>
                 </div>
               </div>
             </div>

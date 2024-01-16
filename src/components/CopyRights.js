@@ -5,9 +5,11 @@ import { useTranslation } from "next-i18next";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 
 const CopyRights = () => {
-  const { myMode, myPalette } = ChangeTheme();
+  const { myPalette } = ChangeTheme();
   const { homeEndPointData } = FetchingAllEndPointsData();
   const { t } = useTranslation();
+
+  const data = homeEndPointData.data.brand;
 
   return (
     <section
@@ -15,7 +17,7 @@ const CopyRights = () => {
       style={{ background: `${myPalette.background.copy_rights}` }}
     >
       <Container fixed className="container">
-        <p className="rights">{homeEndPointData.data.brand.copy_rights}</p>
+        <p className="rights">{data.copy_rights}</p>
 
         <Link href={"/"} style={{ color: myPalette.text.primary }}>
           {homeEndPointData.data.terms_slug}

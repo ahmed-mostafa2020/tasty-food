@@ -1,14 +1,13 @@
 import Image from "next/image";
-import product from "../../public/assets/images/B-2 3.png";
 
-const Product = () => {
+const Product = ({ image, name, description, price }) => {
   return (
     <div className="product">
-      <Image src={product} alt="product" width={214} height={150} />
+      <Image src={image} alt="product" width={214} height={150} />
 
-      <h4>Spicy Burger</h4>
-      <p>Get a 20% Discount On First Order</p>
-      <h5>$10.5</h5>
+      <h4>{name}</h4>
+      <p> {description} </p>
+      <h5> {price} </h5>
     </div>
   );
 };

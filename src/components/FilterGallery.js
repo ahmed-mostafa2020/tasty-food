@@ -2,8 +2,12 @@ import { Container } from "@mui/material";
 import SectionTitle from "../atomicDesign/atoms/SectionTitle";
 import FilterButtons from "../atomicDesign/molecules/FilterButtons";
 import Product from "../components/Product";
+import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 
 const FilterGallery = () => {
+  const { homeEndPointData } = FetchingAllEndPointsData();
+  const allProducts = homeEndPointData.data.category;
+
   return (
     <section className="filterGallery">
       <Container>
@@ -17,13 +21,17 @@ const FilterGallery = () => {
         <FilterButtons />
 
         <div className="productsBox">
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          {allProducts.map((products) =>
+            products.map((product) => (
+              <Product
+                key={product.index}
+                // image={""}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+              />
+            ))
+          )}
         </div>
       </Container>
     </section>

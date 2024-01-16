@@ -30,15 +30,12 @@
         font-size: 28px;
         font-weight: 400;
       }
-      p {
+      p.description {
         font-family: $text-font;
         font-size: 13px;
-        font-weight: 300;
         letter-spacing: 0.5px;
-        span {
-          font-weight: 600;
-          text-transform: uppercase;
-        }
+        font-weight: 600;
+        text-transform: uppercase;
       }
       h3 {
         font-family: $text-font;

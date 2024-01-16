@@ -6,10 +6,14 @@ import Image from "next/image";
 import lightLogo from "../../public/assets/images/lightLogo.png";
 import darkLogo from "../../public/assets/images/darkLogo.png";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
+import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 
 const Navbar = () => {
   const { myMode, myPalette } = ChangeTheme();
   const { t, i18n } = useTranslation();
+  const { homeEndPointData } = FetchingAllEndPointsData();
+
+  const data = homeEndPointData.data.brand;
 
   return (
     <div className="navbar">
@@ -81,8 +85,8 @@ const Navbar = () => {
             className={`phone-icon ${i18n.language == "ar" && "right"}`}
           />
           <div className="text">
-            <p>{t("Call")}</p>
-            <p>+1-555-157-5651</p>
+            <p>{t("Call us for Order ")}</p>
+            <p>{data.mobile}</p>
           </div>
         </div>
       </Container>

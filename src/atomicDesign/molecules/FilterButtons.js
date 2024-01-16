@@ -1,13 +1,15 @@
+import { FetchingAllEndPointsData } from "@/src/context/FetchingDataContext";
+
 const FilterButtons = () => {
+  const { homeEndPointData } = FetchingAllEndPointsData();
+  const categories = homeEndPointData.data.category;
   return (
     <ul className="filterButtons">
-      <li className="active">All Food</li>
-      <li>Burger</li>
-      <li>Pizza</li>
-      <li>Sandwich</li>
-      <li>Cold Drinks</li>
-      <li>Pasta</li>
-      <li>Combo</li>
+      {categories.map((category, index) => (
+        <li className={index == 0 && `active`} key={category.index}>
+          {category.name}
+        </li>
+      ))}
     </ul>
   );
 };

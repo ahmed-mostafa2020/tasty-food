@@ -18,15 +18,17 @@
         font-size: 60px;
         font-weight: 400;
         line-height: 70px;
+        position: relative;
+
         span {
           @extend h1;
           color: $main-color;
           position: relative;
-          img {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-          }
+        }
+        img {
+          position: absolute;
+          bottom: -10px;
+          left: 0;
         }
       }
 

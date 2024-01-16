@@ -11,8 +11,10 @@ import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 const Header = () => {
   const router = useRouter();
   const { myMode, setMyMode, myPalette } = ChangeTheme();
-  const { homeEndPointData } = FetchingAllEndPointsData();
   const { i18n } = useTranslation();
+  const { homeEndPointData } = FetchingAllEndPointsData();
+
+  const data = homeEndPointData.data.brand;
 
   const handleTheme = () => {
     localStorage.setItem("currentMode", myMode === "light" ? "dark" : "light");
@@ -30,7 +32,7 @@ const Header = () => {
         <div className="work-date">
           <AccessTimeIcon />
 
-          <p>{homeEndPointData.data.brand.working_hours}</p>
+          <p>{data.working_hours}</p>
         </div>
 
         <div className="themes">

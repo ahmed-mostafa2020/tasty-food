@@ -5,25 +5,29 @@ import Image from "next/image";
 import heroImage from "../../public/assets/images/Burger.png";
 import underLine from "../../public/assets/images/underLine.svg";
 import BaseImage from "../atomicDesign/atoms/BaseImage";
-// import { ChangeTheme } from "../context/ThemeContext";
+import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 
 const HeroSection = () => {
-  const { t, i18n } = useTranslation();
-  // const { lightTheme, myPalette } = ChangeTheme();
+  const { homeEndPointData } = FetchingAllEndPointsData();
+  const { t } = useTranslation();
+
+  const data = homeEndPointData.data.about;
 
   return (
     <div className="heroSection">
       <Container fixed className="container">
         <div className="text">
           <h1>
-            Welcome To <br /> Our Tasty
+            {/* Welcome To <br /> Our Tasty
             <span>
               {" "}
               Foods <Image src={underLine} alt="underLine" />
-            </span>
+            </span> */}
+            {data.title}
+            <Image src={underLine} alt="underLine" />
           </h1>
 
-          <article> {t("Welcome")}</article>
+          <article> {data.content}</article>
 
           {/* <div className="buttons">
             <AtomicButton
