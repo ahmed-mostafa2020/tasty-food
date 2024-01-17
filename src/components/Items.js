@@ -20,7 +20,7 @@ const Items = () => {
                 <Image
                   className="item-image"
                   loader={() => `${item.image}`}
-                  src={`${item.image}`}
+                  src={item.image}
                   alt="item"
                   width={110}
                   height={75}

@@ -5,43 +5,44 @@
   padding: 40px 0;
   text-align: center;
 
-  article {
-    font: 300 16px $text-font;
-    letter-spacing: 0.5px;
-    line-height: 30px;
-    width: 60%;
-    margin: 0 auto;
-    padding: 10px 0 15px;
-  }
-
   .productsBox {
-    padding: 30px;
+    padding: 0 30px 30px 30px;
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 
     .product {
-      padding: 30px 0;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
+      align-items: center;
       flex-direction: column;
       gap: 7px;
       border-radius: 15px;
       border: 1px solid $dark-text;
       width: 254px;
+      overflow: hidden;
       transition: all 0.15s ease-in-out;
-
-      &:hover {
-        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+      &:hover figure img {
+        transform: translateZ(17px);
+        filter: brightness(0.8);
       }
 
-      img {
-        object-fit: contain;
+      figure {
+        width: 100%;
+        perspective: 200px;
+        height: 150px;
+        overflow: hidden;
+
+        img {
+          object-fit: fill;
+          width: 100%;
+          transition: all 0.4s ease-in-out;
+        }
       }
 
       .text {
-        padding: 0 20px;
+        padding: 15px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -62,6 +63,13 @@
           color: $main-color;
         }
       }
+    }
+
+    .product.light:hover {
+      box-shadow: $light-hover;
+    }
+    .product.dark:hover {
+      box-shadow: $dark-hover;
     }
   }
 }

@@ -1,9 +1,20 @@
 import Image from "next/image";
+import { ChangeTheme } from "../context/ThemeContext";
 
-const Product = ({ image, name, description, price }) => {
+const Product = ({ image, loader, name, description, price }) => {
+  const { myMode } = ChangeTheme();
+
   return (
-    <div className="product">
-      <Image src={image} alt="product" width={250} height={150} />
+    <div className={`product ${myMode}`}>
+      <figure>
+        <Image
+          src={image}
+          loader={() => `${loader}`}
+          alt="product"
+          width={250}
+          height={150}
+        />
+      </figure>
 
       <div className="text">
         <h4> {name} </h4>

@@ -17,7 +17,13 @@ const About = ({ container }) => {
       {container ? (
         <Container className="container">
           <figure>
-            <Image src={aboutImg} alt="about" width={450} height={350} />
+            <Image
+              src={data.image}
+              loader={() => `${data.image}`}
+              alt="about"
+              width={300}
+              height={300}
+            />
             <BaseImage width={450} height={350} />
           </figure>
 
@@ -51,7 +57,13 @@ const About = ({ container }) => {
       ) : (
         <>
           <figure>
-            <Image src={aboutImg} alt="about" width={450} height={350} />
+            <Image
+              src={data.image}
+              loader={() => `${data.image}`}
+              alt="about"
+              width={300}
+              height={300}
+            />
             <BaseImage width={450} height={350} />
           </figure>
 

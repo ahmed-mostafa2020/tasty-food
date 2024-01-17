@@ -9,8 +9,6 @@ import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 
 const HeroSection = () => {
   const { homeEndPointData } = FetchingAllEndPointsData();
-  const { t } = useTranslation();
-
   const data = homeEndPointData.data.slider;
 
   return (
@@ -18,11 +16,6 @@ const HeroSection = () => {
       <Container fixed className="container">
         <div className="text">
           <h1>
-            {/* Welcome To <br /> Our Tasty
-            <span>
-              {" "}
-              Foods <Image src={underLine} alt="underLine" />
-            </span> */}
             {data.title}
             <Image src={underLine} alt="underLine" />
           </h1>
@@ -47,7 +40,13 @@ const HeroSection = () => {
         </div>
 
         <figure className="image">
-          <Image src={heroImage} alt="heroImage" />
+          <Image
+            src={heroImage}
+            alt="heroImage"
+            // loader={() => `${data.image}`}
+            // src={data.image}
+          />
+
           <BaseImage />
         </figure>
       </Container>

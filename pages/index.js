@@ -17,7 +17,7 @@ import Feedback from "../src/components/Feedback";
 import Gallery from "../src/components/Gallery";
 
 const Home = ({ data }) => {
-  const { myPalette } = ChangeTheme();
+  const { myPalette, myMode } = ChangeTheme();
 
   const { t } = useTranslation();
 
@@ -72,15 +72,16 @@ const Home = ({ data }) => {
                         pathname: `/category/${category.slug}`,
                       }}
                     >
-                      <div className="category-box">
-                        <Image
-                          className="category-img"
-                          loader={() => `${category.image}`}
-                          src={`${category.image}`}
-                          alt="category"
-                          width={370}
-                          height={220}
-                        />
+                      <div className={`category-box ${myMode}`}>
+                        <figure className="category-img">
+                          <Image
+                            loader={() => `${category.image}`}
+                            src={`${category.image}`}
+                            alt="category"
+                            width={370}
+                            height={220}
+                          />
+                        </figure>
 
                         <div className="category-info">
                           <h4>{category.name}</h4>

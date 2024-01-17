@@ -5,9 +5,14 @@ import { ChangeTheme } from "../context/ThemeContext";
 import delivery from "../../public/assets/images/Image.png";
 import UpShapedBorder from "../atomicDesign/atoms/UpShapedBorder";
 import DownShapedBorder from "../atomicDesign/atoms/DownShapedBorder";
+import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 
 const Delivery = () => {
   const { myPalette } = ChangeTheme();
+  const { homeEndPointData } = FetchingAllEndPointsData();
+  const firstData = homeEndPointData.data.page3;
+  const secondData = homeEndPointData.data.page4;
+
   return (
     <>
       <section
@@ -20,15 +25,8 @@ const Delivery = () => {
 
         <Container className="container">
           <div>
-            <SectionTitle
-              title={"Choose your favorite food"}
-              fontSize={"30px"}
-            />
-            <article>
-              Egestas amet facilisis cras suspendisse orci volutpat. Enim ut et
-              amet vitae facilisi vel odio nisl. Pellentesque malesuada massa
-              proin cursus elit amet iaculis.
-            </article>
+            <SectionTitle title={firstData.title} fontSize={"30px"} />
+            <article>{firstData.content}</article>
           </div>
 
           <figure>
@@ -36,14 +34,8 @@ const Delivery = () => {
           </figure>
 
           <div>
-            <SectionTitle
-              title={"Order Online and Get Fast Delivery"}
-              fontSize={"30px"}
-            />
-            <article>
-              Egestas amet facilisis cras suspendisse orci volutpat. Enim ut et
-              amet vitae facilisi vel odio nisl.
-            </article>
+            <SectionTitle title={secondData.title} fontSize={"30px"} />
+            <article>{secondData.content}</article>
           </div>
         </Container>
 

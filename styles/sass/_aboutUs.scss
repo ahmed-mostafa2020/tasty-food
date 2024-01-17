@@ -15,10 +15,14 @@
 
   figure {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex: 1;
     position: relative;
+
+    img {
+      border-radius: 10px;
+    }
   }
 
   .text {

@@ -13,11 +13,6 @@ const FilterGallery = () => {
       <Container>
         <SectionTitle title={"Our Popular Tasty Foods"} fontSize={"35px"} />
 
-        <article>
-          Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuada
-          massa proin cursus elit amet iaculis.
-        </article>
-
         <FilterButtons />
 
         <div className="productsBox">
@@ -25,7 +20,8 @@ const FilterGallery = () => {
             category.products.map((product, index) => (
               <Product
                 key={index}
-                // image={""}
+                loader={product.image}
+                image={product.image}
                 name={product.name}
                 description={product.description}
                 price={product.price}
