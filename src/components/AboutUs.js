@@ -4,41 +4,85 @@ import BaseImage from "../atomicDesign/atoms/BaseImage";
 import aboutImg from "../../public/assets/images/about-1 1.png";
 import { FaCheckCircle } from "react-icons/fa";
 import { ChangeTheme } from "../context/ThemeContext";
+import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+import { Container } from "@mui/material";
 
-const About = () => {
+const About = ({ container }) => {
   const { myPalette } = ChangeTheme();
+  const { homeEndPointData } = FetchingAllEndPointsData();
+  const data = homeEndPointData.data.about;
+
   return (
     <section className="aboutUs">
-      <figure>
-        <Image src={aboutImg} alt="about" width={450} height={350} />
-        <BaseImage width={450} height={350} />
-      </figure>
+      {container ? (
+        <Container>
+          <figure>
+            <Image src={aboutImg} alt="about" width={450} height={350} />
+            <BaseImage width={450} height={350} />
+          </figure>
 
-      <div className="text">
-        <SectionTitle title={"About Tasty Foods"} fontSize={"35px"} />
+          <div className="text">
+            <SectionTitle title={data.title} fontSize={"35px"} />
 
-        <article>
-          Egestas amet facilisis cras suspendisse orci volutpat. Enim ut et amet
-          vitae facilisi vel odio nisl. Pellentesque malesuada massa proin
-          cursus elit amet iaculis. Enim ut et amet vitae facilisi vel odio
-          nisl. Pellentesque malesuada massa proin cursus elit amet iaculis.
-        </article>
+            <article>{data.content}</article>
 
-        <ul>
-          <li>
-            <FaCheckCircle style={{ color: myPalette.background.mainColor }} />
-            <p>Delicious & Healthy Foods</p>
-          </li>
-          <li>
-            <FaCheckCircle style={{ color: myPalette.background.mainColor }} />
-            <p>Best Price & Offers</p>
-          </li>
-          <li>
-            <FaCheckCircle style={{ color: myPalette.background.mainColor }} />
-            <p>Made By Fresh Ingredients</p>
-          </li>
-        </ul>
-      </div>
+            <ul>
+              <li>
+                <FaCheckCircle
+                  style={{ color: myPalette.background.mainColor }}
+                />
+                <p>Delicious & Healthy Foods</p>
+              </li>
+              <li>
+                <FaCheckCircle
+                  style={{ color: myPalette.background.mainColor }}
+                />
+                <p>Best Price & Offers</p>
+              </li>
+              <li>
+                <FaCheckCircle
+                  style={{ color: myPalette.background.mainColor }}
+                />
+                <p>Made By Fresh Ingredients</p>
+              </li>
+            </ul>
+          </div>
+        </Container>
+      ) : (
+        <>
+          <figure>
+            <Image src={aboutImg} alt="about" width={450} height={350} />
+            <BaseImage width={450} height={350} />
+          </figure>
+
+          <div className="text">
+            <SectionTitle title={data.title} fontSize={"35px"} />
+
+            <article>{data.content}</article>
+
+            <ul>
+              <li>
+                <FaCheckCircle
+                  style={{ color: myPalette.background.mainColor }}
+                />
+                <p>Delicious & Healthy Foods</p>
+              </li>
+              <li>
+                <FaCheckCircle
+                  style={{ color: myPalette.background.mainColor }}
+                />
+                <p>Best Price & Offers</p>
+              </li>
+              <li>
+                <FaCheckCircle
+                  style={{ color: myPalette.background.mainColor }}
+                />
+                <p>Made By Fresh Ingredients</p>
+              </li>
+            </ul>
+          </div>
+        </>
+      )}
     </section>
   );
 };

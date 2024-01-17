@@ -5,6 +5,8 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Container } from "@mui/material";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
+import AboutUs from "../src/components/AboutUs";
+import Video from "../src/components/Video";
 
 const About = ({ data }) => {
   const { t } = useTranslation();
@@ -24,9 +26,9 @@ const About = ({ data }) => {
           className="about"
           style={{ textAlign: "center", padding: "40px 0" }}
         >
-          <Container fixed className="container">
-            about
-          </Container>
+          <AboutUs container={true} />
+
+          <Video />
         </main>
       </Layout>
     </>
