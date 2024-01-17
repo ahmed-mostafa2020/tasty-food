@@ -18,7 +18,7 @@ const Video = () => {
           <Image src={Polygon} alt="product" width={20} height={20} />
         </Link>
 
-        <SectionTitle title={"Watch The Video"} fontSize={"25px"} />
+        <SectionTitle title={"Watch The Video"} fontSize={"30px"} />
 
         <article>
           Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuada

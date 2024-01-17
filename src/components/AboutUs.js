@@ -15,7 +15,7 @@ const About = ({ container }) => {
   return (
     <section className="aboutUs">
       {container ? (
-        <Container>
+        <Container className="container">
           <figure>
             <Image src={aboutImg} alt="about" width={450} height={350} />
             <BaseImage width={450} height={350} />
