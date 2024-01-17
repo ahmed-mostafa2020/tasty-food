@@ -50,11 +50,11 @@ const Home = ({ data }) => {
 
           <Container fixed className="container">
             <Grid
-              sx={{ marginTop: 0, padding: "30px 0 60px" }}
+              sx={{ marginTop: 0, paddingBottom: "30px" }}
               item
               container
-              rowSpacing={5}
-              columnSpacing={{ sm: 1, md: 2, lg: 3 }}
+              rowSpacing={3}
+              columnSpacing={{ sm: 1, md: 2, lg: 2 }}
             >
               {data &&
                 allCategories.map((category) => (

@@ -22,8 +22,8 @@ const Items = () => {
                   loader={() => `${item.image}`}
                   src={item.image}
                   alt="item"
-                  width={110}
-                  height={75}
+                  width={150}
+                  height={90}
                 />
               </figure>
 

@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
   }
   .item-box {
     display: flex;
@@ -15,10 +16,23 @@
     flex-direction: column;
     padding-bottom: 10px;
     width: 170px;
+
     figure {
-      padding: 10px 20px;
+      width: 150px;
+      height: 90px;
+      margin-bottom: 10px;
+      border-radius: 7px;
+      perspective: 200px;
+      overflow: hidden;
+
+      &:hover img {
+        transform: translateZ(17px);
+        filter: brightness(0.8);
+      }
+
       img {
-        border-radius: 7px;
+        width: 100%;
+        transition: all 0.4s ease-in-out;
       }
     }
     .item-name {
