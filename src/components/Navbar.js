@@ -38,7 +38,19 @@ const Navbar = () => {
             {t("Us")}
           </Link>
 
-          <Link href={"/checkout"} style={{ color: myPalette.text.primary }}>
+          <Link href={"/terms"} style={{ color: myPalette.text.primary }}>
+            {t("Terms")}
+          </Link>
+
+          <Link href={"/menu"} style={{ color: myPalette.text.primary }}>
+            {t("Menu")}
+          </Link>
+
+          <Link href={"/products"} style={{ color: myPalette.text.primary }}>
+            {t("Products")}
+          </Link>
+
+          {/* <Link href={"/checkout"} style={{ color: myPalette.text.primary }}>
             {t("Checkout")}
           </Link>
 
@@ -77,7 +89,7 @@ const Navbar = () => {
             style={{ color: myPalette.text.primary }}
           >
             {t("Reset-password")}
-          </Link>
+          </Link> */}
         </div>
 
         <div className="call">
