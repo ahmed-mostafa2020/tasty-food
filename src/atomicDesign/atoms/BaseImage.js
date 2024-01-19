@@ -8,7 +8,7 @@ const BaseImage = ({ width, height }) => {
       alt="baseImage"
       width={width}
       height={height}
-      style={{ position: "absolute", opacity: 0.4 }}
+      style={{ position: "absolute", zIndex: -1 }}
     />
   );
 };

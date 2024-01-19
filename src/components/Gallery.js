@@ -17,7 +17,7 @@ const Gallery = () => {
 
       <Swiper slidesPerView={5} spaceBetween={10} className="mySwiper">
         {allGallery.map((gallery, index) => (
-          <SwiperSlide key={gallery.index}>
+          <SwiperSlide key={index}>
             <Image
               loader={() => `${gallery}`}
               src={gallery}

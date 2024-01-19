@@ -2,15 +2,11 @@
 @import "./responsive";
 
 .delivery {
-  background: url("../../public/assets/images/L-Footer\ Texture\ img\ 01\ \(1\).png"),
-    no-repeat;
-  // margin: -53px 0 -31px 0;
-  // position: relative;
+  padding: 110px 0;
 
   .container {
     display: flex;
-    align-items: flex-start;
-    padding: 60px 0 10px;
+    align-items: center;
     & > * {
       flex: 1;
     }
@@ -25,7 +21,16 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      margin-top: -30px;
     }
   }
+}
+
+.delivery.light {
+  background: url("../../public/assets/images/BackgroundDelivery.png"),
+    no-repeat;
+}
+
+.delivery.dark {
+  background: url("../../public/assets/images/BackgroundDeliveryDark.png"),
+    no-repeat;
 }

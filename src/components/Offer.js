@@ -10,7 +10,7 @@ const Offer = ({ title, image, description, price }) => {
       </div>
 
       <figure>
-        <Image src={image} alt="discount" width={100} height={100} />
+        <Image src={"/image"} alt="discount" width={100} height={100} />
       </figure>
     </div>
   );

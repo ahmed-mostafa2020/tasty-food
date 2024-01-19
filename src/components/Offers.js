@@ -11,7 +11,7 @@ const Offers = () => {
     <section className="offers">
       {allOffers.map((offer, index) => (
         <Offer
-          key={offer.index}
+          key={index}
           title={offer.title}
           description={offer.description}
           order={"first order"}

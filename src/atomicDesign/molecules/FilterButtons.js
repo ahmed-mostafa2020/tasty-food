@@ -6,7 +6,7 @@ const FilterButtons = () => {
   return (
     <ul className="filterButtons">
       {categories.map((category, index) => (
-        <li className={index == 0 && `active`} key={category.index}>
+        <li className={index == 0 ? `active` : ""} key={index}>
           {category.name}
         </li>
       ))}
