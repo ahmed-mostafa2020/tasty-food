@@ -2,9 +2,10 @@
 @import "./responsive";
 
 .footer {
-  padding: 50px 0;
+  padding: 40px 0;
 
   @include sm {
+    padding-bottom: 40px;
     padding: 25px 0;
   }
 

@@ -5,13 +5,13 @@
   background: url("../../public/assets/images/L-Footer\ Texture\ img\ 01\ \(1\).png"),
     no-repeat;
 
-  svg:first-of-type {
+  & > svg:first-of-type {
     @include sm {
       margin-top: -28px !important;
     }
   }
 
-  svg:last-of-type {
+  & > svg:last-of-type {
     @include sm {
       margin-bottom: -28px !important;
     }

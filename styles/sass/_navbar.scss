@@ -2,34 +2,54 @@
 @import "./responsive";
 
 .navbar {
-  padding: 20px 0;
+  padding: 10px 0 0;
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .logo {
-      object-fit: contain;
-      @include sm {
-        width: 90px;
-      }
-    }
-
-    .links {
+    .box {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
+      gap: 30px;
 
-      a {
-        font-family: $text-font;
-        font-size: 15px;
-        font-weight: 300;
-        line-height: 20px;
-        transition: all 0.15s ease-in-out;
-        &:hover {
-          color: $main-color !important;
+      @include sm {
+        gap: 15px;
+      }
+
+      .logo {
+        object-fit: contain;
+        @include sm {
+          width: 90px;
+        }
+      }
+
+      .links {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        @include sm {
+          gap: 10px;
+        }
+
+        a {
+          font-family: $text-font;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 20px;
+          transition: all 0.15s ease-in-out;
+          &:hover {
+            color: $main-color !important;
+          }
+
+          @include sm {
+            font-size: 14px;
+          }
         }
       }
     }

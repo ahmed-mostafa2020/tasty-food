@@ -7,8 +7,6 @@ import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 const CopyRights = () => {
   const { myPalette } = ChangeTheme();
   const { homeEndPointData } = FetchingAllEndPointsData();
-  const { t } = useTranslation();
-
   const data = homeEndPointData.data.brand;
 
   return (
@@ -20,7 +18,7 @@ const CopyRights = () => {
         <p className="rights">{data.copy_rights}</p>
 
         <Link href={"/"} style={{ color: myPalette.text.primary }}>
-          {homeEndPointData.data.terms_slug}
+          {homeEndPointData.data.terms.title}
         </Link>
       </Container>
     </section>

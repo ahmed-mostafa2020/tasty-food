@@ -18,39 +18,40 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Container fixed className="container">
-        <Link href={"/"}>
-          <Image
-            className="logo"
-            src={myMode == "light" ? lightLogo : darkLogo}
-            alt="logo"
-            width={110}
-            height={60}
-          />
-        </Link>
-
-        <div className="links">
-          <Link href={"/"} style={{ color: myPalette.text.primary }}>
-            {t("Home")}
+        <div className="box">
+          <Link href={"/"}>
+            <Image
+              className="logo"
+              src={myMode == "light" ? lightLogo : darkLogo}
+              alt="logo"
+              width={110}
+              height={60}
+            />
           </Link>
 
-          <Link href={"/about"} style={{ color: myPalette.text.primary }}>
-            {t("About")} {""}
-            {t("Us")}
-          </Link>
+          <div className="links">
+            <Link href={"/"} style={{ color: myPalette.text.primary }}>
+              {t("Home")}
+            </Link>
 
-          <Link href={"/terms"} style={{ color: myPalette.text.primary }}>
-            {t("Terms")}
-          </Link>
+            <Link href={"/about"} style={{ color: myPalette.text.primary }}>
+              {t("About")} {""}
+              {t("Us")}
+            </Link>
 
-          <Link href={"/menu"} style={{ color: myPalette.text.primary }}>
-            {t("Menu")}
-          </Link>
+            <Link href={"/terms"} style={{ color: myPalette.text.primary }}>
+              {t("Terms")}
+            </Link>
 
-          <Link href={"/products"} style={{ color: myPalette.text.primary }}>
-            {t("Products")}
-          </Link>
+            <Link href={"/menu"} style={{ color: myPalette.text.primary }}>
+              {t("Menu")}
+            </Link>
 
-          {/* <Link href={"/checkout"} style={{ color: myPalette.text.primary }}>
+            <Link href={"/products"} style={{ color: myPalette.text.primary }}>
+              {t("Products")}
+            </Link>
+
+            {/* <Link href={"/checkout"} style={{ color: myPalette.text.primary }}>
             {t("Checkout")}
           </Link>
 
@@ -90,6 +91,7 @@ const Navbar = () => {
           >
             {t("Reset-password")}
           </Link> */}
+          </div>
         </div>
 
         <div className="call">
