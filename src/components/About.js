@@ -28,7 +28,7 @@ const About = () => {
 
         <article>{data.content}</article>
 
-        <ul>
+        {/* <ul>
           <li>
             <FaCheckCircle style={{ color: myPalette.background.mainColor }} />
             <p>Delicious & Healthy Foods</p>
@@ -41,7 +41,7 @@ const About = () => {
             <FaCheckCircle style={{ color: myPalette.background.mainColor }} />
             <p>Made By Fresh Ingredients</p>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </>
   );

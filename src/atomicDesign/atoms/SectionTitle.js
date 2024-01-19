@@ -1,6 +1,9 @@
 const SectionTitle = ({ title, fontSize }) => {
   return (
-    <h2 className="sectionTitle" style={{ fontSize: fontSize }}>
+    <h2
+      className="sectionTitle"
+      style={{ fontSize: fontSize, textTransform: "capitalize" }}
+    >
       {title}
     </h2>
   );

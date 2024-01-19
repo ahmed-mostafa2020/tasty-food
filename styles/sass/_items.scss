@@ -4,27 +4,26 @@
 .items {
   padding: 15px 0 20px 0;
   @include sm {
-    margin: -21px 0 -12px 0;
+    margin: -21px 0 -14px 0;
   }
 
   .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
   }
   .item-box {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 10px;
+    gap: 7px;
     width: 170px;
 
     figure {
       width: 150px;
       height: 90px;
-      margin-bottom: 10px;
       border-radius: 7px;
       perspective: 200px;
       overflow: hidden;
