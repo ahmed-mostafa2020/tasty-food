@@ -7,5 +7,11 @@
   .bottomWrapper {
     background: url("../../public/assets/images/L-Footer\ Texture\ img\ 01\ \(1\).png"),
       no-repeat;
+
+    & > svg {
+      @include sm {
+        margin-top: -24px !important;
+      }
+    }
   }
 }

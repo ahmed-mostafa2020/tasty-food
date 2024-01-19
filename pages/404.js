@@ -57,8 +57,8 @@ const Custom404 = ({ data }) => {
                 content={"Go Back To Home Page"}
                 href={"/"}
                 bgColor={myPalette.background.mainColor}
-                borderColor={myPalette.text.mainColor}
-                textColor={myPalette.divider.primary}
+                borderColor={myPalette.text.secColor}
+                textColor={myPalette.text.light}
               />
             </div>
           </Container>
