@@ -2,13 +2,27 @@
 @import "./responsive";
 
 .delivery {
-  padding: 110px 0;
+  padding: 90px 0;
+  @include sm {
+    padding: 70px 0;
+  }
 
   .container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     & > * {
       flex: 1;
+      @include sm {
+        flex: auto;
+      }
+    }
+
+    .sectionTitle {
+      @include sm {
+        font-size: 25px !important;
+      }
     }
 
     article {
@@ -21,6 +35,16 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
+      @include sm {
+        align-items: center;
+      }
+      img {
+        object-fit: contain;
+        @include sm {
+          width: 250px;
+          height: 150px;
+        }
+      }
     }
   }
 }

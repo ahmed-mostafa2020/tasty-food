@@ -51,9 +51,11 @@ const Home = ({ data }) => {
 
           <FilterGallery />
 
+          <Feedback />
+
           <Container fixed className="container">
             <Grid
-              sx={{ marginTop: 0, paddingBottom: "30px" }}
+              sx={{ marginTop: 0 }}
               item
               container
               rowSpacing={3}
@@ -95,8 +97,6 @@ const Home = ({ data }) => {
                 ))}
             </Grid>
           </Container>
-
-          <Feedback />
 
           <Gallery />
         </main>

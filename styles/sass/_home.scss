@@ -3,6 +3,7 @@
 
 .home {
   .container {
+    padding: 20px 0;
     .column {
       display: flex;
       justify-content: center;
@@ -21,13 +22,18 @@
           transform: translateZ(17px);
           filter: brightness(0.8);
         }
+
         figure.category-img {
           height: 220px;
           perspective: 200px;
           overflow: hidden;
 
+          @include sm {
+            height: 170px;
+          }
+
           img {
-            height: 220px;
+            height: 100%;
             border-radius: 20px 20px 0px 0px;
             transition: all 0.4s ease-in-out;
           }
@@ -35,7 +41,7 @@
 
         .category-info {
           width: 100%;
-          padding: 20px 20px 40px;
+          padding: 20px;
           background-color: #fff;
           border-radius: 0px 0px 20px 20px;
           border-left: 1.5px solid $border;
@@ -47,6 +53,9 @@
             font-size: 20px;
             font-weight: 400;
             line-height: 32px;
+            @include sm {
+              font-size: 16px;
+            }
           }
         }
       }

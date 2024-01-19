@@ -3,6 +3,11 @@
 
 .footer {
   padding: 50px 0;
+
+  @include sm {
+    padding: 25px 0;
+  }
+
   .container {
     display: flex;
     justify-content: center;
@@ -15,9 +20,17 @@
       flex-direction: column;
       gap: 30px;
       width: 100%;
-      @include xl {
-        justify-content: center;
-        align-items: center;
+
+      @include sm {
+        gap: 10px;
+      }
+
+      img {
+        object-fit: contain;
+
+        @include sm {
+          width: 90px;
+        }
       }
 
       h6 {
@@ -28,9 +41,9 @@
         display: flex;
         align-items: flex-start;
         width: 100%;
-        @include xl {
-          justify-content: center;
-          align-items: center;
+
+        @include sm {
+          font-size: 18px;
         }
       }
 
@@ -44,6 +57,10 @@
           font-size: 20px;
           font-weight: 700;
           line-height: 20px;
+
+          @include sm {
+            font-size: 18px;
+          }
         }
       }
 
@@ -61,15 +78,17 @@
           &:hover {
             color: $main-color !important;
           }
+
+          @include sm {
+            font-size: 16px;
+            line-height: 26px;
+          }
         }
       }
 
       .get-in-touch {
         @extend .opening-hours;
         gap: 25px;
-        @include xl {
-          margin-left: 27%;
-        }
 
         .box {
           display: flex;

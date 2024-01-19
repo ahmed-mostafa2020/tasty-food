@@ -5,16 +5,37 @@
   background: url("../../public/assets/images/L-Footer\ Texture\ img\ 01\ \(1\).png"),
     no-repeat;
 
+  svg:first-of-type {
+    @include sm {
+      margin-top: -28px !important;
+    }
+  }
+
+  svg:last-of-type {
+    @include sm {
+      margin-bottom: -28px !important;
+    }
+  }
+
   .container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    padding: 30px 0;
+
+    .sectionTitle {
+      @include sm {
+        font-size: 25px !important;
+      }
+    }
 
     & > p {
       width: 50%;
       margin: 0 auto;
+      @include sm {
+        width: 90%;
+        font-size: 14px;
+      }
     }
 
     .testimonialBox {
@@ -22,7 +43,7 @@
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
-      padding: 40px;
+      padding: 30px 0;
 
       .testimonial {
         padding: 40px;
