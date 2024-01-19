@@ -7,18 +7,18 @@ import lightLogo from "../../public/assets/images/lightLogo.png";
 import darkLogo from "../../public/assets/images/darkLogo.png";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+import TemporaryDrawer from "../components/TemporaryDrawer";
 
 const Navbar = () => {
   const { myMode, myPalette } = ChangeTheme();
   const { t, i18n } = useTranslation();
   const { homeEndPointData } = FetchingAllEndPointsData();
-
   const data = homeEndPointData.data.brand;
 
   return (
     <div className="navbar">
       <Container fixed className="container">
-        <div className="box">
+        <div className="logoBox">
           <Link href={"/"}>
             <Image
               className="logo"
@@ -103,8 +103,9 @@ const Navbar = () => {
             <p>{data.mobile}</p>
           </div>
         </div>
+
+        <TemporaryDrawer />
       </Container>
-      {/* <p>{data.message}</p> */}
     </div>
   );
 };

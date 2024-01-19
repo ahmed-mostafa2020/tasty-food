@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    .box {
+    .logoBox {
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -35,6 +35,7 @@
 
         @include sm {
           gap: 10px;
+          display: none;
         }
 
         a {
@@ -95,6 +96,91 @@
             @include sm {
               font-size: 14px;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+// sidebar
+
+.burgerIcon {
+  display: none;
+  @include sm {
+    display: block;
+  }
+}
+
+.sidebar {
+  figure {
+    padding: 20px 20px 0 20px;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+
+    @include sm {
+      gap: 10px;
+    }
+
+    a {
+      font-family: $text-font;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      align-items: end;
+      gap: 7px;
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        color: $main-color !important;
+      }
+    }
+  }
+
+  .callBox {
+    padding: 20px;
+    .call {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+
+      .phone-icon {
+        font-size: 25px;
+      }
+      .phone-icon.right {
+        transform: rotateY(180deg);
+      }
+
+      .text {
+        p {
+          &:first-child {
+            font-family: $text-font;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 20px;
+          }
+          &:last-child {
+            color: $sec-color;
+            font-family: $text-font;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 20px;
           }
         }
       }
