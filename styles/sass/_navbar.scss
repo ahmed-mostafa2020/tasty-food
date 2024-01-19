@@ -2,7 +2,11 @@
 @import "./responsive";
 
 .navbar {
-  padding: 10px 0 0;
+  padding: 20px 0 0;
+
+  @include sm {
+    padding: 10px 0 0;
+  }
 
   .container {
     display: flex;
@@ -55,46 +59,54 @@
       }
     }
 
-    .call {
+    .callBox {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
+      gap: 20px;
+
       @include sm {
         display: none;
-        gap: 5px;
       }
 
-      .phone-icon {
-        font-size: 35px;
+      .call {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
         @include sm {
-          font-size: 24px;
+          gap: 5px;
         }
-      }
-      .phone-icon.right {
-        transform: rotateY(180deg);
-      }
 
-      .text {
-        p {
-          &:first-child {
-            font-family: $text-font;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 20px;
-            @include sm {
-              font-size: 11px;
-            }
+        .phone-icon {
+          font-size: 35px;
+          @include sm {
+            font-size: 24px;
           }
-          &:last-child {
-            color: $sec-color;
-            font-family: $text-font;
-            font-size: 22px;
-            font-weight: 700;
-            line-height: 20px;
+        }
+        .phone-icon.right {
+          transform: rotateY(180deg);
+        }
 
-            @include sm {
+        .text {
+          p {
+            &:first-child {
+              font-family: $text-font;
               font-size: 14px;
+              font-weight: 400;
+              line-height: 20px;
+              @include sm {
+                font-size: 11px;
+              }
+            }
+            &:last-child {
+              color: $sec-color;
+              font-family: $text-font;
+              font-size: 22px;
+              font-weight: 700;
+              line-height: 20px;
+
+              @include sm {
+                font-size: 14px;
+              }
             }
           }
         }
@@ -113,6 +125,8 @@
 }
 
 .sidebar {
+  height: 100%;
+
   figure {
     padding: 20px 20px 0 20px;
 
@@ -153,7 +167,12 @@
   }
 
   .callBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
     padding: 20px;
+
     .call {
       display: flex;
       justify-content: flex-start;
@@ -186,4 +205,13 @@
       }
     }
   }
+}
+
+.sidebar.light {
+  color: $light-text;
+}
+
+.sidebar.dark {
+  color: $dark-text;
+  background-color: $dark-bg;
 }

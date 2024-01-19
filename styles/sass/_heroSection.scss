@@ -18,8 +18,10 @@
     .text {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       gap: 20px;
       flex: 1;
+
       h1 {
         font-family: $topic-font;
         font-size: 60px;

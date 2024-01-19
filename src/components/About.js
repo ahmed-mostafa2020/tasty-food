@@ -4,6 +4,7 @@ import BaseImage from "../atomicDesign/atoms/BaseImage";
 import { FaCheckCircle } from "react-icons/fa";
 import { ChangeTheme } from "../context/ThemeContext";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+import AtomicButton from "../atomicDesign/atoms/AtomicButton";
 
 const About = () => {
   const { myPalette } = ChangeTheme();
@@ -24,24 +25,18 @@ const About = () => {
       </figure>
 
       <div className="text">
-        <SectionTitle title={data.title} fontSize={"35px"} />
+        <div>
+          <SectionTitle title={data.title} fontSize={"35px"} />
 
-        <article>{data.content}</article>
+          <article>{data.content}</article>
+        </div>
 
-        {/* <ul>
-          <li>
-            <FaCheckCircle style={{ color: myPalette.background.mainColor }} />
-            <p>Delicious & Healthy Foods</p>
-          </li>
-          <li>
-            <FaCheckCircle style={{ color: myPalette.background.mainColor }} />
-            <p>Best Price & Offers</p>
-          </li>
-          <li>
-            <FaCheckCircle style={{ color: myPalette.background.mainColor }} />
-            <p>Made By Fresh Ingredients</p>
-          </li>
-        </ul> */}
+        <AtomicButton
+          content={"Order Online"}
+          href={"/"}
+          bgColor={myPalette.background.secColor}
+          textColor={myPalette.text.dark}
+        />
       </div>
     </>
   );

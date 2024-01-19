@@ -53,13 +53,14 @@ const Custom404 = ({ data }) => {
                 back and try a different link.
               </p>
 
-              <AtomicButton
-                content={"Go Back To Home Page"}
-                href={"/"}
-                bgColor={myPalette.background.mainColor}
-                borderColor={myPalette.text.secColor}
-                textColor={myPalette.text.light}
-              />
+              <div className="buttonBox">
+                <AtomicButton
+                  content={"Go Back To Home Page"}
+                  href={"/"}
+                  bgColor={myPalette.background.mainColor}
+                  textColor={myPalette.text.light}
+                />
+              </div>
             </div>
           </Container>
         </main>

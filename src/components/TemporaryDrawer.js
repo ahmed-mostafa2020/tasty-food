@@ -19,6 +19,7 @@ import FastfoodIcon from "@mui/icons-material/Fastfood";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+import AtomicButton from "../atomicDesign/atoms/AtomicButton";
 
 const TemporaryDrawer = () => {
   const { myMode, myPalette } = ChangeTheme();
@@ -28,6 +29,7 @@ const TemporaryDrawer = () => {
 
   const [state, setState] = React.useState({
     left: false,
+    right: false,
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -43,7 +45,7 @@ const TemporaryDrawer = () => {
 
   const list = (anchor) => (
     <Box
-      className="sidebar"
+      className={`sidebar ${myMode}`}
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
@@ -101,22 +103,49 @@ const TemporaryDrawer = () => {
             <p>{data.mobile}</p>
           </div>
         </div>
+
+        <AtomicButton
+          content={"Order Online"}
+          href={"/"}
+          bgColor={myPalette.background.mainColor}
+          textColor={myPalette.text.light}
+        />
       </div>
     </Box>
   );
 
   return (
     <div className="burgerIcon">
-      <Button onClick={toggleDrawer("left", true)} color="inherit">
-        <MenuIcon />
-      </Button>
-      <Drawer
-        anchor={"left"}
-        open={state["left"]}
-        onClose={toggleDrawer("left", false)}
-      >
-        {list("left")}
-      </Drawer>
+      {i18n.language == "en" ? (
+        <>
+          <Button onClick={toggleDrawer("left", true)} color="inherit">
+            <MenuIcon />
+          </Button>
+
+          <Drawer
+            anchor={"left"}
+            open={state["left"]}
+            onClose={toggleDrawer("left", false)}
+          >
+            {list("right")}
+          </Drawer>
+        </>
+      ) : (
+        <>
+          <Button onClick={toggleDrawer("right", true)} color="inherit">
+            <MenuIcon />
+          </Button>
+
+          <Drawer
+            anchor={"right"}
+            open={state["right"]}
+            onClose={toggleDrawer("right", false)}
+            sx={{ direction: "rtl" }}
+          >
+            {list("right")}
+          </Drawer>
+        </>
+      )}
     </div>
   );
 };

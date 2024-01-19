@@ -8,6 +8,7 @@ import darkLogo from "../../public/assets/images/darkLogo.png";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import TemporaryDrawer from "../components/TemporaryDrawer";
+import AtomicButton from "../atomicDesign/atoms/AtomicButton";
 
 const Navbar = () => {
   const { myMode, myPalette } = ChangeTheme();
@@ -94,14 +95,23 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="call">
-          <AddIcCallIcon
-            className={`phone-icon ${i18n.language == "ar" && "right"}`}
-          />
-          <div className="text">
-            <p>{t("Call us for Order ")}</p>
-            <p>{data.mobile}</p>
+        <div className="callBox">
+          <div className="call">
+            <AddIcCallIcon
+              className={`phone-icon ${i18n.language == "ar" && "right"}`}
+            />
+            <div className="text">
+              <p>{t("Call us for Order ")}</p>
+              <p>{data.mobile}</p>
+            </div>
           </div>
+
+          <AtomicButton
+            content={"Order Online"}
+            href={"/"}
+            bgColor={myPalette.background.mainColor}
+            textColor={myPalette.text.light}
+          />
         </div>
 
         <TemporaryDrawer />
