@@ -9,6 +9,10 @@
       no-repeat;
     padding-bottom: 70px;
     margin-bottom: -40px;
+
+    @include sm {
+      padding-bottom: 0;
+    }
   }
 
   .bottomWrapper {

@@ -2,9 +2,11 @@
 @import "./responsive";
 
 .items {
-  // background: url("../../public/assets/images/BackgroundDelivery.png"),
-  //   no-repeat;
-  padding: 10px 0 15px 0;
+  padding: 15px 0 20px 0;
+  @include sm {
+    margin: -21px 0 -12px 0;
+  }
+
   .container {
     display: flex;
     justify-content: center;
