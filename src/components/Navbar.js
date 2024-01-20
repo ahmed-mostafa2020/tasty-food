@@ -111,6 +111,7 @@ const Navbar = () => {
             href={"/"}
             bgColor={myPalette.background.mainColor}
             textColor={myPalette.text.light}
+            shadowColor={myPalette.shadowColor.red}
           />
         </div>
 

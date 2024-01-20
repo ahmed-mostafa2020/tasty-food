@@ -35,6 +35,7 @@ const About = () => {
           href={"/"}
           bgColor={myPalette.background.secColor}
           textColor={myPalette.text.dark}
+          shadowColor={myPalette.shadowColor.yellow}
         />
       </div>
     </>

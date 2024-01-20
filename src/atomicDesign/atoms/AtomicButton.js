@@ -1,25 +1,17 @@
 import Link from "next/link";
 import { ChangeTheme } from "../../context/ThemeContext";
 
-const AtomicButton = ({ content, bgColor, borderColor, textColor, href }) => {
+const AtomicButton = ({ content, bgColor, shadowColor, textColor, href }) => {
   const { myPalette } = ChangeTheme();
 
   const style = {
-    padding: " 12px 30px",
-    display: "flex",
-    justifyContent: "center",
-    width: "fit-content",
-    textAlign: "center",
-    fontSize: "16px",
-    fontWeight: "400",
-    lineHeight: "20px",
-    borderRadius: "50px",
+    boxShadow: `0 20px 30px ${shadowColor}`,
     backgroundColor: `${bgColor}`,
     color: textColor ? `${textColor}` : `${myPalette.text.primary}`,
   };
 
   return (
-    <Link style={style} href={`${href}`}>
+    <Link className="atomicButton" style={style} href={`${href}`}>
       {content}
     </Link>
   );

@@ -34,6 +34,10 @@ const DarkThemeProvider = ({ children }) => {
           border: {
             primary: "#898989",
           },
+          shadowColor: {
+            red: "rgba(207, 20, 34, 0.3)",
+            yellow: "rgba(254, 194, 35, 0.3)",
+          },
         }
       : {
           background: {
@@ -55,6 +59,10 @@ const DarkThemeProvider = ({ children }) => {
           },
           border: {
             primary: "#898989",
+          },
+          shadowColor: {
+            red: "rgba(207, 20, 34, 0.3)",
+            yellow: "rgba(254, 194, 35, 0.3)",
           },
         };
 
