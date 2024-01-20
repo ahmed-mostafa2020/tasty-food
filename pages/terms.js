@@ -26,7 +26,7 @@ const Terms = ({ data }) => {
         <LayoutTopWrapper title={terms.title} />
         <main className="terms">
           <Container fixed className="container">
-            {terms.content}
+            <div dangerouslySetInnerHTML={{ __html: terms.content }} />
           </Container>
         </main>
       </Layout>
