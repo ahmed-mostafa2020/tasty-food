@@ -74,7 +74,7 @@ const TemporaryDrawer = () => {
 
         <AtomicButton
           content={"Order Online"}
-          href={"/"}
+          href={`${data.elmenus_url}`}
           bgColor={myPalette.background.mainColor}
           textColor={myPalette.text.light}
           shadowColor={myPalette.shadowColor.red}

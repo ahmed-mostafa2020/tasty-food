@@ -9,6 +9,7 @@ const About = () => {
   const { myPalette } = ChangeTheme();
   const { homeEndPointData } = FetchingAllEndPointsData();
   const data = homeEndPointData.data.about;
+  const elmenus = homeEndPointData.data.brand.elmenus_url;
 
   return (
     <>
@@ -32,7 +33,7 @@ const About = () => {
 
         <AtomicButton
           content={"Order Online"}
-          href={"/"}
+          href={`${elmenus}`}
           bgColor={myPalette.background.secColor}
           textColor={myPalette.text.dark}
           shadowColor={myPalette.shadowColor.yellow}

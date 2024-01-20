@@ -11,6 +11,7 @@ const HeroSection = () => {
   const { myPalette } = ChangeTheme();
   const { homeEndPointData } = FetchingAllEndPointsData();
   const data = homeEndPointData.data.slider;
+  const elmenus = homeEndPointData.data.brand.elmenus_url;
 
   return (
     <div className="heroSection">
@@ -27,7 +28,7 @@ const HeroSection = () => {
 
           <AtomicButton
             content={"Order Online"}
-            href={"/"}
+            href={`${elmenus}`}
             bgColor={myPalette.background.secColor}
             textColor={myPalette.text.dark}
             shadowColor={myPalette.shadowColor.yellow}

@@ -22,6 +22,7 @@ const AtomicButton = ({ content, bgColor, shadowColor, textColor, href }) => {
   return (
     <Link
       className="atomicButton"
+      target="_blank"
       style={style}
       href={`${href}`}
       onMouseEnter={handleMouseEnter}
