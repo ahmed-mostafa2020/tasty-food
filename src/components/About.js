@@ -1,7 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "../atomicDesign/atoms/SectionTitle";
 import BaseImage from "../atomicDesign/atoms/BaseImage";
-import { FaCheckCircle } from "react-icons/fa";
 import { ChangeTheme } from "../context/ThemeContext";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import AtomicButton from "../atomicDesign/atoms/AtomicButton";

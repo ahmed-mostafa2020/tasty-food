@@ -27,7 +27,7 @@ const Feedback = () => {
 
         <div className="testimonialBox">
           <Testimonial
-            rating={""}
+            rating={2}
             opinion={
               "Tellus ultrices egestas justo duis. Leo sit quam ultrices turpis libero facilisis faucibus. Nulla elementum sed senectus nunc dolor augue. Blandit hac tempus id blandit urna libero."
             }
@@ -36,7 +36,7 @@ const Feedback = () => {
           />
 
           <Testimonial
-            rating={""}
+            rating={3}
             opinion={
               "Tellus ultrices egestas justo duis. Leo sit quam ultrices turpis libero facilisis faucibus. Nulla elementum sed senectus nunc dolor augue. Blandit hac tempus id blandit urna libero."
             }
