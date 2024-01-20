@@ -4,10 +4,15 @@
 .video {
   background: url("../../public/assets/images/Background-image.png"), no-repeat;
   padding: 170px 0;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @include sm {
+    padding: 160px 0;
+  }
 
   .container {
     display: flex;
@@ -15,7 +20,6 @@
     align-items: center;
     flex-direction: column;
     gap: 7px;
-    // color: $light-bg;
 
     a {
       display: flex;
@@ -28,11 +32,23 @@
       margin-bottom: 10px;
     }
 
+    .sectionTitle {
+      @include sm {
+        font-size: 26px !important;
+      }
+    }
+
     article {
       font: 300 16px $text-font;
       letter-spacing: 0.5px;
       line-height: 30px;
       width: 50%;
+      text-align: center;
+
+      @include sm {
+        width: 90%;
+        line-height: 24px;
+      }
     }
   }
 }

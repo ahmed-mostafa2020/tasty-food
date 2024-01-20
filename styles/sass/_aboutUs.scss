@@ -7,6 +7,10 @@
   flex-wrap: wrap;
   padding: 60px 0 40px;
 
+  @include sm {
+    padding: 0 0 40px;
+  }
+
   .container {
     display: flex;
     gap: 10px;
@@ -50,22 +54,10 @@
       font-weight: 300;
       line-height: 30px;
       letter-spacing: 0.5px;
-    }
 
-    // ul {
-    //   display: flex;
-    //   flex-direction: column;
-    //   gap: 5px;
-    //   li {
-    //     display: flex;
-    //     align-items: center;
-    //     gap: 10px;
-    //     p {
-    //       font: 500 18px $text-font;
-    //       letter-spacing: 0.5px;
-    //       line-height: 25px;
-    //     }
-    //   }
-    // }
+      @include sm {
+        line-height: 24px;
+      }
+    }
   }
 }

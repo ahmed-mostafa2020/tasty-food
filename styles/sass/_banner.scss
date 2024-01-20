@@ -4,6 +4,10 @@
 .banner {
   padding: 50px 0 20px;
 
+  @include sm {
+    padding: 0;
+  }
+
   .container {
     text-align: center;
 
@@ -12,6 +16,10 @@
       font-size: 46px;
       font-weight: 400;
       line-height: 50px;
+
+      @include sm {
+        font-size: 35px;
+      }
 
       span {
         @extend h2;

@@ -14,7 +14,7 @@ const Banner = ({ title, subTitle, text }) => {
           </span>
         </h2>
 
-        <p>{text}</p>
+        {text && <p>{text}</p>}
       </Container>
     </section>
   );

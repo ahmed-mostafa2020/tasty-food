@@ -27,7 +27,7 @@ const About = ({ data }) => {
         <LayoutTopWrapper title={t("About")} subTitle={t("Us")} />
         <main
           className="about"
-          style={{ textAlign: "center", padding: "40px 0" }}
+          // style={{ textAlign: "center", padding: "40px 0" }}
         >
           <AboutUs container={true} />
 

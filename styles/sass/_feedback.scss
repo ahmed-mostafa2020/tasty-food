@@ -90,6 +90,10 @@
           letter-spacing: 0.5px;
           line-height: 30px;
           width: 90%;
+
+          @include sm {
+            line-height: 24px;
+          }
         }
 
         .by {

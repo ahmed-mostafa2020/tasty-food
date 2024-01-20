@@ -29,6 +29,10 @@
       font: 300 16px $text-font;
       letter-spacing: 0.5px;
       line-height: 30px;
+
+      @include sm {
+        line-height: 24px;
+      }
     }
 
     figure {
