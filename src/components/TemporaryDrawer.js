@@ -10,16 +10,10 @@ import Link from "next/link";
 import { ChangeTheme } from "../context/ThemeContext";
 import lightLogo from "../../public/assets/images/lightLogo.png";
 import darkLogo from "../../public/assets/images/darkLogo.png";
-
-//Icons
-import HomeIcon from "@mui/icons-material/Home";
-import InfoIcon from "@mui/icons-material/Info";
-import GavelIcon from "@mui/icons-material/Gavel";
-import FastfoodIcon from "@mui/icons-material/Fastfood";
-import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import AtomicButton from "../atomicDesign/atoms/AtomicButton";
+import AddIcCallIcon from "@mui/icons-material/AddIcCall";
+import Links from "../atomicDesign/molecules/Links";
 
 const TemporaryDrawer = () => {
   const { myMode, myPalette } = ChangeTheme();
@@ -63,33 +57,7 @@ const TemporaryDrawer = () => {
         </figure>
       </Link>
 
-      <div className="links">
-        <Link href={"/"} style={{ color: myPalette.text.primary }}>
-          <HomeIcon />
-          {t("Home")}
-        </Link>
-
-        <Link href={"/about"} style={{ color: myPalette.text.primary }}>
-          <InfoIcon />
-          {t("About")} {""}
-          {t("Us")}
-        </Link>
-
-        <Link href={"/terms"} style={{ color: myPalette.text.primary }}>
-          <GavelIcon />
-          {t("Terms")}
-        </Link>
-
-        <Link href={"/menu"} style={{ color: myPalette.text.primary }}>
-          <FastfoodIcon />
-          {t("Menu")}
-        </Link>
-
-        <Link href={"/products"} style={{ color: myPalette.text.primary }}>
-          <ShoppingBasketIcon />
-          {t("Products")}
-        </Link>
-      </div>
+      <Links icons={true} />
 
       <Divider />
 

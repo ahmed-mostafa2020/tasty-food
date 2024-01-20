@@ -18,9 +18,7 @@ import Gallery from "../src/components/Gallery";
 
 const Home = ({ data }) => {
   const { myMode, myPalette } = ChangeTheme();
-
   const { t } = useTranslation();
-
   const allCategories = data.data.category;
 
   return (

@@ -9,6 +9,7 @@ import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+import Links from "../atomicDesign/molecules/Links";
 
 const Footer = () => {
   const { myMode, myPalette } = ChangeTheme();
@@ -26,7 +27,7 @@ const Footer = () => {
           rowSpacing={5}
           columnSpacing={{ sm: 1, md: 2, lg: 3 }}
         >
-          <Grid item xs={12} sm={6} md={6} lg={3}>
+          <Grid item xs={12} sm={6} md={6} lg={4}>
             <div className="column">
               <Link href={"/"}>
                 <Image
@@ -48,38 +49,15 @@ const Footer = () => {
             </div>
           </Grid>
 
-          <Grid className="grid-box" item xs={12} sm={6} md={6} lg={3}>
+          <Grid className="grid-box" item xs={6} sm={6} md={6} lg={4}>
             <div className="column">
               <h6>{t("Quick-links")}</h6>
-              <div className="links">
-                <Link href={"/"} style={{ color: myPalette.text.primary }}>
-                  {t("Home")}
-                </Link>
 
-                <Link href={"/about"} style={{ color: myPalette.text.primary }}>
-                  {t("About")} {""}
-                  {t("Us")}
-                </Link>
-
-                <Link href={"/terms"} style={{ color: myPalette.text.primary }}>
-                  {t("Terms")}
-                </Link>
-
-                <Link href={"/menu"} style={{ color: myPalette.text.primary }}>
-                  {t("Menu")}
-                </Link>
-
-                <Link
-                  href={"/products"}
-                  style={{ color: myPalette.text.primary }}
-                >
-                  {t("Products")}
-                </Link>
-              </div>
+              <Links />
             </div>
           </Grid>
 
-          <Grid className="grid-box" item xs={12} sm={6} md={6} lg={3}>
+          {/* <Grid className="grid-box" item xs={12} sm={6} md={6} lg={3}>
             <div className="column">
               <h6>{t("Our-menu")}</h6>
               <div className="links">
@@ -104,9 +82,9 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-          </Grid>
+          </Grid> */}
 
-          <Grid className="grid-box" item xs={12} sm={6} md={6} lg={3}>
+          <Grid className="grid-box" item xs={6} sm={6} md={6} lg={4}>
             <div className="column">
               <h6>{t("Get-in-touch")}</h6>
 
