@@ -52,24 +52,28 @@ const Footer = () => {
             <div className="column">
               <h6>{t("Quick-links")}</h6>
               <div className="links">
-                <Link href={"/about"} style={{ color: myPalette.text.primary }}>
-                  {t("About")}
+                <Link href={"/"} style={{ color: myPalette.text.primary }}>
+                  {t("Home")}
                 </Link>
 
-                <Link href={"/"} style={{ color: myPalette.text.primary }}>
+                <Link href={"/about"} style={{ color: myPalette.text.primary }}>
+                  {t("About")} {""}
+                  {t("Us")}
+                </Link>
+
+                <Link href={"/terms"} style={{ color: myPalette.text.primary }}>
+                  {t("Terms")}
+                </Link>
+
+                <Link href={"/menu"} style={{ color: myPalette.text.primary }}>
                   {t("Menu")}
                 </Link>
 
-                <Link href={"/"} style={{ color: myPalette.text.primary }}>
-                  {t("Testimonial")}
-                </Link>
-
-                <Link href={"/"} style={{ color: myPalette.text.primary }}>
-                  {t("Blog")}
-                </Link>
-
-                <Link href={"/"} style={{ color: myPalette.text.primary }}>
-                  {t("Contact")}
+                <Link
+                  href={"/products"}
+                  style={{ color: myPalette.text.primary }}
+                >
+                  {t("Products")}
                 </Link>
               </div>
             </div>

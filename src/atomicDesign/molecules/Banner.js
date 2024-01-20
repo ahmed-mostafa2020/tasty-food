@@ -9,9 +9,11 @@ const Banner = ({ title, subTitle, text }) => {
       <Container className="container" fixed>
         <h2>
           {title}{" "}
-          <span style={{ color: `${myPalette.background.mainColor}` }}>
-            {subTitle}
-          </span>
+          {{ subTitle } && (
+            <span style={{ color: `${myPalette.background.mainColor}` }}>
+              {subTitle}
+            </span>
+          )}
         </h2>
 
         {text && <p>{text}</p>}
