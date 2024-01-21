@@ -37,8 +37,6 @@ const Home = ({ data }) => {
         <main className="home">
           <Items />
 
-          {/* <DownShapedBorder fill={myPalette.background.shaped_border} /> */}
-
           <Container fixed className="container">
             <Offers />
 

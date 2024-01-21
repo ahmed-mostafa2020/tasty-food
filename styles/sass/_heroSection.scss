@@ -31,7 +31,7 @@
         font-weight: 400;
         line-height: 70px;
         position: relative;
-        @include lg {
+        @include xl {
           font-size: 30px;
           line-height: 30px;
         }
@@ -55,7 +55,7 @@
       flex: 1;
 
       img {
-        @include lg {
+        @include xxl {
           width: 350px;
           height: 260px;
           object-fit: contain;

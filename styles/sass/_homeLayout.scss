@@ -7,17 +7,17 @@
   .topWrapper {
     background: url("../../public/assets/images/Banner\ Texture\ img\ 01.png"),
       no-repeat;
-    padding-bottom: 70px;
+    padding-bottom: 20px;
     margin-bottom: -40px;
-
-    & > svg {
-      @include lg {
-        margin-bottom: -24px !important;
-      }
-    }
 
     @include sm {
       padding-bottom: 0;
+    }
+  }
+
+  & > svg {
+    @include xl {
+      margin-bottom: -24px !important;
     }
   }
 

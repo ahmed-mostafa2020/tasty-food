@@ -25,7 +25,7 @@
 
       .logo {
         object-fit: contain;
-        @include sm {
+        @include md {
           width: 90px;
         }
       }
@@ -37,7 +37,7 @@
         flex-wrap: wrap;
         gap: 15px;
 
-        @include lg {
+        @include xl {
           gap: 10px;
           display: none;
         }
@@ -70,7 +70,7 @@
       display: flex;
       gap: 20px;
 
-      @include sm {
+      @include md {
         display: none;
       }
 
@@ -126,7 +126,7 @@
 
 .burgerIcon {
   display: none;
-  @include lg {
+  @include xl {
     display: block;
   }
 }

@@ -1,4 +1,3 @@
-import { ChangeTheme } from "@/src/context/ThemeContext";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
