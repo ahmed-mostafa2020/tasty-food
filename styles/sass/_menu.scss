@@ -1,0 +1,78 @@
+@import "./variables";
+@import "./responsive";
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 40px;
+
+  @include sm {
+    gap: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .menuItem {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .sectionTitle {
+        text-align: center;
+      }
+
+      .subItemsContainer {
+        max-height: 100px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 60px;
+
+        @include sm {
+          max-height: fit-content;
+          flex-wrap: nowrap;
+        }
+
+        .subItem {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+
+          .subItemBox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // width: 90%;
+            gap: 5px;
+
+            h4 {
+              font: 700 20px $text-font;
+              text-align: start;
+            }
+
+            span {
+              display: inline-block;
+              color: $gary-dark-text;
+            }
+
+            h5 {
+              font: 700 18px $text-font;
+              text-align: end;
+              color: $main-color;
+            }
+          }
+
+          p {
+            font: 300 16px $text-font;
+            color: $gary-dark-text;
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}

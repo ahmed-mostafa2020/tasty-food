@@ -10,7 +10,8 @@
 @import "./_orders.scss";
 @import "./_about.scss";
 @import "./_categoryProducts.scss";
-@import "./errorPage.scss";
+@import "./_errorPage.scss";
+@import "./_menu.scss";
 
 // Components
 @import "./_header.scss";
@@ -29,12 +30,12 @@
 
 // Atomic Design
 @import "./_atomicButton.scss";
-@import "./_banner.scss";
+@import "./_filterButtons.scss";
 @import "./_sectionTitle.scss";
+@import "./_banner.scss";
+@import "./_atomicInput.scss";
 @import "./_layoutTopWrapper.scss";
 @import "./_formTopWrapper.scss";
-@import "./_atomicInput.scss";
-@import "./_filterButtons.scss";
 
 // Layout
 @import "./_homeLayout.scss";
@@ -44,6 +45,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  // border: 1px solid red;
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
