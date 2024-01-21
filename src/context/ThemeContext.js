@@ -9,7 +9,7 @@ export const ChangeTheme = () => {
 };
 
 const DarkThemeProvider = ({ children }) => {
-  const [myMode, setMyMode] = useState("");
+  const [myMode, setMyMode] = useState("light");
 
   const myPalette =
     myMode == "light"
