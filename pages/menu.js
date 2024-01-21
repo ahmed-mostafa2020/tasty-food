@@ -5,60 +5,61 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Container } from "@mui/material";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
-import MenuItem from "../src/components/MenuItem";
 import SectionTitle from "../src/atomicDesign/atoms/SectionTitle";
 
 const Menu = ({ data }) => {
   const { t } = useTranslation();
+  const allCategories = data.data.category;
+  console.log(allCategories);
 
-  const allMenuItems = [
-    {
-      name: "Burger",
-      subItems: [
-        {
-          name: "Cheese Burger",
-          price: "30EGP",
-          description:
-            "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
-        },
-        {
-          name: "Crispy veg cheese Burger",
-          price: "33EGP",
-          description:
-            "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
-        },
-        {
-          name: "Cheese Burger",
-          price: "30EGP",
-          description:
-            "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
-        },
-        {
-          name: "Crispy veg cheese Burger",
-          price: "33EGP",
-          description:
-            "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
-        },
-      ],
-    },
-    {
-      name: "Pizza",
-      subItems: [
-        {
-          name: "Margherita Pizza",
-          price: "35EGP",
-          description:
-            "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
-        },
-        {
-          name: "Garden Delight Pizza",
-          price: "31EGP",
-          description:
-            "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
-        },
-      ],
-    },
-  ];
+  // const allMenuItems = [
+  //   {
+  //     name: "Burger",
+  //     subItems: [
+  //       {
+  //         name: "Cheese Burger",
+  //         price: "30EGP",
+  //         description:
+  //           "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
+  //       },
+  //       {
+  //         name: "Crispy veg cheese Burger",
+  //         price: "33EGP",
+  //         description:
+  //           "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
+  //       },
+  //       {
+  //         name: "Cheese Burger",
+  //         price: "30EGP",
+  //         description:
+  //           "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
+  //       },
+  //       {
+  //         name: "Crispy veg cheese Burger",
+  //         price: "33EGP",
+  //         description:
+  //           "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "Pizza",
+  //     subItems: [
+  //       {
+  //         name: "Margherita Pizza",
+  //         price: "35EGP",
+  //         description:
+  //           "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
+  //       },
+  //       {
+  //         name: "Garden Delight Pizza",
+  //         price: "31EGP",
+  //         description:
+  //           "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
+  //       },
+  //     ],
+  //   },
+  // ];
 
   return (
     <>
@@ -76,20 +77,20 @@ const Menu = ({ data }) => {
         <LayoutTopWrapper title={t("Menu")} />
         <main className="menu">
           <Container fixed className="container">
-            {allMenuItems.map((menuItem, index) => (
-              <section key={index} className="menuItem">
-                <SectionTitle title={menuItem.name} fontSize={"40px"} />
+            {allCategories.map((category, index) => (
+              <section key={index} className="category">
+                <SectionTitle title={category.name} fontSize={"40px"} />
 
-                <div className="subItemsContainer">
-                  {menuItem.subItems.map((subItem, index) => (
-                    <div key={index} className="subItem">
-                      <div className="subItemBox">
-                        <h4>{subItem.name}</h4>
+                <div className="productsContainer">
+                  {category.products.map((product) => (
+                    <div key={product.id} className="product">
+                      <div className="productDetails">
+                        <h4>{product.name}</h4>
                         <span>....</span>
-                        <h5>{subItem.price}</h5>
+                        <h5>{product.price}</h5>
                       </div>
 
-                      <p>{subItem.description}</p>
+                      <p>{product.description}</p>
                     </div>
                   ))}
                 </div>

@@ -6,12 +6,12 @@ import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 
 const FilterGallery = () => {
   const { homeEndPointData } = FetchingAllEndPointsData();
-  const allData = homeEndPointData.data.category;
-  console.log(allData.filter((category, index) => index === 1));
+  const allCategories = homeEndPointData.data.category;
+  console.log(allCategories.filter((category, index) => index === 1));
   console.log(
     Object.assign(
       {},
-      allData.filter((category, index) => index === 1)
+      allCategories.filter((category, index) => index === 1)
     )
   );
 
@@ -23,7 +23,7 @@ const FilterGallery = () => {
         <FilterButtons />
 
         <div className="productsBox">
-          {allData.map((category, index) =>
+          {allCategories.map((category, index) =>
             category.products.map((product, index) => (
               <Product
                 key={index}
