@@ -60,6 +60,9 @@
             font-size: 14px;
           }
         }
+        a.active {
+          color: $main-color !important;
+        }
       }
     }
 
@@ -167,6 +170,10 @@
       &:hover {
         color: $main-color !important;
       }
+    }
+
+    a.active {
+      color: $main-color !important;
     }
   }
 

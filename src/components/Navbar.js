@@ -10,15 +10,17 @@ import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import TemporaryDrawer from "../components/TemporaryDrawer";
 import AtomicButton from "../atomicDesign/atoms/AtomicButton";
 import Links from "../atomicDesign/molecules/Links";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+  const router = useRouter();
   const { myMode, myPalette } = ChangeTheme();
   const { t, i18n } = useTranslation();
   const { homeEndPointData } = FetchingAllEndPointsData();
   const data = homeEndPointData.data.brand;
 
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <Container fixed className="container">
         <div className="logoBox">
           <Link href={"/"}>
@@ -56,7 +58,7 @@ const Navbar = () => {
 
         <TemporaryDrawer />
       </Container>
-    </div>
+    </nav>
   );
 };
 export default Navbar;

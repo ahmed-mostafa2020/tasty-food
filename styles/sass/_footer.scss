@@ -89,6 +89,10 @@
             line-height: 25px;
           }
         }
+
+        a.active {
+          color: $main-color !important;
+        }
       }
 
       .get-in-touch {
