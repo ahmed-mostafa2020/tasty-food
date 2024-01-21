@@ -5,7 +5,7 @@ const DownShapedBorder = ({ fill }) => {
 
   return (
     <svg
-      style={{ marginTop: " -10px", width: "100%" }}
+      style={{ marginTop: " -11px", width: "100%" }}
       src="http://www.w3.org/2000/svg"
       width="1440"
       height="59"

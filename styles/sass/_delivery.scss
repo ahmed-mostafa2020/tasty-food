@@ -20,7 +20,7 @@
     }
 
     .sectionTitle {
-      @include sm {
+      @include md {
         font-size: 25px !important;
       }
     }
@@ -30,7 +30,7 @@
       letter-spacing: 0.5px;
       line-height: 30px;
 
-      @include sm {
+      @include md {
         line-height: 24px;
       }
     }
@@ -39,12 +39,12 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      @include sm {
+      @include md {
         align-items: center;
       }
       img {
         object-fit: contain;
-        @include sm {
+        @include md {
           width: 250px;
           height: 150px;
         }

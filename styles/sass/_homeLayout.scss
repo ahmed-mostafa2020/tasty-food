@@ -20,7 +20,7 @@
       no-repeat;
 
     & > svg {
-      @include sm {
+      @include lg {
         margin-top: -24px !important;
       }
     }

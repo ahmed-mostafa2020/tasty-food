@@ -86,7 +86,7 @@ const Menu = ({ data }) => {
                     <div key={product.id} className="product">
                       <div className="productDetails">
                         <h4>{product.name}</h4>
-                        <span>....</span>
+                        <span>..................................</span>
                         <h5>{product.price}</h5>
                       </div>
 

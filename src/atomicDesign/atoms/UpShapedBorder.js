@@ -1,7 +1,7 @@
 const UpShapedBorder = ({ fill }) => {
   return (
     <svg
-      style={{ marginBottom: " -10px", width: "100%" }}
+      style={{ marginBottom: " -11px", width: "100%" }}
       src="http://www.w3.org/2000/svg"
       width="1440"
       height="59"

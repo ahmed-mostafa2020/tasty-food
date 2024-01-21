@@ -6,13 +6,13 @@
     no-repeat;
 
   & > svg:first-of-type {
-    @include sm {
+    @include lg {
       margin-top: -28px !important;
     }
   }
 
   & > svg:last-of-type {
-    @include sm {
+    @include lg {
       margin-bottom: -28px !important;
     }
   }
