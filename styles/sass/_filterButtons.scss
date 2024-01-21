@@ -15,6 +15,7 @@ ul.filterButtons {
     border: 1px solid $gary-dark-text;
     border-radius: 50px;
     cursor: pointer;
+    user-select: none;
     transition: all 0.15s ease-in-out;
 
     &:hover {
