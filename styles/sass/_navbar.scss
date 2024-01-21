@@ -37,7 +37,7 @@
         flex-wrap: wrap;
         gap: 15px;
 
-        @include sm {
+        @include lg {
           gap: 10px;
           display: none;
         }
@@ -126,7 +126,7 @@
 
 .burgerIcon {
   display: none;
-  @include sm {
+  @include lg {
     display: block;
   }
 }

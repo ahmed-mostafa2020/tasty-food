@@ -27,6 +27,18 @@ const Menu = ({ data }) => {
           description:
             "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
         },
+        {
+          name: "Cheese Burger",
+          price: "30EGP",
+          description:
+            "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
+        },
+        {
+          name: "Crispy veg cheese Burger",
+          price: "33EGP",
+          description:
+            "In justo maecenas viverra pulvinar phasellus mattis ac mi.",
+        },
       ],
     },
     {

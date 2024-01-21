@@ -101,6 +101,7 @@
 
         .box {
           display: flex;
+          align-items: center;
           gap: 10px;
 
           .icon-box {
@@ -119,6 +120,7 @@
           }
 
           p {
+            font-size: 13px;
             word-break: break-all;
           }
         }
