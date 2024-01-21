@@ -6,16 +6,17 @@
   text-align: center;
 
   .sectionTitle {
-    @include sm {
-      font-size: 30px !important;
+    @include md {
+      font-size: 26px !important;
     }
   }
 
   .swiper {
     padding-top: 40px;
-    @include sm {
+    @include md {
       padding-top: 20px;
     }
+
     .swiper-slide {
       cursor: grab;
       height: 280px;
@@ -25,6 +26,11 @@
       &:hover img {
         transform: translateZ(17px);
         filter: brightness(0.8);
+      }
+
+      @include md {
+        width: 120px !important;
+        height: 120px;
       }
 
       @include sm {

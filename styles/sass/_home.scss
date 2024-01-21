@@ -4,10 +4,12 @@
 .home {
   .container {
     padding: 20px;
+
     .column {
       display: flex;
       justify-content: center;
     }
+
     a {
       color: $light-text;
 
@@ -28,7 +30,7 @@
           perspective: 200px;
           overflow: hidden;
 
-          @include sm {
+          @include md {
             height: 170px;
           }
 
@@ -53,7 +55,7 @@
             font-size: 20px;
             font-weight: 400;
             line-height: 32px;
-            @include sm {
+            @include md {
               font-size: 16px;
             }
           }
@@ -68,10 +70,4 @@
       }
     }
   }
-}
-
-.home {
-}
-
-.home.dark {
 }

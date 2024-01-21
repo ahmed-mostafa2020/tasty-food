@@ -49,6 +49,15 @@
 }
 body {
   margin: 0;
+  background-color: unset !important;
+}
+
+body.light {
+  background-color: $light-bg;
+}
+
+body.dark {
+  background-color: $dark-bg;
 }
 
 ol,

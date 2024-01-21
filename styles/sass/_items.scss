@@ -1,6 +1,13 @@
 @import "./variables";
 @import "./responsive";
 
+.itemsWrapper {
+  & > svg {
+    @include xl {
+      margin-top: -24px !important;
+    }
+  }
+}
 .items {
   padding: 15px 0 20px 0;
   @include sm {

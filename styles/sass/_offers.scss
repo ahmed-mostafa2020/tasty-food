@@ -6,9 +6,10 @@
   justify-content: center;
   padding-bottom: 20px;
   flex-wrap: wrap;
-  @include sm {
-    gap: 20px;
-    padding-bottom: 60px;
+
+  @include md {
+    gap: 15px;
+    padding-bottom: 50px;
   }
 
   .offer:first-of-type {
@@ -39,7 +40,11 @@
         font-family: $topic-font;
         font-size: 28px;
         font-weight: 400;
+        @include md {
+          font-size: 26px;
+        }
       }
+
       p.description {
         font-family: $text-font;
         font-size: 13px;
@@ -47,11 +52,16 @@
         font-weight: 600;
         text-transform: uppercase;
       }
+
       h3 {
         font-family: $text-font;
         font-size: 20px;
         font-weight: 800;
         padding-top: 5px;
+
+        @include md {
+          font-size: 18px;
+        }
       }
     }
 

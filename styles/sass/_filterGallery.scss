@@ -10,8 +10,8 @@
   text-align: center;
 
   .sectionTitle {
-    @include sm {
-      font-size: 30px !important;
+    @include md {
+      font-size: 26px !important;
     }
   }
 
@@ -67,13 +67,17 @@
         flex-direction: column;
         gap: 10px;
 
+        @include md {
+          gap: 7px;
+        }
+
         h4 {
           font: 400 22px $topic-font;
           line-height: 30px;
 
-          @include sm {
-            font-size: 20px;
-            line-height: 24px;
+          @include md {
+            font-size: 18px;
+            line-height: 26px;
           }
         }
         p {

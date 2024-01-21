@@ -10,6 +10,12 @@
     padding-bottom: 70px;
     margin-bottom: -40px;
 
+    & > svg {
+      @include lg {
+        margin-bottom: -24px !important;
+      }
+    }
+
     @include sm {
       padding-bottom: 0;
     }

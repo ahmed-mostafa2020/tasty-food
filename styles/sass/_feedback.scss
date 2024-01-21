@@ -24,15 +24,15 @@
     text-align: center;
 
     .sectionTitle {
-      @include sm {
-        font-size: 25px !important;
+      @include md {
+        font-size: 26px !important;
       }
     }
 
     & > p {
       width: 50%;
       margin: 0 auto;
-      @include sm {
+      @include md {
         width: 90%;
         font-size: 14px;
       }
