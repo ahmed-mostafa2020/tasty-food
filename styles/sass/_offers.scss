@@ -22,7 +22,7 @@
   .offer {
     display: flex;
     justify-content: space-between;
-    width: 300px;
+    min-width: 300px;
     color: $light-bg;
     background-color: $gary-dark-bg;
     @include sm {
@@ -38,6 +38,7 @@
 
       h2 {
         font: 400 28px $topic-font;
+        text-transform: uppercase;
         @include md {
           font-size: 26px;
         }

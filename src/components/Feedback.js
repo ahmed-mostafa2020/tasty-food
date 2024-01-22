@@ -6,20 +6,23 @@ import DownShapedBorder from "../atomicDesign/atoms/DownShapedBorder";
 import UpShapedBorder from "../atomicDesign/atoms/UpShapedBorder";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Image } from "../../public/assets/images/footerTexture.png";
 
-const Feedback = () => {
+const Feedback = ({ background }) => {
   const { myPalette } = ChangeTheme();
 
   AOS.init();
 
   return (
     <section
-      className="feedback"
+      className={background ? `feedback` : `feedback withoutBackground`}
       style={{
-        backgroundColor: `${myPalette.background.footer}`,
+        backgroundColor: background && `${myPalette.background.footer}`,
+        backgroundImage: background && `url(${Image})`,
+        backgroundRepeat: "no-repeat",
       }}
     >
-      <DownShapedBorder fill={myPalette.background.default} />
+      {background && <DownShapedBorder fill={myPalette.background.default} />}
 
       <Container className="container">
         <div className="box" data-aos="fade-down" data-aos-once="true">
@@ -52,7 +55,7 @@ const Feedback = () => {
         </div>
       </Container>
 
-      <UpShapedBorder fill={myPalette.background.default} />
+      {background && <UpShapedBorder fill={myPalette.background.default} />}
     </section>
   );
 };

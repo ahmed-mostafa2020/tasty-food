@@ -4,7 +4,7 @@
 .video {
   background: url("../../public/assets/images/Background-image.png"), no-repeat;
   padding: 170px 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +33,7 @@
     }
 
     .sectionTitle {
-      @include sm {
+      @include md {
         font-size: 26px !important;
       }
     }
@@ -45,7 +45,7 @@
       width: 50%;
       text-align: center;
 
-      @include sm {
+      @include md {
         width: 90%;
         line-height: 24px;
       }

@@ -3,10 +3,12 @@ import Layout from "../src/layout/Layout";
 import { API_URLS } from "../src/util/API_URL";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { Container } from "@mui/material";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
 import AboutUs from "../src/components/AboutUs";
 import Video from "../src/components/Video";
+import Feedback from "../src/components/Feedback";
+import Delivery from "../src/components/Delivery";
+import Gallery from "../src/components/Gallery";
 
 const About = ({ data }) => {
   const { t } = useTranslation();
@@ -25,13 +27,16 @@ const About = ({ data }) => {
 
       <Layout>
         <LayoutTopWrapper title={t("About")} subTitle={t("Us")} />
-        <main
-          className="about"
-          // style={{ textAlign: "center", padding: "40px 0" }}
-        >
+        <main className="about">
           <AboutUs container={true} />
 
           <Video />
+
+          <Feedback background={false} />
+
+          <Delivery />
+
+          <Gallery />
         </main>
       </Layout>
     </>

@@ -5,8 +5,7 @@
   width: -webkit-fill-available;
 
   .bottomWrapper {
-    background: url("../../public/assets/images/L-Footer\ Texture\ img\ 01\ \(1\).png"),
-      no-repeat;
+    background: url("../../public/assets/images/footerTexture.png"), no-repeat;
 
     & > svg {
       @include xl {

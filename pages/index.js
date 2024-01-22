@@ -47,7 +47,7 @@ const Home = ({ data }) => {
 
           <FilterGallery />
 
-          <Feedback />
+          <Feedback background={true} />
 
           <Container fixed className="container">
             <Grid
