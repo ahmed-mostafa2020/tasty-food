@@ -40,7 +40,7 @@ const Home = ({ data }) => {
 
           <Feedback background={true} />
 
-          <Container fixed className="container">
+          {/* <Container fixed className="container">
             <Grid
               sx={{ marginTop: 0 }}
               item
@@ -83,7 +83,7 @@ const Home = ({ data }) => {
                   </Grid>
                 ))}
             </Grid>
-          </Container>
+          </Container> */}
 
           <Gallery />
         </main>

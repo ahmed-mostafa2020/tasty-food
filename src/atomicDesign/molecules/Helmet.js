@@ -5,7 +5,7 @@ import { FetchingAllEndPointsData } from "../../context/FetchingDataContext";
 const Helmet = ({ pageName }) => {
   const { t } = useTranslation();
   const { homeEndPointData } = FetchingAllEndPointsData();
-  const data = homeEndPointData.data.brand;
+  const data = homeEndPointData && homeEndPointData.data.brand;
 
   return (
     <Head>
