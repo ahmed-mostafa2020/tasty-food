@@ -120,8 +120,10 @@
           }
 
           p {
-            font-size: 13px;
-            word-break: break-all;
+            @include sm {
+              font-size: 13px;
+              word-break: break-all;
+            }
           }
         }
       }
