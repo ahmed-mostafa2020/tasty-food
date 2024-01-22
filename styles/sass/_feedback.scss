@@ -33,6 +33,7 @@
       p {
         width: 50%;
         margin: 0 auto;
+        font-family: $text-font;
         @include md {
           width: 90%;
           font-size: 14px;

@@ -31,10 +31,7 @@
       text-align: center;
       padding-top: 10px;
       padding-bottom: 30px;
-      font-family: $text-font;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 300;
+      font: 300 18px $text-font;
       line-height: normal;
       letter-spacing: 0.2px;
     }

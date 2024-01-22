@@ -51,9 +51,8 @@
           border-bottom: 1.5px solid $border;
 
           h4 {
-            font-family: $topic-font;
-            font-size: 20px;
-            font-weight: 400;
+            font: 400 20px $topic-font;
+
             line-height: 32px;
             @include md {
               font-size: 16px;

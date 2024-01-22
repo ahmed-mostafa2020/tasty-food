@@ -35,9 +35,7 @@
       }
 
       h6 {
-        font-family: $topic-font;
-        font-size: 20px;
-        font-weight: 400;
+        font: 400 20px $topic-font;
         line-height: 20px;
         display: flex;
         align-items: flex-start;
@@ -54,9 +52,7 @@
         gap: 5px;
 
         & > p {
-          font-family: $text-font;
-          font-size: 20px;
-          font-weight: 700;
+          font: 700 20px $text-font;
           line-height: 20px;
 
           @include sm {
@@ -69,9 +65,7 @@
         @extend .opening-hours;
 
         a {
-          font-family: $text-font;
-          font-size: 18px;
-          font-weight: 400;
+          font: 400 18px $text-font;
           line-height: 30px;
           letter-spacing: 0.5px;
           width: 100%;

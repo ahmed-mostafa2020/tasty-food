@@ -26,9 +26,7 @@
       min-width: 50%;
 
       h1 {
-        font-family: $topic-font;
-        font-size: 60px;
-        font-weight: 400;
+        font: 400 60px $topic-font;
         line-height: 70px;
         position: relative;
         @include xl {

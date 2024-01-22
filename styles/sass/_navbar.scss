@@ -43,9 +43,7 @@
         }
 
         a {
-          font-family: $text-font;
-          font-size: 16px;
-          font-weight: 500;
+          font: 500 16px $text-font;
           line-height: 20px;
           display: flex;
           align-items: end;
@@ -96,9 +94,7 @@
         .text {
           p {
             &:first-child {
-              font-family: $text-font;
-              font-size: 14px;
-              font-weight: 400;
+              font: 400 14px $text-font;
               line-height: 20px;
               @include sm {
                 font-size: 11px;
@@ -106,9 +102,7 @@
             }
             &:last-child {
               color: $sec-color;
-              font-family: $text-font;
-              font-size: 22px;
-              font-weight: 700;
+              font: 700 22px $text-font;
               line-height: 20px;
 
               @include sm {
@@ -156,9 +150,7 @@
     }
 
     a {
-      font-family: $text-font;
-      font-size: 16px;
-      font-weight: 500;
+      font: 500 16px $text-font;
       line-height: 20px;
       width: 100%;
       padding: 10px;
@@ -200,9 +192,7 @@
       .text {
         p {
           &:first-child {
-            font-family: $text-font;
-            font-size: 12px;
-            font-weight: 400;
+            font: 400 12px $text-font;
             line-height: 20px;
           }
           &:last-child {

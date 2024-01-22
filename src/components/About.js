@@ -20,9 +20,7 @@ const About = () => {
       <figure
         data-aos="fade-up"
         data-aos-easing="ease-in-out"
-        // data-aos-offset="150"
-        // data-aos-duration="700"
-        // data-aos-once="false"
+        data-aos-once="true"
       >
         <Image
           src={data.image}
@@ -34,7 +32,12 @@ const About = () => {
         <BaseImage width={450} height={350} />
       </figure>
 
-      <div className="text" data-aos="fade-down" data-aos-easing="linear">
+      <div
+        className="text"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-once="true"
+      >
         <div>
           <SectionTitle title={data.title} fontSize={"35px"} />
 

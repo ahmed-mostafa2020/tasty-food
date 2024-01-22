@@ -46,9 +46,7 @@
       }
     }
     .item-name {
-      font-family: $topic-font;
-      font-size: 15px;
-      font-weight: 400;
+      font: 400 15px $topic-font;
     }
   }
 }

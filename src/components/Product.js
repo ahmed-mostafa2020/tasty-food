@@ -14,6 +14,7 @@ const Product = ({ image, loader, name, description, price }) => {
       data-aos="flip-left"
       data-aos-easing="ease-out-cubic"
       data-aos-duration="1000"
+      data-aos-once="true"
     >
       <figure>
         <Image

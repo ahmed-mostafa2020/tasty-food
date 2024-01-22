@@ -27,12 +27,10 @@ const DarkThemeProvider = ({ children }) => {
             mainColor: "#e60000",
             secColor: "#fec223",
             light: "#fff",
+            dark: "#131313",
           },
           divider: {
             primary: "#dddcdc",
-          },
-          border: {
-            primary: "#898989",
           },
           shadowColor: {
             red: "rgba(207, 20, 34, 0.3)",
@@ -53,12 +51,10 @@ const DarkThemeProvider = ({ children }) => {
             mainColor: "#fec223",
             secColor: "#e60000",
             light: "#fff",
+            dark: "#131313",
           },
           divider: {
             primary: "#5c5a5a",
-          },
-          border: {
-            primary: "#898989",
           },
           shadowColor: {
             red: "rgba(207, 20, 34, 0.3)",

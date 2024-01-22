@@ -37,26 +37,20 @@
       flex-direction: column;
 
       h2 {
-        font-family: $topic-font;
-        font-size: 28px;
-        font-weight: 400;
+        font: 400 28px $topic-font;
         @include md {
           font-size: 26px;
         }
       }
 
       p.description {
-        font-family: $text-font;
-        font-size: 13px;
+        font: 600 13px $text-font;
         letter-spacing: 0.5px;
-        font-weight: 600;
         text-transform: uppercase;
       }
 
       h3 {
-        font-family: $text-font;
-        font-size: 20px;
-        font-weight: 800;
+        font: 800 20px $text-font;
         padding-top: 5px;
 
         @include md {

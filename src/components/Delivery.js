@@ -19,16 +19,24 @@ const Delivery = () => {
     <>
       <section className={`delivery ${myMode}`}>
         <Container className="container">
-          <div data-aos="fade-right" data-aos-easing="ease-in-sine">
+          <div
+            data-aos="fade-right"
+            data-aos-easing="ease-in-sine"
+            data-aos-once="true"
+          >
             <SectionTitle title={firstData.title} fontSize={"30px"} />
             <article>{firstData.content}</article>
           </div>
 
-          <figure data-aos="fade-right" data-aos-easing="ease-in-sine">
+          <figure
+            data-aos="fade-right"
+            data-aos-easing="ease-in-sine"
+            data-aos-once="true"
+          >
             <Image src={delivery} alt="delivery" width={300} height={300} />
           </figure>
 
-          <div data-aos="fade-left">
+          <div data-aos="fade-left" data-aos-once="true">
             <SectionTitle title={secondData.title} fontSize={"30px"} />
             <article>{secondData.content}</article>
           </div>

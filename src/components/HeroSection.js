@@ -20,7 +20,12 @@ const HeroSection = () => {
   return (
     <div className="heroSection">
       <Container fixed className="container">
-        <div className="text" data-aos="fade-right" data-aos-duration="700">
+        <div
+          className="text"
+          data-aos="fade-right"
+          data-aos-duration="700"
+          data-aos-once="true"
+        >
           <div>
             <h1>
               {data.title}
@@ -43,6 +48,7 @@ const HeroSection = () => {
           className="image"
           data-aos="zoom-in-left"
           data-aos-duration="700"
+          data-aos-once="true"
         >
           <Image
             src={heroImage}

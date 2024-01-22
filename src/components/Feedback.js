@@ -22,7 +22,7 @@ const Feedback = () => {
       <DownShapedBorder fill={myPalette.background.default} />
 
       <Container className="container">
-        <div className="box" data-aos="fade-down">
+        <div className="box" data-aos="fade-down" data-aos-once="true">
           <SectionTitle title={"Our Customer Feedbacks"} fontSize={"40px"} />
 
           <p>

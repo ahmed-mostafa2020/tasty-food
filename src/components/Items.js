@@ -26,6 +26,7 @@ const Items = () => {
                 className="item-box"
                 data-aos="zoom-in"
                 data-aos-duration="700"
+                data-aos-once="true"
               >
                 <figure>
                   <Image

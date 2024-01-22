@@ -6,7 +6,12 @@ const Offer = ({ title, image, description, price }) => {
   AOS.init();
 
   return (
-    <div className="offer" data-aos="fade-up" data-aos-duration="2000">
+    <div
+      className="offer"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      data-aos-once="true"
+    >
       <div className="text">
         <h2>{title}</h2>
         <p className="description">{description}</p>

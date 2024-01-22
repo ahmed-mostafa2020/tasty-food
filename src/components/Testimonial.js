@@ -42,6 +42,7 @@ const Testimonial = ({ rating, opinion, name, disc }) => {
       className="testimonial"
       style={{ backgroundColor: myPalette.background.default }}
       data-aos="fade-up"
+      data-aos-once="true"
     >
       <Image
         className="sideImage"
