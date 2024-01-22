@@ -6,6 +6,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Container } from "@mui/material";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
 import SectionTitle from "../src/atomicDesign/atoms/SectionTitle";
+import Gallery from "../src/components/Gallery";
+import Delivery from "../src/components/Delivery";
 
 const Menu = ({ data }) => {
   const { t } = useTranslation();
@@ -97,6 +99,10 @@ const Menu = ({ data }) => {
               </section>
             ))}
           </Container>
+
+          <Delivery />
+
+          <Gallery />
         </main>
       </Layout>
     </>
