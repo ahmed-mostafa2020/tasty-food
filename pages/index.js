@@ -1,13 +1,13 @@
-import Head from "next/head";
 import HomeLayout from "../src/layout/HomeLayout";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { API_URLS } from "../src/util/API_URL";
 import { Container, Grid } from "@mui/material";
 import { ChangeTheme } from "@/src/context/ThemeContext";
-import Image from "next/image";
-import DownShapedBorder from "@/src/atomicDesign/atoms/DownShapedBorder";
+
+// Components
+import Helmet from "../src/atomicDesign/molecules/Helmet";
 import Items from "../src/components/Items";
 import Offers from "../src/components/Offers";
 import AboutUs from "../src/components/AboutUs";
@@ -17,21 +17,12 @@ import Feedback from "../src/components/Feedback";
 import Gallery from "../src/components/Gallery";
 
 const Home = ({ data }) => {
-  const { myMode, myPalette } = ChangeTheme();
-  const { t } = useTranslation();
+  const { myMode } = ChangeTheme();
   const allCategories = data.data.category;
 
   return (
     <>
-      <Head>
-        <title>Tasty Food | {t("Home")} </title>
-        <meta
-          name="description"
-          content="online shopping with our e-commerce app"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.svg" />
-      </Head>
+      <Helmet pageName={"Home"} />
 
       <HomeLayout>
         <main className="home">

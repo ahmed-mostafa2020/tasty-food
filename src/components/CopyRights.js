@@ -17,7 +17,7 @@ const CopyRights = () => {
       <Container fixed className="container">
         <p className="rights">{data.copy_rights}</p>
 
-        <Link href={"/"} style={{ color: myPalette.text.primary }}>
+        <Link href={"/terms"} style={{ color: myPalette.text.primary }}>
           {homeEndPointData.data.terms.title}
         </Link>
       </Container>

@@ -1,8 +1,10 @@
-import Head from "next/head";
+import Helmet from "../src/atomicDesign/molecules/Helmet";
 import Layout from "../src/layout/Layout";
 import { API_URLS } from "../src/util/API_URL";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+// Components
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
 import AboutUs from "../src/components/AboutUs";
 import Video from "../src/components/Video";
@@ -15,15 +17,7 @@ const About = ({ data }) => {
 
   return (
     <>
-      <Head>
-        <title>Tasty Food | {t("About")}</title>
-        <meta
-          name="description"
-          content="online shopping with our e-commerce app"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.svg" />
-      </Head>
+      <Helmet pageName={"About"} />
 
       <Layout>
         <LayoutTopWrapper title={t("About")} subTitle={t("Us")} />

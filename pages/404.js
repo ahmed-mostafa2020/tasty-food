@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Helmet from "../src/atomicDesign/molecules/Helmet";
 import Layout from "../src/layout/Layout";
 import { API_URLS } from "../src/util/API_URL";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -17,15 +17,7 @@ const Custom404 = ({ data }) => {
 
   return (
     <>
-      <Head>
-        <title>Tasty Food | 404</title>
-        <meta
-          name="description"
-          content="online shopping with our e-commerce app"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.svg" />
-      </Head>
+      <Helmet pageName={"Not Found"} />
 
       <Layout>
         <LayoutTopWrapper />
