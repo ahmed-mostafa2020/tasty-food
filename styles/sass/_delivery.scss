@@ -3,6 +3,7 @@
 
 .delivery {
   padding: 90px 0;
+  overflow: hidden;
   @include sm {
     padding: 70px 0;
   }
