@@ -1,8 +1,12 @@
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Offer = ({ title, image, description, price }) => {
+  AOS.init();
+
   return (
-    <div className="offer">
+    <div className="offer" data-aos="fade-up" data-aos-duration="2000">
       <div className="text">
         <h2>{title}</h2>
         <p className="description">{description}</p>
@@ -10,7 +14,12 @@ const Offer = ({ title, image, description, price }) => {
       </div>
 
       <figure>
-        <Image src={"/image"} alt="discount" width={100} height={100} />
+        <Image
+          src={image ? `${image}` : "/"}
+          alt="discount"
+          width={100}
+          height={100}
+        />
       </figure>
     </div>
   );

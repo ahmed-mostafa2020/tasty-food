@@ -4,9 +4,13 @@ import { ChangeTheme } from "../context/ThemeContext";
 import Testimonial from "../components/Testimonial";
 import DownShapedBorder from "../atomicDesign/atoms/DownShapedBorder";
 import UpShapedBorder from "../atomicDesign/atoms/UpShapedBorder";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Feedback = () => {
   const { myPalette } = ChangeTheme();
+
+  AOS.init();
 
   return (
     <section
@@ -18,12 +22,14 @@ const Feedback = () => {
       <DownShapedBorder fill={myPalette.background.default} />
 
       <Container className="container">
-        <SectionTitle title={"Our Customer Feedbacks"} fontSize={"40px"} />
+        <div className="box" data-aos="fade-down">
+          <SectionTitle title={"Our Customer Feedbacks"} fontSize={"40px"} />
 
-        <p>
-          Magna sed sagittis non in mattis ultrices fermentum neque maecenas.
-          Leo diam justo ac vel eleifend placerat volutpat.
-        </p>
+          <p>
+            Magna sed sagittis non in mattis ultrices fermentum neque maecenas.
+            Leo diam justo ac vel eleifend placerat volutpat.
+          </p>
+        </div>
 
         <div className="testimonialBox">
           <Testimonial

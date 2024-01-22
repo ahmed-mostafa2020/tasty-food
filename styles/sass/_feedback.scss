@@ -23,18 +23,20 @@
     flex-direction: column;
     text-align: center;
 
-    .sectionTitle {
-      @include md {
-        font-size: 26px !important;
+    .box {
+      .sectionTitle {
+        @include md {
+          font-size: 26px !important;
+        }
       }
-    }
 
-    & > p {
-      width: 50%;
-      margin: 0 auto;
-      @include md {
-        width: 90%;
-        font-size: 14px;
+      p {
+        width: 50%;
+        margin: 0 auto;
+        @include md {
+          width: 90%;
+          font-size: 14px;
+        }
       }
     }
 

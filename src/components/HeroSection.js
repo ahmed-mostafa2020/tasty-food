@@ -6,6 +6,8 @@ import BaseImage from "../atomicDesign/atoms/BaseImage";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import AtomicButton from "../atomicDesign/atoms/AtomicButton";
 import { ChangeTheme } from "../context/ThemeContext";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HeroSection = () => {
   const { myPalette } = ChangeTheme();
@@ -13,10 +15,12 @@ const HeroSection = () => {
   const data = homeEndPointData.data.slider;
   const elmenus = homeEndPointData.data.brand.elmenus_url;
 
+  AOS.init();
+
   return (
     <div className="heroSection">
       <Container fixed className="container">
-        <div className="text">
+        <div className="text" data-aos="fade-right" data-aos-duration="700">
           <div>
             <h1>
               {data.title}
@@ -35,7 +39,11 @@ const HeroSection = () => {
           />
         </div>
 
-        <figure className="image">
+        <figure
+          className="image"
+          data-aos="zoom-in-left"
+          data-aos-duration="700"
+        >
           <Image
             src={heroImage}
             alt="heroImage"

@@ -4,6 +4,8 @@ import BaseImage from "../atomicDesign/atoms/BaseImage";
 import { ChangeTheme } from "../context/ThemeContext";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import AtomicButton from "../atomicDesign/atoms/AtomicButton";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
   const { myPalette } = ChangeTheme();
@@ -11,9 +13,17 @@ const About = () => {
   const data = homeEndPointData.data.about;
   const elmenus = homeEndPointData.data.brand.elmenus_url;
 
+  AOS.init();
+
   return (
     <>
-      <figure>
+      <figure
+        data-aos="fade-up"
+        data-aos-easing="ease-in-out"
+        // data-aos-offset="150"
+        // data-aos-duration="700"
+        // data-aos-once="false"
+      >
         <Image
           src={data.image}
           loader={() => `${data.image}`}
@@ -24,7 +34,7 @@ const About = () => {
         <BaseImage width={450} height={350} />
       </figure>
 
-      <div className="text">
+      <div className="text" data-aos="fade-down" data-aos-easing="linear">
         <div>
           <SectionTitle title={data.title} fontSize={"35px"} />
 

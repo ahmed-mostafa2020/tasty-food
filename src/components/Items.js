@@ -3,11 +3,16 @@ import { ChangeTheme } from "../context/ThemeContext";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import Image from "next/image";
 import DownShapedBorder from "../atomicDesign/atoms/DownShapedBorder";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Items = () => {
   const { myPalette } = ChangeTheme();
   const { homeEndPointData } = FetchingAllEndPointsData();
   const allItems = homeEndPointData && homeEndPointData.data.category;
+
+  AOS.init();
+
   return (
     <section className="itemsWrapper">
       <div
@@ -17,7 +22,11 @@ const Items = () => {
         <Container fixed className="container">
           {allItems.map((item) => (
             <div className="item" key={item.name}>
-              <div className="item-box">
+              <div
+                className="item-box"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+              >
                 <figure>
                   <Image
                     className="item-image"

@@ -1,11 +1,20 @@
 import Image from "next/image";
 import { ChangeTheme } from "../context/ThemeContext";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Product = ({ image, loader, name, description, price }) => {
   const { myMode } = ChangeTheme();
 
+  AOS.init();
+
   return (
-    <div className={`product ${myMode}`}>
+    <div
+      className={`product ${myMode}`}
+      data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000"
+    >
       <figure>
         <Image
           src={image}

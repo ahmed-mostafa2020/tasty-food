@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import SectionTitle from "../atomicDesign/atoms/SectionTitle";
 import Image from "next/image";
-import galleryImage from "../../public/assets/images/01 image.png";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 // Import Swiper styles
 import "swiper/css";
