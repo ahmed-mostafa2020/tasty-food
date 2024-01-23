@@ -1,4 +1,4 @@
-const TextFieldGroup = ({
+const TextInputGroup = ({
   type,
   label,
   name,
@@ -9,7 +9,7 @@ const TextFieldGroup = ({
   onBlur,
 }) => {
   return (
-    <div className="textFieldGroup">
+    <div className="textInputGroup">
       <label> {label} </label>
 
       <input
@@ -27,4 +27,4 @@ const TextFieldGroup = ({
   );
 };
 
-export default TextFieldGroup;
+export default TextInputGroup;

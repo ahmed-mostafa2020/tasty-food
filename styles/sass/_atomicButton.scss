@@ -6,6 +6,9 @@
   padding: 12px 30px;
   width: fit-content;
   text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font: 400 16px $text-font;
   line-height: 20px;
   border-radius: 50px;
@@ -15,5 +18,11 @@
   @include md {
     padding: 10px 20px;
     font-size: 14px;
+  }
+
+  span {
+    height: 20px !important;
+    width: 20px !important;
+    color: $border;
   }
 }

@@ -39,12 +39,12 @@ const SubmitButton = ({
     >
       {isSubmitting ? (
         <>
-          <span>{content}</span>
+          {t("Send request")}
 
           <CircularProgress />
         </>
       ) : (
-        <span>{t("Send request")}</span>
+        content
       )}
     </button>
   );

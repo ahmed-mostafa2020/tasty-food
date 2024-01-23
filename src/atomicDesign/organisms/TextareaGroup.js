@@ -1,3 +1,5 @@
+import { Field } from "formik";
+
 const TextareaGroup = ({
   label,
   name,
@@ -11,7 +13,8 @@ const TextareaGroup = ({
     <div className="textareaGroup">
       <label> {label} </label>
 
-      <textarea
+      <Field
+        as="textarea"
         className={errors && touched ? "textareaError" : ""}
         style={{ borderRadius: "20px", resize: "none" }}
         name={name}
