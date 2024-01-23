@@ -1,16 +1,30 @@
-const TextareaGroup = ({ label, name }) => {
+const TextareaGroup = ({
+  label,
+  name,
+  errors,
+  touched,
+  values,
+  onChange,
+  onBlur,
+}) => {
   return (
     <div className="textareaGroup">
       <label> {label} </label>
+
       <textarea
+        className={errors && touched ? "textareaError" : ""}
+        style={{ borderRadius: "20px", resize: "none" }}
         name={name}
         rows="5"
         wrap="hard"
         spellcheck
         autocomplete
-        style={{ borderRadius: "20px", resize: "none" }}
+        value={values}
+        onChange={onChange}
+        onBlur={onBlur}
       />
-      <p>error</p>
+
+      {errors && touched && <p>{errors}</p>}
     </div>
   );
 };

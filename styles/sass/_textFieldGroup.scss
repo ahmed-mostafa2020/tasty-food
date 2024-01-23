@@ -10,6 +10,7 @@
 
   label {
     font: 400 14px $text-font;
+    text-transform: capitalize;
   }
 
   input,
@@ -24,6 +25,15 @@
 
     &:focus {
       box-shadow: 2px 2px 2px $gary-dark-text;
+    }
+  }
+
+  input.inputError,
+  .textareaError {
+    border: 1px solid $main-color;
+
+    &:focus {
+      box-shadow: 2px 2px 2px $main-color;
     }
   }
 

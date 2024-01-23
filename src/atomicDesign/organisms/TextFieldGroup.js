@@ -11,6 +11,7 @@ const TextFieldGroup = ({
   return (
     <div className="textFieldGroup">
       <label> {label} </label>
+
       <input
         className={errors && touched ? "inputError" : ""}
         style={{ borderRadius: "50px" }}
@@ -20,6 +21,7 @@ const TextFieldGroup = ({
         onChange={onChange}
         onBlur={onBlur}
       />
+
       {errors && touched && <p>{errors}</p>}
     </div>
   );

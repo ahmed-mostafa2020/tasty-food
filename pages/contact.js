@@ -1,4 +1,6 @@
 import Helmet from "../src/atomicDesign/molecules/Helmet";
+import { Formik } from "formik";
+import * as Yup from "yup";
 import Layout from "../src/layout/Layout";
 import { API_URLS } from "../src/util/API_URL";
 import { useTranslation } from "next-i18next";
@@ -13,10 +15,14 @@ import TextFieldGroup from "../src/atomicDesign/organisms/TextFieldGroup";
 import SubmitButton from "../src/atomicDesign/molecules/SubmitButton";
 import { ChangeTheme } from "../src/context/ThemeContext";
 import TextareaGroup from "../src/atomicDesign/organisms/TextareaGroup";
+import { useState } from "react";
 
 const ContactUs = ({ data }) => {
   const { myPalette } = ChangeTheme();
   const { t } = useTranslation();
+
+  const [formErrors, setFormErrors] = useState([]);
+  const [status, setStatus] = useState(false);
 
   const contactData = data.data.brand;
 
@@ -40,6 +46,20 @@ const ContactUs = ({ data }) => {
       data: contactData.mobile,
     },
   ];
+
+  const requestSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(3, "Name should more than 3 letters")
+      .required("This field is required"),
+    phone: Yup.string().required("This field is required"),
+    message: Yup.string()
+      .min(3, "Message should more than 3 letters")
+      .required("This field is required"),
+  });
+
+  const formErrorsList = formErrors.map((formError) => (
+    <p key={formError}>{formError}</p>
+  ));
 
   return (
     <>
@@ -85,8 +105,8 @@ const ContactUs = ({ data }) => {
 
                   <TextFieldGroup
                     label={"Phone"}
-                    name={"phone"}
                     type={"number"}
+                    name={"phone"}
                   />
 
                   <TextareaGroup label={"Message"} name={"Message"} />
@@ -96,6 +116,8 @@ const ContactUs = ({ data }) => {
                     bgColor={myPalette.background.mainColor}
                     textColor={myPalette.text.light}
                     shadowColor={myPalette.shadowColor.red}
+                    // isSubmitting={isSubmitting}
+                    // disableState={disabledButton}
                   />
                 </form>
 
