@@ -20,8 +20,8 @@ const TextareaGroup = ({
         name={name}
         rows="5"
         wrap="hard"
-        spellcheck
-        autocomplete
+        spellCheck
+        autoComplete
         value={values}
         onChange={onChange}
         onBlur={onBlur}
