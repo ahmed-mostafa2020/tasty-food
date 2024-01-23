@@ -75,7 +75,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      column-gap: 20px;
+      row-gap: 40px;
       flex-wrap: wrap;
       padding: 30px 0;
 
@@ -88,6 +89,10 @@
 
       .map {
         flex: 1;
+
+        .leaflet-control-attribution {
+          display: none !important;
+        }
       }
     }
   }
