@@ -9,6 +9,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
 import SectionTitle from "../src/atomicDesign/atoms/SectionTitle";
+import TextFieldGroup from "../src/atomicDesign/organisms/TextFieldGroup";
 
 const ContactUs = ({ data }) => {
   const { t } = useTranslation();
@@ -65,6 +66,22 @@ const ContactUs = ({ data }) => {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="contactFormSection">
+              <SectionTitle title={"Get in touch"} fontSize={"40px"} />
+
+              <article>
+                We would love to hear from you. Please fill out this form.
+              </article>
+
+              <div className="formSection">
+                <form>
+                  <TextFieldGroup label={"Name"} type={"text"} name={"name"} />
+                </form>
+
+                <div className="map"></div>
+              </div>
             </div>
           </Container>
         </main>

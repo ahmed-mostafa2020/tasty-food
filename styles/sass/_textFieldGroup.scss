@@ -1,0 +1,23 @@
+@import "./variables";
+@import "./responsive";
+
+.textFieldGroup {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 7px;
+
+  label {
+    font: 400 14px $text-font;
+  }
+
+  input {
+    width: 100%;
+    height: 30px;
+    padding: 20px;
+    background-color: $input-bg;
+    border-radius: 50px;
+    border: 1px solid $dark-text;
+    outline: transparent;
+  }
+}

@@ -21,6 +21,7 @@
     flex-wrap: wrap;
     gap: 20px;
     padding: 50px 0;
+    border-bottom: 2px solid $border;
 
     .contactItem {
       display: flex;
@@ -63,6 +64,30 @@
           color: $main-color;
           font: 400 15px $text-font;
         }
+      }
+    }
+  }
+
+  .contactFormSection {
+    padding: 50px 0;
+
+    .formSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 30px 0;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1;
+      }
+
+      .map {
+        flex: 1;
       }
     }
   }
