@@ -12,6 +12,7 @@ import SectionTitle from "../src/atomicDesign/atoms/SectionTitle";
 import TextFieldGroup from "../src/atomicDesign/organisms/TextFieldGroup";
 import SubmitButton from "../src/atomicDesign/atoms/SubmitButton";
 import { ChangeTheme } from "../src/context/ThemeContext";
+import TextareaGroup from "../src/atomicDesign/organisms/TextareaGroup";
 
 const ContactUs = ({ data }) => {
   const { myPalette } = ChangeTheme();
@@ -81,6 +82,14 @@ const ContactUs = ({ data }) => {
               <div className="formSection">
                 <form>
                   <TextFieldGroup label={"Name"} type={"text"} name={"name"} />
+
+                  <TextFieldGroup
+                    label={"Phone"}
+                    name={"phone"}
+                    type={"number"}
+                  />
+
+                  <TextareaGroup label={"Message"} name={"Message"} />
 
                   <SubmitButton
                     content={"Send Message"}
