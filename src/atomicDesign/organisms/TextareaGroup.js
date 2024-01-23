@@ -27,7 +27,7 @@ const TextareaGroup = ({
         onBlur={onBlur}
       />
 
-      {errors && touched && <p>{errors}</p>}
+      {errors && touched ? <p>{errors}</p> : <p>{""}</p>}
     </div>
   );
 };

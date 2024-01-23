@@ -30,10 +30,10 @@
 
   input.inputError,
   .textareaError {
-    border: 1px solid $main-color;
+    border: 1px solid $error;
 
     &:focus {
-      box-shadow: 2px 2px 2px rgba(255, 0, 0, 0.151);
+      box-shadow: 2px 2px 2px $error;
     }
   }
 
@@ -46,8 +46,9 @@
 
   p {
     font: 300 14px $text-font;
-    margin-top: -6px;
+    margin-top: -5px;
     color: $main-color;
+    height: 18.4px;
     transition: all 0.2s linear;
   }
 }

@@ -26,8 +26,6 @@ export const getApi = async (url, postedData, lang) => {
     }
     return data;
   } catch (err) {
-    <Alert variant="danger" className="mt-3  text-center">
-      {"please try again" + err}
-    </Alert>;
+    <Alert severity="error">{"please try again" + err}</Alert>;
   }
 };
