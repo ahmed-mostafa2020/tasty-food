@@ -12,7 +12,7 @@ import lightLogo from "../../public/assets/images/lightLogo.png";
 import darkLogo from "../../public/assets/images/darkLogo.png";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import AtomicButton from "../atomicDesign/atoms/AtomicButton";
-import AddIcCallIcon from "@mui/icons-material/AddIcCall";
+import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import Links from "../atomicDesign/molecules/Links";
 
 const TemporaryDrawer = () => {
@@ -63,9 +63,10 @@ const TemporaryDrawer = () => {
 
       <div className="callBox">
         <div className="call">
-          <AddIcCallIcon
+          <PhoneInTalkOutlinedIcon
             className={`phone-icon ${i18n.language == "ar" && "right"}`}
           />
+
           <div className="text">
             <p>{t("Call us for Order ")}</p>
             <p>{data.mobile}</p>

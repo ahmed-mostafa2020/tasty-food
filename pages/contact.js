@@ -4,10 +4,37 @@ import { API_URLS } from "../src/util/API_URL";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Container } from "@mui/material";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
+import SectionTitle from "../src/atomicDesign/atoms/SectionTitle";
 
 const ContactUs = ({ data }) => {
   const { t } = useTranslation();
+
+  const contactData = data.data.brand;
+
+  const contactItems = [
+    {
+      icon: <MailOutlineIcon />,
+      title: "Email",
+      welcomeMsg: "Our friendly team is here to help.",
+      data: contactData.email,
+    },
+    {
+      icon: <LocationOnOutlinedIcon />,
+      title: "Cafe",
+      welcomeMsg: "Come say hello at our cafe HQ.",
+      data: contactData.address,
+    },
+    {
+      icon: <PhoneInTalkOutlinedIcon />,
+      title: "Phone",
+      welcomeMsg: "Faucibus neque vel risus turpis.",
+      data: contactData.mobile,
+    },
+  ];
 
   return (
     <>
@@ -17,7 +44,28 @@ const ContactUs = ({ data }) => {
         <LayoutTopWrapper title={t("Contact Us")} />
         <main className="contactUs" style={{ textAlign: "center" }}>
           <Container fixed className="container">
-            Contact Us
+            <SectionTitle
+              title={"We’d love to hear from you"}
+              fontSize={"40px"}
+            />
+
+            <article>
+              Porta enim vitae volutpat donec dictumst eu mi gravida sit.
+            </article>
+
+            <div className="contactItemsBox">
+              {contactItems.map((contactItem, index) => (
+                <div key={index} className="contactItem">
+                  <figure>{contactItem.icon}</figure>
+
+                  <div className="text">
+                    <h6>{contactItem.title}</h6>
+                    <p>{contactItem.welcomeMsg}</p>
+                    <p> {contactItem.data}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </Container>
         </main>
       </Layout>

@@ -5,15 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import lightLogo from "../../public/assets/images/lightLogo.png";
 import darkLogo from "../../public/assets/images/darkLogo.png";
-import AddIcCallIcon from "@mui/icons-material/AddIcCall";
+import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import TemporaryDrawer from "../components/TemporaryDrawer";
 import AtomicButton from "../atomicDesign/atoms/AtomicButton";
 import Links from "../atomicDesign/molecules/Links";
-import { useRouter } from "next/router";
 
 const Navbar = () => {
-  const router = useRouter();
   const { myMode, myPalette } = ChangeTheme();
   const { t, i18n } = useTranslation();
   const { homeEndPointData } = FetchingAllEndPointsData();
@@ -38,9 +36,10 @@ const Navbar = () => {
 
         <div className="callBox">
           <div className="call">
-            <AddIcCallIcon
+            <PhoneInTalkOutlinedIcon
               className={`phone-icon ${i18n.language == "ar" && "right"}`}
             />
+
             <div className="text">
               <p>{t("Call us for Order ")}</p>
               <p>{data.mobile}</p>
