@@ -1,8 +1,18 @@
+import { CircularProgress } from "@mui/material";
 import { ChangeTheme } from "../../context/ThemeContext";
 import { useState } from "react";
+import { useTranslation } from "next-i18next";
 
-const SubmitButton = ({ content, bgColor, shadowColor, textColor }) => {
+const SubmitButton = ({
+  content,
+  bgColor,
+  shadowColor,
+  textColor,
+  isSubmitting,
+  disableState,
+}) => {
   const { myPalette } = ChangeTheme();
+  const { t } = useTranslation();
 
   const [isHover, setIsHover] = useState(false);
   const handleMouseEnter = () => {
@@ -25,8 +35,17 @@ const SubmitButton = ({ content, bgColor, shadowColor, textColor }) => {
       style={style}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      disabled={disableState}
     >
-      {content}
+      {isSubmitting ? (
+        <>
+          <span>{content}</span>
+
+          <CircularProgress />
+        </>
+      ) : (
+        <span>{t("Send request")}</span>
+      )}
     </button>
   );
 };

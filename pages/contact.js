@@ -10,7 +10,7 @@ import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
 import SectionTitle from "../src/atomicDesign/atoms/SectionTitle";
 import TextFieldGroup from "../src/atomicDesign/organisms/TextFieldGroup";
-import SubmitButton from "../src/atomicDesign/atoms/SubmitButton";
+import SubmitButton from "../src/atomicDesign/molecules/SubmitButton";
 import { ChangeTheme } from "../src/context/ThemeContext";
 import TextareaGroup from "../src/atomicDesign/organisms/TextareaGroup";
 
