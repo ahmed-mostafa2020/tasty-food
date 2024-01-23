@@ -20,12 +20,11 @@ import { useState } from "react";
 const ContactUs = ({ data }) => {
   const { myPalette } = ChangeTheme();
   const { t } = useTranslation();
+  const contactData = data.data.brand;
 
   const [formErrors, setFormErrors] = useState([]);
   const [status, setStatus] = useState(false);
   const [disabledButton, setDisabledButton] = useState(false);
-
-  const contactData = data.data.brand;
 
   const contactItems = [
     {
