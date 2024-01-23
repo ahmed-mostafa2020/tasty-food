@@ -10,8 +10,11 @@ import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
 import SectionTitle from "../src/atomicDesign/atoms/SectionTitle";
 import TextFieldGroup from "../src/atomicDesign/organisms/TextFieldGroup";
+import SubmitButton from "../src/atomicDesign/atoms/SubmitButton";
+import { ChangeTheme } from "../src/context/ThemeContext";
 
 const ContactUs = ({ data }) => {
+  const { myPalette } = ChangeTheme();
   const { t } = useTranslation();
 
   const contactData = data.data.brand;
@@ -78,6 +81,13 @@ const ContactUs = ({ data }) => {
               <div className="formSection">
                 <form>
                   <TextFieldGroup label={"Name"} type={"text"} name={"name"} />
+
+                  <SubmitButton
+                    content={"Send Message"}
+                    bgColor={myPalette.background.mainColor}
+                    textColor={myPalette.text.light}
+                    shadowColor={myPalette.shadowColor.red}
+                  />
                 </form>
 
                 <div className="map"></div>

@@ -1,13 +1,15 @@
 @import "./variables";
 @import "./responsive";
 
-.atomicButton {
+.atomicButton,
+.submitButton {
   padding: 12px 30px;
   width: fit-content;
   text-align: center;
   font: 400 16px $text-font;
   line-height: 20px;
   border-radius: 50px;
+  border: transparent;
   transition: all 0.2s ease-in-out;
 
   @include md {
