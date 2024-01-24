@@ -1,9 +1,9 @@
 import { Container } from "@mui/material";
-import SectionTitle from "../atomicDesign/atoms/SectionTitle";
 import Link from "next/link";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import Image from "next/image";
 import Polygon from "../../public/assets/images/Polygon 1.svg";
+import SectionCrown from "../atomicDesign/molecules/SectionCrown";
 
 const Video = () => {
   const { homeEndPointData } = FetchingAllEndPointsData();
@@ -18,12 +18,11 @@ const Video = () => {
           <Image src={Polygon} alt="product" width={20} height={20} />
         </Link>
 
-        <SectionTitle title={"Watch The Video"} fontSize={"30px"} />
-
-        <article>
-          Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuada
-          massa proin cursus elit amet iaculis.
-        </article>
+        <SectionCrown
+          title={"Watch The Video"}
+          description={`Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuada
+                massa proin cursus elit amet iaculis.`}
+        />
       </Container>
     </div>
   );

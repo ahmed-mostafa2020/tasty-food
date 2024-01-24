@@ -20,23 +20,6 @@
       }
     }
 
-    .sectionTitle {
-      @include md {
-        font-size: 26px !important;
-        line-height: 26px;
-      }
-    }
-
-    article {
-      font: 300 16px $text-font;
-      letter-spacing: 0.5px;
-      line-height: 30px;
-
-      @include md {
-        line-height: 24px;
-      }
-    }
-
     figure {
       display: flex;
       justify-content: center;

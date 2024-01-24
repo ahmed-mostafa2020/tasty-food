@@ -4,18 +4,6 @@
 .contactUs {
   padding: 40px 0;
 
-  .sectionTitle {
-    @include md {
-      font-size: 26px !important;
-      line-height: 26px !important;
-    }
-  }
-
-  article {
-    padding-top: 15px;
-    font: 300 16px $text-font;
-  }
-
   .contactItemsBox {
     display: flex;
     flex-wrap: wrap;

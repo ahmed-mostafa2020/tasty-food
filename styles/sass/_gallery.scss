@@ -5,12 +5,6 @@
   padding: 40px 0;
   text-align: center;
 
-  .sectionTitle {
-    @include md {
-      font-size: 26px !important;
-    }
-  }
-
   .swiper {
     padding-top: 40px;
     @include md {

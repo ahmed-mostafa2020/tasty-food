@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SectionTitle from "../atomicDesign/atoms/SectionTitle";
+import SectionCrown from "../atomicDesign/molecules/SectionCrown";
 import BaseImage from "../atomicDesign/atoms/BaseImage";
 import { ChangeTheme } from "../context/ThemeContext";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
@@ -38,11 +38,7 @@ const About = () => {
         data-aos-easing="linear"
         data-aos-once="true"
       >
-        <div>
-          <SectionTitle title={data.title} fontSize={"35px"} />
-
-          <article>{data.content}</article>
-        </div>
+        <SectionCrown title={data.title} description={data.content} />
 
         <AtomicButton
           content={"Order Online"}

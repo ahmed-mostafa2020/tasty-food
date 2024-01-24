@@ -1,10 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import SectionTitle from "../atomicDesign/atoms/SectionTitle";
 import Image from "next/image";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import SectionCrown from "../atomicDesign/molecules/SectionCrown";
 
 const Gallery = () => {
   const { homeEndPointData } = FetchingAllEndPointsData();
@@ -12,8 +13,7 @@ const Gallery = () => {
 
   return (
     <section className="gallery">
-      <SectionTitle title={"Foods Gallery"} fontSize={"35px"} />
-
+      <SectionCrown title={"Foods Gallery"} />
       <Swiper slidesPerView={5} spaceBetween={10} className="mySwiper">
         {allGallery.map((gallery, index) => (
           <SwiperSlide key={index}>

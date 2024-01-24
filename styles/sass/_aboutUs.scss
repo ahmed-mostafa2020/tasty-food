@@ -42,21 +42,5 @@
     flex: 1;
     text-align: start;
     min-width: 50%;
-
-    .sectionTitle {
-      @include md {
-        font-size: 26px !important;
-      }
-    }
-
-    article {
-      font: 300 15px $text-font;
-      line-height: 30px;
-      letter-spacing: 0.5px;
-
-      @include md {
-        line-height: 24px;
-      }
-    }
   }
 }

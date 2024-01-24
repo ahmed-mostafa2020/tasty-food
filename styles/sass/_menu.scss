@@ -21,14 +21,6 @@
       flex-direction: column;
       gap: 10px;
 
-      .sectionTitle {
-        text-align: center;
-        @include md {
-          font-size: 26px !important;
-          line-height: 26px;
-        }
-      }
-
       .productsContainer {
         max-height: 176px;
         display: flex;

@@ -3,7 +3,7 @@
 
 .video {
   background: url("../../public/assets/images/Background-image.png"), no-repeat;
-  padding: 170px 0;
+  padding: 180px 0;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
@@ -20,6 +20,7 @@
     align-items: center;
     flex-direction: column;
     gap: 7px;
+    text-align: center;
 
     a {
       display: flex;
@@ -30,25 +31,6 @@
       border-radius: 50%;
       background-color: $sec-color;
       margin-bottom: 10px;
-    }
-
-    .sectionTitle {
-      @include md {
-        font-size: 26px !important;
-      }
-    }
-
-    article {
-      font: 300 16px $text-font;
-      letter-spacing: 0.5px;
-      line-height: 30px;
-      width: 50%;
-      text-align: center;
-
-      @include md {
-        width: 90%;
-        line-height: 24px;
-      }
     }
   }
 }

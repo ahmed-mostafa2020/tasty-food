@@ -7,7 +7,7 @@ import { Container } from "@mui/material";
 
 // Components
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
-import SectionTitle from "../src/atomicDesign/atoms/SectionTitle";
+import SectionCrown from "../src/atomicDesign/molecules/SectionCrown";
 import Gallery from "../src/components/Gallery";
 import Delivery from "../src/components/Delivery";
 
@@ -25,7 +25,12 @@ const Menu = ({ data }) => {
           <Container fixed className="container">
             {allCategories.map((category, index) => (
               <section key={index} className="category">
-                <SectionTitle title={category.name} fontSize={"40px"} />
+                <SectionCrown
+                  title={category.name}
+                  description={
+                    "Porta enim vitae volutpat donec dictumst eu mi gravida sit."
+                  }
+                />
 
                 <div className="productsContainer">
                   {category.products.map((product) => (

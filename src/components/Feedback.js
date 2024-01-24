@@ -1,5 +1,4 @@
 import { Container } from "@mui/material";
-import SectionTitle from "../atomicDesign/atoms/SectionTitle";
 import { ChangeTheme } from "../context/ThemeContext";
 import Testimonial from "../components/Testimonial";
 import DownShapedBorder from "../atomicDesign/atoms/DownShapedBorder";
@@ -7,6 +6,7 @@ import UpShapedBorder from "../atomicDesign/atoms/UpShapedBorder";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Image } from "../../public/assets/images/footerTexture.png";
+import SectionCrown from "../atomicDesign/molecules/SectionCrown";
 
 const Feedback = ({ background }) => {
   const { myPalette } = ChangeTheme();
@@ -26,12 +26,11 @@ const Feedback = ({ background }) => {
 
       <Container className="container">
         <div className="box" data-aos="fade-down" data-aos-once="true">
-          <SectionTitle title={"Our Customer Feedbacks"} fontSize={"40px"} />
-
-          <p>
-            Magna sed sagittis non in mattis ultrices fermentum neque maecenas.
-            Leo diam justo ac vel eleifend placerat volutpat.
-          </p>
+          <SectionCrown
+            title={"Our Customer Feedbacks"}
+            description={`Magna sed sagittis non in mattis ultrices fermentum neque maecenas.
+                Leo diam justo ac vel eleifend placerat volutpat.`}
+          />
         </div>
 
         <div className="testimonialBox">

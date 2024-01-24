@@ -8,9 +8,9 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
-import SectionTitle from "../src/atomicDesign/atoms/SectionTitle";
 import Map from "../src/components/Map";
 import ContactForm from "../src/components/ContactForm";
+import SectionCrown from "../src/atomicDesign/molecules/SectionCrown";
 
 const ContactUs = ({ data }) => {
   const { t } = useTranslation();
@@ -45,14 +45,12 @@ const ContactUs = ({ data }) => {
         <LayoutTopWrapper title={t("Contact Us")} />
         <main className="contactUs" style={{ textAlign: "center" }}>
           <Container fixed className="container">
-            <SectionTitle
+            <SectionCrown
               title={"We’d love to hear from you"}
-              fontSize={"40px"}
+              description={
+                "Porta enim vitae volutpat donec dictumst eu mi gravida sit."
+              }
             />
-
-            <article>
-              Porta enim vitae volutpat donec dictumst eu mi gravida sit.
-            </article>
 
             <div className="contactItemsBox">
               {contactItems.map((contactItem, index) => (
@@ -69,12 +67,12 @@ const ContactUs = ({ data }) => {
             </div>
 
             <div className="contactFormSection">
-              <SectionTitle title={"Get in touch"} fontSize={"40px"} />
-
-              <article>
-                We would love to hear from you. Please fill out this form.
-              </article>
-
+              <SectionCrown
+                title={"Get in touch"}
+                description={
+                  "We would love to hear from you. Please fill out this form."
+                }
+              />
               <div className="formSection">
                 <ContactForm />
 

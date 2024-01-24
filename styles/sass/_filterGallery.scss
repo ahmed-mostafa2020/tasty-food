@@ -9,12 +9,6 @@
   padding: 60px 0 40px;
   text-align: center;
 
-  .sectionTitle {
-    @include md {
-      font-size: 26px !important;
-    }
-  }
-
   .productsBox {
     padding: 0 30px 30px 30px;
     display: flex;

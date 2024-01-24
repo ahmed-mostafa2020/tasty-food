@@ -1,8 +1,8 @@
 import { Container } from "@mui/material";
-import SectionTitle from "../atomicDesign/atoms/SectionTitle";
 import FilterButtons from "../atomicDesign/molecules/FilterButtons";
 import Product from "../components/Product";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+import SectionCrown from "../atomicDesign/molecules/SectionCrown";
 
 const FilterGallery = () => {
   const { homeEndPointData } = FetchingAllEndPointsData();
@@ -18,7 +18,7 @@ const FilterGallery = () => {
   return (
     <section className="filterGallery">
       <Container>
-        <SectionTitle title={"Our Popular Tasty Foods"} fontSize={"35px"} />
+        <SectionCrown title={"Our Popular Tasty Foods"} />
 
         <FilterButtons />
 

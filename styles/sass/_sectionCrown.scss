@@ -5,6 +5,7 @@
   h2 {
     font: 400 35px $topic-font;
     line-height: 50px;
+    text-transform: capitalize;
 
     @include md {
       font-size: 26px;

@@ -1,11 +1,9 @@
-import SectionTitle from "../atoms/SectionTitle";
-
 const SectionCrown = ({ title, description }) => {
   return (
     <div className="sectionCrown">
-      <SectionTitle title={title} />
+      <h2>{title}</h2>
 
-      <article> {description} </article>
+      {description && <article> {description} </article>}
     </div>
   );
 };

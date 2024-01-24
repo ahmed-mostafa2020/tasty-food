@@ -1,11 +1,11 @@
 import Image from "next/image";
-import SectionTitle from "../atomicDesign/atoms/SectionTitle";
 import { Container } from "@mui/material";
 import delivery from "../../public/assets/images/Image.png";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import { ChangeTheme } from "../context/ThemeContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SectionCrown from "../atomicDesign/molecules/SectionCrown";
 
 const Delivery = () => {
   const { myMode } = ChangeTheme();
@@ -24,8 +24,10 @@ const Delivery = () => {
             data-aos-easing="ease-in-sine"
             data-aos-once="true"
           >
-            <SectionTitle title={firstData.title} fontSize={"30px"} />
-            <article>{firstData.content}</article>
+            <SectionCrown
+              title={firstData.title}
+              description={firstData.content}
+            />
           </div>
 
           <figure
@@ -37,8 +39,10 @@ const Delivery = () => {
           </figure>
 
           <div data-aos="fade-left" data-aos-once="true">
-            <SectionTitle title={secondData.title} fontSize={"30px"} />
-            <article>{secondData.content}</article>
+            <SectionCrown
+              title={secondData.title}
+              description={secondData.content}
+            />
           </div>
         </Container>
       </section>
