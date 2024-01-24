@@ -9,6 +9,7 @@
     flex-wrap: wrap;
     gap: 20px;
     padding: 50px 0;
+    margin-bottom: 50px;
     border-bottom: 2px solid $border;
 
     .contactItem {
@@ -57,8 +58,6 @@
   }
 
   .contactFormSection {
-    padding: 50px 0;
-
     .formSection {
       display: flex;
       justify-content: center;
@@ -79,8 +78,11 @@
       .map {
         flex: 1;
 
-        .leaflet-control-attribution {
-          display: none !important;
+        iframe {
+          @include md {
+            width: 300px;
+            height: 300px;
+          }
         }
       }
     }

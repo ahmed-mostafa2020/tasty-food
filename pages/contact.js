@@ -8,7 +8,7 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
-import Map from "../src/components/Map";
+import Map from "../src/atomicDesign/atoms/Map";
 import ContactForm from "../src/components/ContactForm";
 import SectionCrown from "../src/atomicDesign/molecules/SectionCrown";
 
@@ -73,11 +73,12 @@ const ContactUs = ({ data }) => {
                   "We would love to hear from you. Please fill out this form."
                 }
               />
+
               <div className="formSection">
                 <ContactForm />
 
                 <div className="map">
-                  <Map address={""} />
+                  <Map />
                 </div>
               </div>
             </div>
