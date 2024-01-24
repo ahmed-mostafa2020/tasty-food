@@ -6,6 +6,9 @@ import TextareaGroup from "../atomicDesign/organisms/TextareaGroup";
 import TextInputGroup from "../atomicDesign/organisms/TextInputGroup";
 import { useState } from "react";
 import { ChangeTheme } from "../context/ThemeContext";
+import { getApi } from "../util/getApi";
+import { API_URLS } from "../util/API_URL";
+// import { API_URLS } from "../util/API_URL";
 
 const ContactForm = () => {
   const [formErrors, setFormErrors] = useState([]);
@@ -40,10 +43,44 @@ const ContactForm = () => {
       validationSchema={requestSchema}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         setDisabledButton(true);
+
         const contactForm = new FormData();
         contactForm.append("name", values.name);
         contactForm.append("phone", values.phone);
         contactForm.append("message", values.message);
+
+        // post data
+        // const sendData = async () => {
+        //   API_URLS.HEADER_POST.body = JSON.stringify(contactForm);
+
+        //   getApi(API_URLS.HOME, API_URLS.HEADER_POST)
+        //     .then((res) => {
+        //       if (res.status == 200) {
+        //         setSubmitting(false);
+        //         setStatus(true);
+        //         setFormErrors([]);
+
+        //         setTimeout(() => {
+        //           setStatus(false);
+        //           router.reload();
+        //         }, 3000);
+        //         resetForm();
+        //       }
+        //     })
+        //     .catch((error) => {
+        //       setDisabledButton(false);
+        //       setSubmitting(false);
+        //       setStatus(false);
+
+        //       setFormErrors(
+        //         error.response.data.errors.map(
+        //           (error) => tForms.api_errors[error]
+        //         )
+        //       );
+        //     });
+        // };
+
+        // sendData();
       }}
     >
       {({
@@ -54,7 +91,6 @@ const ContactForm = () => {
         handleBlur,
         handleChange,
         handleSubmit,
-        setFieldValue,
       }) => (
         <form onSubmit={handleSubmit}>
           <TextInputGroup
