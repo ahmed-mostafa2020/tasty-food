@@ -20,6 +20,10 @@
       gap: 15px;
       flex: 1;
 
+      @include sm {
+        flex: auto;
+      }
+
       figure {
         display: flex;
         padding: 12px;
