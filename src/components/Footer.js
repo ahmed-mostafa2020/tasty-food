@@ -6,7 +6,7 @@ import darkLogo from "../../public/assets/images/darkLogo.png";
 import { ChangeTheme } from "../context/ThemeContext";
 import { useTranslation } from "next-i18next";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
-import AddIcCallIcon from "@mui/icons-material/AddIcCall";
+import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import Links from "../atomicDesign/molecules/Links";
@@ -99,7 +99,7 @@ const Footer = () => {
 
                 <div className="box">
                   <div className="icon-box">
-                    <AddIcCallIcon className="icon" />
+                    <PhoneInTalkOutlinedIcon className="icon" />
                   </div>
 
                   <p>{data.mobile}</p>

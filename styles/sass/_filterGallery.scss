@@ -66,12 +66,12 @@
         }
 
         h4 {
-          font: 400 22px $topic-font;
-          line-height: 30px;
+          font: 400 20px $topic-font;
+          line-height: 24px;
 
           @include md {
             font-size: 18px;
-            line-height: 26px;
+            line-height: 22px;
           }
         }
         p {

@@ -16,9 +16,7 @@
   }
 
   & > svg {
-    @include xl {
-      margin-bottom: -24px !important;
-    }
+    margin-bottom: -24px !important;
   }
 
   .bottomWrapper {
