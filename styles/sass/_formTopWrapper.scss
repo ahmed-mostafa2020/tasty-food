@@ -2,6 +2,20 @@
 @import "./responsive";
 
 .formTopWrapper {
+  h2 {
+    font-family: $topic-font;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 50px 0 30px;
+
+    @include sm {
+      font-size: 30px;
+      padding: 0;
+    }
+  }
 }
 
 .formTopWrapper.light {

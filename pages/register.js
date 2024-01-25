@@ -23,10 +23,7 @@ const Register = ({ data, formPage }) => {
       </Head>
 
       <Layout>
-        <FormTopWrapper
-          title={t("Sign-up")}
-          text={"Get access to exclusive features by creating account"}
-        >
+        <FormTopWrapper title={""}>
           <main
             className="register"
             style={{ textAlign: "center", paddingBottom: " 40px " }}
