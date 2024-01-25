@@ -1,12 +1,4 @@
 {
-  "Checkout": "Checkout",
-  "Forget-password": "Forget Password",
-  "Sign-up": "Sign Up",
-  "Login": "Login",
-  "Profile": "Profile",
-  "Reset-password": "Reset Password",
-  "Verify-account": "Verify Account",
-
   "Navbar": {
     "links": {
       "home": "Home",
@@ -109,10 +101,6 @@
     "order_online": "Order Online",
     "send_message": "Send Message",
     "send_request": "Send Request",
-    "back_to_home": "Go Back To Home Page",
-    "more_news": "المزيد من الأخبار",
-    "more": "المزيد",
-    "subscribe": "اشتراك",
-    "send_req": "إرسال الطلب"
+    "back_to_home": "Go Back To Home Page"
   }
 }

@@ -1,13 +1,4 @@
 {
-  "Checkout": "الدفع",
-  "Forget-password": "نسيت كلمة المرور",
-  "Sign-up": "إنشاء حساب",
-  "Login": "تسجيل دخول",
-  "Profile": "الملف الشخصي",
-  "Reset-password": "إعادة تعيين كلمة المرور",
-  "Verify-account": "التحقق من الحساب",
-  "Orders": "طلبات",
-
   "Navbar": {
     "call_us": "اتصل بنا للطلب",
     "links": {
@@ -109,10 +100,6 @@
     "order_online": "اطلب الآن",
     "send_message": "ارسل الرسالة",
     "send_request": "ارسل الطلب",
-    "back_to_home": "الرجوع إلى الصفحة الرئيسية",
-    "more_news": "المزيد من الأخبار",
-    "more": "المزيد",
-    "subscribe": "اشتراك",
-    "send_req": "إرسال الطلب"
+    "back_to_home": "الرجوع إلى الصفحة الرئيسية"
   }
 }
