@@ -129,7 +129,7 @@ const ContactForm = () => {
           />
 
           <SubmitButton
-            content={t("Send_Message")}
+            content={t("Forms.Send_Message")}
             bgColor={myPalette.background.mainColor}
             textColor={myPalette.text.light}
             shadowColor={myPalette.shadowColor.red}
