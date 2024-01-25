@@ -17,16 +17,28 @@ const Links = ({ icons }) => {
   const { t } = useTranslation();
 
   const navbarLinks = [
-    { href: "/", label: `${t("Home")}`, icon: <HomeIcon /> },
-    { href: "/about", label: `${t("About")}`, icon: <InfoIcon /> },
-    { href: "/terms", label: `${t("Terms")}`, icon: <GavelIcon /> },
-    { href: "/menu", label: `${t("Menu")}`, icon: <FastfoodIcon /> },
+    { href: "/", label: `${t("Navbar.links.home")}`, icon: <HomeIcon /> },
+    { href: "/about", label: `${t("Navbar.links.about")}`, icon: <InfoIcon /> },
+    {
+      href: "/menu",
+      label: `${t("Navbar.links.menu")}`,
+      icon: <FastfoodIcon />,
+    },
     {
       href: "/products",
-      label: `${t("Products")}`,
+      label: `${t("Navbar.links.products")}`,
       icon: <ShoppingBasketIcon />,
     },
-    { href: "/contact", label: `${t("Contact")}`, icon: <ContactMailIcon /> },
+    {
+      href: "/terms",
+      label: `${t("Navbar.links.terms")}`,
+      icon: <GavelIcon />,
+    },
+    {
+      href: "/contact",
+      label: `${t("Navbar.links.contact")}`,
+      icon: <ContactMailIcon />,
+    },
   ];
 
   function isActiveLink(href) {
