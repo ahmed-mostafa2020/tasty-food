@@ -39,7 +39,7 @@ const SubmitButton = ({
     >
       {isSubmitting ? (
         <>
-          {t("Send request")}
+          {t("Forms.validation.sending")}
 
           <CircularProgress />
         </>

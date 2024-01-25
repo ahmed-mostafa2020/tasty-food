@@ -20,14 +20,16 @@ const ContactForm = () => {
   const { myPalette } = ChangeTheme();
 
   const requestSchema = Yup.object().shape({
-    name: Yup.string().min(3, t("forms.name.error")).required(t("Orders")),
+    name: Yup.string()
+      .min(3, t("Forms.name.error"))
+      .required(t("Forms.validation.require")),
     phone: Yup.string()
-      .min(10, "Number should more than 10")
-      .required("This field is required"),
+      .min(10, t("Forms.phone.error"))
+      .required(t("Forms.validation.require")),
     message: Yup.string()
-      .required("Please enter a message")
-      .min(5, "Message must be at least 5 characters long")
-      .max(255, "Message cannot exceed 255 characters"),
+      .required(t("Forms.validation.require"))
+      .min(5, t("Forms.message.error.min"))
+      .max(255, t("Forms..message.error.max")),
   });
 
   const formErrorsList = formErrors.map((formError) => (
@@ -127,7 +129,7 @@ const ContactForm = () => {
           />
 
           <SubmitButton
-            content={t("btns.more_news")}
+            content={t("Buttons.send_message")}
             bgColor={myPalette.background.mainColor}
             textColor={myPalette.text.light}
             shadowColor={myPalette.shadowColor.red}
@@ -136,9 +138,7 @@ const ContactForm = () => {
           />
 
           {status ? (
-            <Alert severity="success">
-              {"Message has been sent successfully, reviewing now."}
-            </Alert>
+            <Alert severity="success">{t("Forms.validation.success")}</Alert>
           ) : null}
 
           {formErrors.length > 0 ? (

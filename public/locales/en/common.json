@@ -48,11 +48,29 @@
   "Forms": {
     "validation": {
       "require": "This field is required",
-      "sending": "Sending Now",
-      "success": "Your message sent successfully",
+      "sending": "Sending Now ...",
+      "success": "Message has been sent successfully, reviewing now.",
 
       "api_errors": {
         "other_error": "Error , please try again"
+      }
+    },
+
+    "name": {
+      "name": "Name",
+      "error": "Name should be more than 3 characters"
+    },
+
+    "phone": {
+      "name": "Phone",
+      "error": "Number should be more than 10"
+    },
+
+    "message": {
+      "name": "Message",
+      "error": {
+        "min": "Message should be more than 5 characters",
+        "max": "Message should be less than 225 characters"
       }
     },
 
@@ -62,23 +80,13 @@
       "is_exists": " This email address already exists",
       "done": "Your account has been added",
       "mailing": " Keep sending email"
-    },
-
-    "name": {
-      "name": "Name",
-      "error": "Name should be more than 3 characters"
-    },
-
-    "message": {
-      "name": "Message",
-      "error": "Message should be more than 5 characters"
-    },
-
-    "phone": "Phone"
+    }
   },
 
   "Buttons": {
     "order_online": "Order Online",
+    "send_message": "Send Message",
+    "send_request": "Send Request",
     "more_news": "المزيد من الأخبار",
     "more": "المزيد",
     "subscribe": "اشتراك",
