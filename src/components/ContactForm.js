@@ -9,8 +9,11 @@ import { ChangeTheme } from "../context/ThemeContext";
 import { getApi } from "../util/getApi";
 import { API_URLS } from "../util/API_URL";
 // import { API_URLS } from "../util/API_URL";
+import { useTranslation } from "next-i18next";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
+
   const [formErrors, setFormErrors] = useState([]);
   const [status, setStatus] = useState(false);
   const [disabledButton, setDisabledButton] = useState(false);
@@ -126,7 +129,7 @@ const ContactForm = () => {
           />
 
           <SubmitButton
-            content={"Send Message"}
+            content={t("Send_Message")}
             bgColor={myPalette.background.mainColor}
             textColor={myPalette.text.light}
             shadowColor={myPalette.shadowColor.red}

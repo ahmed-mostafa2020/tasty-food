@@ -26,6 +26,9 @@
   "Verify-account": "التحقق من الحساب",
   "Orders": "طلبات",
   "Send request": "ارسل الطلب",
+  "Forms": {
+    "Send_Message": "ارسل رسالة"
+  },
 
   "btns": {
     "more_news": "المزيد من الأخبار",

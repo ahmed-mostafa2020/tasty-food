@@ -24,5 +24,8 @@
   "Profile": "Profile",
   "Reset-password": "Reset Password",
   "Verify-account": "Verify Account",
-  "Orders": "Orders"
+  "Orders": "Orders",
+  "Forms": {
+    "Send_Message": "Send Message"
+  }
 }
