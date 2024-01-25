@@ -1,16 +1,14 @@
 import Head from "next/head";
-import { useTranslation } from "next-i18next";
 import { FetchingAllEndPointsData } from "../../context/FetchingDataContext";
 
 const Helmet = ({ pageName }) => {
-  const { t } = useTranslation();
   const { homeEndPointData } = FetchingAllEndPointsData();
   const data = homeEndPointData && homeEndPointData.data.brand;
 
   return (
     <Head>
       <title>
-        {data.name} | {t(`${pageName}`)}
+        {data.name} | {pageName}
       </title>
       <meta
         name="description"

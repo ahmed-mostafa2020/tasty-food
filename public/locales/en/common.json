@@ -8,7 +8,6 @@
   "Verify-account": "Verify Account",
 
   "Navbar": {
-    "call_us": "Call us for Order",
     "links": {
       "home": "Home",
       "about": "About",
@@ -16,7 +15,9 @@
       "products": "Products",
       "terms": "Terms",
       "contact": "Contact Us"
-    }
+    },
+
+    "call_us": "Call us for Order"
   },
 
   "FilterGallery": {
@@ -41,6 +42,29 @@
     "opening_hours": "Opening Hours",
     "quick_links": "Quick Links",
     "get_in_touch": "Get In Touch"
+  },
+
+  "Contact": {
+    "title": "We’d Love To Hear From You",
+    "description": "Porta enim vitae volutpat donec dictumst eu mi gravida sit",
+    "location": "Cafe",
+
+    "welcome_message": {
+      "Phone": "Faucibus neque vel risus turpis",
+      "location": "Come say hello at our cafe HQ",
+      "email": "Our friendly team is here to help"
+    },
+
+    "form_section": {
+      "title": "Get In Touch",
+      "description": "We’d Love To Hear From You"
+    }
+  },
+
+  "404": {
+    "name": "Not Found",
+    "title": "Oops! I think we just lost something.",
+    "description": "  Much as we would love to serve it up to you, we’d suggest you go back and try a different link."
   },
 
   "Forms": {
@@ -85,6 +109,7 @@
     "order_online": "Order Online",
     "send_message": "Send Message",
     "send_request": "Send Request",
+    "back_to_home": "Go Back To Home Page",
     "more_news": "المزيد من الأخبار",
     "more": "المزيد",
     "subscribe": "اشتراك",

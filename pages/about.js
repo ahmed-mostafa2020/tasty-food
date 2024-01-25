@@ -17,10 +17,10 @@ const About = ({ data }) => {
 
   return (
     <>
-      <Helmet pageName={"About"} />
+      <Helmet pageName={t("Navbar.links.about")} />
 
       <Layout>
-        <LayoutTopWrapper title={t("About")} subTitle={t("Us")} />
+        <LayoutTopWrapper title={t("Navbar.links.about")} />
         <main className="about">
           <AboutUs />
 

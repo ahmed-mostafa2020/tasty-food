@@ -11,13 +11,15 @@ import chiliImage from "../public/assets/images/red_chili 1.png";
 import chiliImageDark from "../public/assets/images/red_chiliDark.png";
 import { ChangeTheme } from "../src/context/ThemeContext";
 import AtomicButton from "../src/atomicDesign/atoms/AtomicButton";
+import { useTranslation } from "next-i18next";
 
 const Custom404 = ({ data }) => {
   const { myMode, myPalette } = ChangeTheme();
+  const { t } = useTranslation();
 
   return (
     <>
-      <Helmet pageName={"Not Found"} />
+      <Helmet pageName={t("404.name")} />
 
       <Layout>
         <LayoutTopWrapper />
@@ -38,16 +40,13 @@ const Custom404 = ({ data }) => {
               height={170}
             />
             <div className="text">
-              <h6>Oops! I think we just lost something.</h6>
+              <h6>{t("404.title")}</h6>
 
-              <p>
-                Much as we would love to serve it up to you, we’d suggest you go
-                back and try a different link.
-              </p>
+              <p>{t("404.description")}</p>
 
               <div className="buttonBox">
                 <AtomicButton
-                  content={"Go Back To Home Page"}
+                  content={t("Buttons.back_to_home")}
                   href={"/"}
                   bgColor={myPalette.background.mainColor}
                   textColor={myPalette.text.light}

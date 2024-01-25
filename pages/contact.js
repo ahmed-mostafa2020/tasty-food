@@ -19,37 +19,35 @@ const ContactUs = ({ data }) => {
   const contactItems = [
     {
       icon: <MailOutlineIcon />,
-      title: "Email",
-      welcomeMsg: "Our friendly team is here to help.",
+      title: t("Forms.email.name"),
+      welcomeMsg: t("Contact.welcome_message.phone"),
       data: contactData.email,
     },
     {
       icon: <LocationOnOutlinedIcon />,
-      title: "Cafe",
-      welcomeMsg: "Come say hello at our cafe HQ.",
+      title: t("Contact.location"),
+      welcomeMsg: t("Contact.welcome_message.location"),
       data: contactData.address,
     },
     {
       icon: <PhoneInTalkOutlinedIcon />,
-      title: "Phone",
-      welcomeMsg: "Faucibus neque vel risus turpis.",
+      title: t("Forms.phone.name"),
+      welcomeMsg: t("Contact.welcome_message.email"),
       data: contactData.mobile,
     },
   ];
 
   return (
     <>
-      <Helmet pageName={"Contact Us"} />
+      <Helmet pageName={t("Navbar.links.contact")} />
 
       <Layout>
-        <LayoutTopWrapper title={t("Contact Us")} />
+        <LayoutTopWrapper title={t("Navbar.links.contact")} />
         <main className="contactUs" style={{ textAlign: "center" }}>
           <Container fixed className="container">
             <SectionCrown
-              title={"We’d love to hear from you"}
-              description={
-                "Porta enim vitae volutpat donec dictumst eu mi gravida sit."
-              }
+              title={t("Contact.title")}
+              description={t("Contact.description")}
             />
 
             <div className="contactItemsBox">
@@ -68,10 +66,8 @@ const ContactUs = ({ data }) => {
 
             <div className="contactFormSection">
               <SectionCrown
-                title={"Get in touch"}
-                description={
-                  "We would love to hear from you. Please fill out this form."
-                }
+                title={t("Contact.form_section.title")}
+                description={t("Contact.form_section.description")}
               />
 
               <div className="formSection">

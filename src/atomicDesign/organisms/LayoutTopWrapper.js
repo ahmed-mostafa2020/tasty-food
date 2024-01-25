@@ -4,7 +4,7 @@ import Banner from "../molecules/Banner";
 import { ChangeTheme } from "../../context/ThemeContext";
 import UpShapedBorder from "../atoms/UpShapedBorder";
 
-const LayoutTopWrapper = ({ title, subTitle }) => {
+const LayoutTopWrapper = ({ title }) => {
   const { myPalette } = ChangeTheme();
 
   return (
@@ -17,7 +17,7 @@ const LayoutTopWrapper = ({ title, subTitle }) => {
       >
         <Header />
         <Navbar />
-        {title && <Banner title={title} subTitle={subTitle} />}
+        {title && <Banner title={title} />}
       </div>
 
       <UpShapedBorder fill={myPalette.background.default} />

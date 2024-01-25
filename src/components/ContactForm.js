@@ -97,7 +97,7 @@ const ContactForm = () => {
       }) => (
         <form onSubmit={handleSubmit}>
           <TextInputGroup
-            label={"Name"}
+            label={t("Forms.name.name")}
             type={"text"}
             name={"name"}
             value={values.name}
@@ -108,7 +108,7 @@ const ContactForm = () => {
           />
 
           <TextInputGroup
-            label={"Phone"}
+            label={t("Forms.phone.name")}
             type={"number"}
             name={"phone"}
             value={values.phone}
@@ -119,7 +119,7 @@ const ContactForm = () => {
           />
 
           <TextareaGroup
-            label={"Message"}
+            label={t("Forms.message.name")}
             name={"message"}
             value={values.message}
             errors={errors.message}

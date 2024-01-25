@@ -9,8 +9,6 @@ import { ChangeTheme } from "../context/ThemeContext";
 import { useTranslation } from "next-i18next";
 import UpShapedBorder from "../atomicDesign/atoms/UpShapedBorder";
 import DownShapedBorder from "../atomicDesign/atoms/DownShapedBorder";
-// import Image from "next/image";
-// import corrTopBorder from "../../public/assets/images/corrTopBorder.svg";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import CircularProgress from "@mui/material/CircularProgress";
 

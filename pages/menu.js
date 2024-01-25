@@ -17,10 +17,10 @@ const Menu = ({ data }) => {
 
   return (
     <>
-      <Helmet pageName={"Menu"} />
+      <Helmet pageName={t("Navbar.links.menu")} />
 
       <Layout>
-        <LayoutTopWrapper title={t("Menu")} />
+        <LayoutTopWrapper title={t("Navbar.links.menu")} />
         <main className="menu">
           <Container fixed className="container">
             {allCategories.map((category, index) => (

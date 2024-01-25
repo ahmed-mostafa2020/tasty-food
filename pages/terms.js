@@ -4,13 +4,16 @@ import { API_URLS } from "../src/util/API_URL";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Container } from "@mui/material";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
+import { useTranslation } from "next-i18next";
 
 const Terms = ({ data }) => {
+  const { t } = useTranslation();
+
   const terms = data.data.terms;
 
   return (
     <>
-      <Helmet pageName={"Terms"} />
+      <Helmet pageName={t("Navbar.links.terms")} />
 
       <Layout>
         <LayoutTopWrapper title={terms.title} />

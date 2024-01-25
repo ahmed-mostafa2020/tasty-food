@@ -1,10 +1,10 @@
 import HomeLayout from "../src/layout/HomeLayout";
-import Link from "next/link";
-import Image from "next/image";
+// import Link from "next/link";
+// import Image from "next/image";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { API_URLS } from "../src/util/API_URL";
-import { Container, Grid } from "@mui/material";
-import { ChangeTheme } from "@/src/context/ThemeContext";
+// import { Container, Grid } from "@mui/material";
 
 // Components
 import Helmet from "../src/atomicDesign/molecules/Helmet";
@@ -17,12 +17,13 @@ import Feedback from "../src/components/Feedback";
 import Gallery from "../src/components/Gallery";
 
 const Home = ({ data }) => {
-  const { myMode } = ChangeTheme();
+  const { t } = useTranslation();
+
   const allCategories = data.data.category;
 
   return (
     <>
-      <Helmet pageName={"Home"} />
+      <Helmet pageName={t("Navbar.links.home")} />
 
       <HomeLayout>
         <main className="home">

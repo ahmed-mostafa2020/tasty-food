@@ -2,19 +2,19 @@ import Helmet from "../src/atomicDesign/molecules/Helmet";
 import Layout from "../src/layout/Layout";
 import { API_URLS } from "../src/util/API_URL";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { Container } from "@mui/material";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
 import FilterGallery from "../src/components/FilterGallery";
+import { useTranslation } from "next-i18next";
 
 const Products = ({ data }) => {
-  // const terms = data.data.terms;
+  const { t } = useTranslation();
 
   return (
     <>
-      <Helmet pageName={"Products"} />
+      <Helmet pageName={t("Navbar.links.products")} />
 
       <Layout>
-        <LayoutTopWrapper title={"Products"} />
+        <LayoutTopWrapper title={t("Navbar.links.products")} />
         <main className="products">
           <FilterGallery />
         </main>
