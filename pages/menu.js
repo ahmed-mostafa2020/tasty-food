@@ -25,19 +25,14 @@ const Menu = ({ data }) => {
           <Container fixed className="container">
             {allCategories.map((category, index) => (
               <section key={index} className="category">
-                <SectionCrown
-                  title={category.name}
-                  description={
-                    "Porta enim vitae volutpat donec dictumst eu mi gravida sit."
-                  }
-                />
+                <SectionCrown title={category.name} />
 
                 <div className="productsContainer">
                   {category.products.map((product) => (
                     <div key={product.id} className="product">
                       <div className="productDetails">
                         <h4>{product.name}</h4>
-                        <span>.............</span>
+                        <span></span>
                         <h5>{product.price}</h5>
                       </div>
 

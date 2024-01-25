@@ -21,7 +21,7 @@ const ContactForm = () => {
       .min(3, "Name should more than 3 letters")
       .required("This field is required"),
     phone: Yup.string()
-      .min(11, "Number should more than 11")
+      .min(10, "Number should more than 10")
       .required("This field is required"),
     message: Yup.string()
       .required("Please enter a message")
