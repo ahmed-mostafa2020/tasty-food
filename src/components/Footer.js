@@ -12,9 +12,9 @@ import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import Links from "../atomicDesign/molecules/Links";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const { myMode, myPalette } = ChangeTheme();
   const { homeEndPointData } = FetchingAllEndPointsData();
-  const { t } = useTranslation();
 
   const data = homeEndPointData.data.brand;
 
@@ -40,7 +40,7 @@ const Footer = () => {
               </Link>
 
               <div className="opening-hours">
-                <h6> {t("Opening-hours")} </h6>
+                <h6> {t("Footer.opening_hours")} </h6>
 
                 <p style={{ color: myPalette.text.mainColor }}>
                   {data.working_hours}
@@ -51,7 +51,7 @@ const Footer = () => {
 
           <Grid className="grid-box" item xs={6} sm={6} md={6} lg={4}>
             <div className="column">
-              <h6>{t("Quick-links")}</h6>
+              <h6>{t("Footer.quick_links")}</h6>
 
               <Links />
             </div>
@@ -86,7 +86,7 @@ const Footer = () => {
 
           <Grid className="grid-box" item xs={6} sm={6} md={6} lg={4}>
             <div className="column">
-              <h6>{t("Get-in-touch")}</h6>
+              <h6>{t("Footer.get_in_touch")}</h6>
 
               <div className="get-in-touch">
                 <div className="box">

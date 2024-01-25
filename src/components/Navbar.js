@@ -41,13 +41,13 @@ const Navbar = () => {
             />
 
             <div className="text">
-              <p>{t("Call us for Order ")}</p>
+              <p>{t("Navbar.call_us")}</p>
               <p>{data.mobile}</p>
             </div>
           </div>
 
           <AtomicButton
-            content={"Order Online"}
+            content={t("Buttons.order_online")}
             href={`${data.elmenus_url}`}
             bgColor={myPalette.background.mainColor}
             textColor={myPalette.text.light}

@@ -79,12 +79,13 @@
         }
 
         .by {
+          z-index: 2;
           h6 {
             font: 400 16px $topic-font;
           }
           p {
             font: 300 14px $text-font;
-            color: $gary-dark-text;
+            color: $gary-dark-bg;
             text-align: start;
           }
         }

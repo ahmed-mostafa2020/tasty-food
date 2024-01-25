@@ -17,6 +17,7 @@ const Helmet = ({ pageName }) => {
         content="online shopping with our e-commerce app"
       />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta charset="UTF-8" />
       <link rel="icon" href="/favicon.svg" />
       {/* <link rel="icon" href={data.logo} /> */}
     </Head>

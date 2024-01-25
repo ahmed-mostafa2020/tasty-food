@@ -6,14 +6,16 @@ import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import "swiper/css";
 import "swiper/css/pagination";
 import SectionCrown from "../atomicDesign/molecules/SectionCrown";
+import { useTranslation } from "next-i18next";
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const { homeEndPointData } = FetchingAllEndPointsData();
   const allGallery = homeEndPointData.data.images;
 
   return (
     <section className="gallery">
-      <SectionCrown title={"Foods Gallery"} />
+      <SectionCrown title={t("Gallery.title")} />
       <Swiper slidesPerView={5} spaceBetween={10} className="mySwiper">
         {allGallery.map((gallery, index) => (
           <SwiperSlide key={index}>

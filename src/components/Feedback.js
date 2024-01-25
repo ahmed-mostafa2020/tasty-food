@@ -7,8 +7,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Image } from "../../public/assets/images/footerTexture.png";
 import SectionCrown from "../atomicDesign/molecules/SectionCrown";
+import { useTranslation } from "next-i18next";
 
 const Feedback = ({ background }) => {
+  const { t } = useTranslation();
   const { myPalette } = ChangeTheme();
 
   AOS.init();
@@ -27,9 +29,8 @@ const Feedback = ({ background }) => {
       <Container className="container">
         <div className="box" data-aos="fade-down" data-aos-once="true">
           <SectionCrown
-            title={"Our Customer Feedbacks"}
-            description={`Magna sed sagittis non in mattis ultrices fermentum neque maecenas.
-                Leo diam justo ac vel eleifend placerat volutpat.`}
+            title={t("Feedback.title")}
+            description={t("Feedback.description")}
           />
         </div>
 

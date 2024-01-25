@@ -6,9 +6,11 @@ import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import AtomicButton from "../atomicDesign/atoms/AtomicButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "next-i18next";
 
 const About = () => {
   const { myPalette } = ChangeTheme();
+  const { t } = useTranslation();
   const { homeEndPointData } = FetchingAllEndPointsData();
   const data = homeEndPointData.data.about;
   const elmenus = homeEndPointData.data.brand.elmenus_url;
@@ -41,7 +43,7 @@ const About = () => {
         <SectionCrown title={data.title} description={data.content} />
 
         <AtomicButton
-          content={"Order Online"}
+          content={t("Buttons.order_online")}
           href={`${elmenus}`}
           bgColor={myPalette.background.secColor}
           textColor={myPalette.text.dark}

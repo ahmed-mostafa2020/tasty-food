@@ -1,7 +1,6 @@
 import { Container } from "@mui/material";
 import { ChangeTheme } from "../context/ThemeContext";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 
 const CopyRights = () => {

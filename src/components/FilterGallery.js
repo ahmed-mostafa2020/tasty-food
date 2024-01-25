@@ -3,8 +3,11 @@ import FilterButtons from "../atomicDesign/molecules/FilterButtons";
 import Product from "../components/Product";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import SectionCrown from "../atomicDesign/molecules/SectionCrown";
+import { useTranslation } from "next-i18next";
 
 const FilterGallery = () => {
+  const { t } = useTranslation();
+
   const { homeEndPointData } = FetchingAllEndPointsData();
   const allCategories = homeEndPointData.data.category;
   console.log(allCategories.filter((category, index) => index === 1));
@@ -18,7 +21,7 @@ const FilterGallery = () => {
   return (
     <section className="filterGallery">
       <Container>
-        <SectionCrown title={"Our Popular Tasty Foods"} />
+        <SectionCrown title={t("FilterGallery.title")} />
 
         <FilterButtons />
 

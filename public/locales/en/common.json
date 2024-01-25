@@ -5,18 +5,15 @@
   "About": "About",
   "Us": "Us",
   "Welcome": "Egestas amet facilisis cras suspendisse orci volutpat. Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuada massa proin cursus elit amet iaculis.",
-  "Opening-hours": "Opening Hours",
   "Menu": "Menu",
   "Testimonial": "Testimonial",
   "Blog": "Blog",
-  "Quick-links": "Quick Links",
   "Our-menu": "Our Menu",
   "Burgers": "Burgers",
   "Desserts": "Desserts",
   "Pizza": "Pizza",
   "Pasta": "Pasta",
   "Cold Drinks": "Cold Drinks",
-  "Get-in-touch": "Get In Touch",
   "Checkout": "Checkout",
   "Forget-password": "Forget Password",
   "Sign-up": "Sign Up",
@@ -26,6 +23,42 @@
   "Verify-account": "Verify Account",
   "Orders": "Orders",
   "Required": "This field required",
+
+  "Navbar": {
+    "call_us": "Call us for Order"
+  },
+
+  "FilterGallery": {
+    "title": "Our Popular Tasty Foods"
+  },
+
+  "Feedback": {
+    "title": "Our Customer Feedbacks",
+    "description": "Magna sed sagittis non in mattis ultrices fermentum neque maecenas.Leo diam justo ac vel eleifend placerat volutpat."
+  },
+
+  "Gallery": {
+    "title": "Foods Gallery"
+  },
+
+  "Video": {
+    "title": "Watch The Video",
+    "description": "Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuadamassa proin cursus elit amet iaculis"
+  },
+
+  "Footer": {
+    "opening_hours": "Opening Hours",
+    "quick_links": "Quick Links",
+    "get_in_touch": "Get In Touch"
+  },
+
+  "Buttons": {
+    "order_online": "Order Online",
+    "more_news": "المزيد من الأخبار",
+    "more": "المزيد",
+    "subscribe": "اشتراك",
+    "send_req": "إرسال الطلب"
+  },
 
   "Forms": {
     "Send_Message": "Send Message"

@@ -6,8 +6,10 @@ import Polygon from "../../public/assets/images/Polygon 1.svg";
 import SectionCrown from "../atomicDesign/molecules/SectionCrown";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "next-i18next";
 
 const Video = () => {
+  const { t } = useTranslation();
   const { homeEndPointData } = FetchingAllEndPointsData();
   const data = homeEndPointData.data.brand;
 
@@ -26,9 +28,8 @@ const Video = () => {
 
         <div data-aos="fade-up" data-aos-once="true">
           <SectionCrown
-            title={"Watch The Video"}
-            description={`Enim ut et amet vitae facilisi vel odio nisl. Pellentesque malesuada
-                massa proin cursus elit amet iaculis.`}
+            title={t("Video.title")}
+            description={t("Video.description")}
           />
         </div>
       </Container>
