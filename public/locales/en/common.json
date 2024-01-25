@@ -42,7 +42,7 @@
     "location": "Cafe",
 
     "welcome_message": {
-      "Phone": "Faucibus neque vel risus turpis",
+      "phone": "Faucibus neque vel risus turpis",
       "location": "Come say hello at our cafe HQ",
       "email": "Our friendly team is here to help"
     },

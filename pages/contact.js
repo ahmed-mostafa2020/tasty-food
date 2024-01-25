@@ -20,7 +20,7 @@ const ContactUs = ({ data }) => {
     {
       icon: <MailOutlineIcon />,
       title: t("Forms.email.name"),
-      welcomeMsg: t("Contact.welcome_message.phone"),
+      welcomeMsg: t("Contact.welcome_message.email"),
       data: contactData.email,
     },
     {
@@ -32,7 +32,7 @@ const ContactUs = ({ data }) => {
     {
       icon: <PhoneInTalkOutlinedIcon />,
       title: t("Forms.phone.name"),
-      welcomeMsg: t("Contact.welcome_message.email"),
+      welcomeMsg: t("Contact.welcome_message.phone"),
       data: contactData.mobile,
     },
   ];
