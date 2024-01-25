@@ -2,13 +2,17 @@
 @import "./responsive";
 
 .offers {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 20px;
-  flex-wrap: wrap;
+  .container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    @include md {
+      gap: 15px;
+    }
+  }
 
   @include md {
-    gap: 15px;
     padding-bottom: 50px;
   }
 

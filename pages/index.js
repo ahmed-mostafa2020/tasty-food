@@ -28,11 +28,9 @@ const Home = ({ data }) => {
         <main className="home">
           <Items />
 
-          <Container fixed className="container">
-            <Offers />
+          <Offers />
 
-            <AboutUs />
-          </Container>
+          <AboutUs />
 
           <Delivery />
 

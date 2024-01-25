@@ -2,9 +2,6 @@
 @import "./responsive";
 
 .aboutUs {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
   padding: 60px 0 40px;
 
   @include sm {
@@ -13,7 +10,7 @@
 
   .container {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
   }
 

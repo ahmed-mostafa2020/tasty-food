@@ -22,7 +22,7 @@ const About = ({ data }) => {
       <Layout>
         <LayoutTopWrapper title={t("About")} subTitle={t("Us")} />
         <main className="about">
-          <AboutUs container={true} />
+          <AboutUs />
 
           <Video />
 
