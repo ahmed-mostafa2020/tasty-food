@@ -7,11 +7,9 @@
   "Reset-password": "إعادة تعيين كلمة المرور",
   "Verify-account": "التحقق من الحساب",
   "Orders": "طلبات",
-  "Send request": "ارسل الطلب",
-  "Required": "هذا الحقل مطلوب",
 
   "Navbar": {
-    "call_us": "Call us for Order",
+    "call_us": "اتصل بنا للطلب",
     "links": {
       "home": "الرئيسية",
       "about": "من نحن",
