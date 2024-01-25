@@ -26,6 +26,8 @@
   "Verify-account": "التحقق من الحساب",
   "Orders": "طلبات",
   "Send request": "ارسل الطلب",
+  "Required": "هذا الحقل مطلوب",
+
   "Forms": {
     "Send_Message": "ارسل رسالة"
   },

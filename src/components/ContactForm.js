@@ -20,9 +20,7 @@ const ContactForm = () => {
   const { myPalette } = ChangeTheme();
 
   const requestSchema = Yup.object().shape({
-    name: Yup.string()
-      .min(3, "Name should more than 3 letters")
-      .required("This field is required"),
+    name: Yup.string().min(3, t("forms.name.error")).required(t("Orders")),
     phone: Yup.string()
       .min(10, "Number should more than 10")
       .required("This field is required"),
@@ -129,7 +127,7 @@ const ContactForm = () => {
           />
 
           <SubmitButton
-            content={t("Forms.Send_Message")}
+            content={t("btns.more_news")}
             bgColor={myPalette.background.mainColor}
             textColor={myPalette.text.light}
             shadowColor={myPalette.shadowColor.red}

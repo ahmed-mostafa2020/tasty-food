@@ -25,6 +25,8 @@
   "Reset-password": "Reset Password",
   "Verify-account": "Verify Account",
   "Orders": "Orders",
+  "Required": "This field required",
+
   "Forms": {
     "Send_Message": "Send Message"
   }
