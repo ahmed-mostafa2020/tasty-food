@@ -1,17 +1,17 @@
 import Image from "next/image";
 import { Container } from "@mui/material";
 import delivery from "../../public/assets/images/Image.png";
-import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+// import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import { ChangeTheme } from "../context/ThemeContext";
+import SectionCrown from "../atomicDesign/molecules/SectionCrown";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import SectionCrown from "../atomicDesign/molecules/SectionCrown";
 
-const Delivery = () => {
+const Delivery = ({ allData }) => {
   const { myMode } = ChangeTheme();
-  const { homeEndPointData } = FetchingAllEndPointsData();
-  const firstData = homeEndPointData.data.page3;
-  const secondData = homeEndPointData.data.page4;
+  // const { homeEndPointData } = FetchingAllEndPointsData();
+  // const firstData = homeEndPointData.data.page3;
+  // const secondData = homeEndPointData.data.page4;
 
   AOS.init();
 
@@ -25,8 +25,8 @@ const Delivery = () => {
             data-aos-once="true"
           >
             <SectionCrown
-              title={firstData.title}
-              description={firstData.content}
+              title={allData.page3.title}
+              description={allData.page3.content}
             />
           </div>
 
@@ -40,8 +40,8 @@ const Delivery = () => {
 
           <div data-aos="fade-left" data-aos-once="true">
             <SectionCrown
-              title={secondData.title}
-              description={secondData.content}
+              title={allData.page4.title}
+              description={allData.page4.content}
             />
           </div>
         </Container>

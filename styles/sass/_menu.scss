@@ -23,25 +23,21 @@
       text-align: center;
 
       .productsContainer {
-        max-height: 176px;
         display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
         column-gap: 70px;
         row-gap: 30px;
-
-        @include lg {
-          max-height: fit-content;
-          flex-wrap: nowrap;
-        }
 
         .product {
           display: flex;
           flex-direction: column;
           gap: 7px;
-          width: 50%;
-          @include lg {
-            width: 100%;
+          flex: 1;
+          min-width: 46%;
+          max-width: 46%;
+
+          @include xl {
+            max-width: 100%;
           }
 
           .productDetails {

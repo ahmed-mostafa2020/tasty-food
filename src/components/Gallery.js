@@ -1,17 +1,17 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+// import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+import SectionCrown from "../atomicDesign/molecules/SectionCrown";
+import { useTranslation } from "next-i18next";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import SectionCrown from "../atomicDesign/molecules/SectionCrown";
-import { useTranslation } from "next-i18next";
 
-const Gallery = () => {
+const Gallery = ({ allGallery }) => {
   const { t } = useTranslation();
-  const { homeEndPointData } = FetchingAllEndPointsData();
-  const allGallery = homeEndPointData.data.images;
+  // const { homeEndPointData } = FetchingAllEndPointsData();
+  // const allGallery = homeEndPointData.data.images;
 
   return (
     <section className="gallery">

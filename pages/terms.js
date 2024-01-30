@@ -9,16 +9,18 @@ import { useTranslation } from "next-i18next";
 const Terms = ({ data }) => {
   const { t } = useTranslation();
 
-  const terms = data.data.terms;
+  const allData = data.data;
+  const terms = allData.terms;
+  const brand = allData.brand;
 
   return (
     <>
-      <Helmet pageName={t("Navbar.links.terms")} />
+      <Helmet brand={brand} pageName={t("Navbar.links.terms")} />
 
       <Layout>
         <LayoutTopWrapper title={terms.title} />
-        <main className="terms">
-          <Container fixed className="container">
+        <main>
+          <Container fixed sx={{ padding: "30px 0" }}>
             <div dangerouslySetInnerHTML={{ __html: terms.content }} />
           </Container>
         </main>
@@ -30,7 +32,10 @@ const Terms = ({ data }) => {
 export default Terms;
 
 export async function getServerSideProps({ locale }) {
-  const res = await fetch(API_URLS.HOME, API_URLS.HEADER_GET);
+  const res = await fetch(
+    API_URLS.HOME + "?lang=" + locale,
+    API_URLS.HEADER_GET
+  );
   const data = await res.json();
   return {
     props: {

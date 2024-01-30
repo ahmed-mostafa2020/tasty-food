@@ -1,14 +1,14 @@
 import Head from "next/head";
-import { FetchingAllEndPointsData } from "../../context/FetchingDataContext";
+// import { FetchingAllEndPointsData } from "../../context/FetchingDataContext";
 
-const Helmet = ({ pageName }) => {
-  const { homeEndPointData } = FetchingAllEndPointsData();
-  const data = homeEndPointData && homeEndPointData.data.brand;
+const Helmet = ({ brand, pageName }) => {
+  // const { homeEndPointData } = FetchingAllEndPointsData();
+  // const data = homeEndPointData && homeEndPointData.data.brand;
 
   return (
     <Head>
       <title>
-        {data.name} | {pageName}
+        {brand.name} | {pageName}
       </title>
       <meta
         name="description"

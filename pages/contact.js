@@ -14,32 +14,34 @@ import SectionCrown from "../src/atomicDesign/molecules/SectionCrown";
 
 const ContactUs = ({ data }) => {
   const { t } = useTranslation();
-  const contactData = data.data.brand;
+
+  const allData = data.data;
+  const brand = allData.brand;
 
   const contactItems = [
     {
       icon: <MailOutlineIcon />,
       title: t("Forms.email.name"),
       welcomeMsg: t("Contact.welcome_message.email"),
-      data: contactData.email,
+      data: brand.email,
     },
     {
       icon: <LocationOnOutlinedIcon />,
       title: t("Contact.location"),
       welcomeMsg: t("Contact.welcome_message.location"),
-      data: contactData.address,
+      data: brand.address,
     },
     {
       icon: <PhoneInTalkOutlinedIcon />,
       title: t("Forms.phone.name"),
       welcomeMsg: t("Contact.welcome_message.phone"),
-      data: contactData.mobile,
+      data: brand.mobile,
     },
   ];
 
   return (
     <>
-      <Helmet pageName={t("Navbar.links.contact")} />
+      <Helmet brand={brand} pageName={t("Navbar.links.contact")} />
 
       <Layout>
         <LayoutTopWrapper title={t("Navbar.links.contact")} />
@@ -88,7 +90,10 @@ const ContactUs = ({ data }) => {
 export default ContactUs;
 
 export async function getServerSideProps({ locale }) {
-  const res = await fetch(API_URLS.HOME, API_URLS.HEADER_GET);
+  const res = await fetch(
+    API_URLS.HOME + "?lang=" + locale,
+    API_URLS.HEADER_GET
+  );
   const data = await res.json();
   return {
     props: {

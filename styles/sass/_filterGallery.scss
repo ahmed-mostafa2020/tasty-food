@@ -9,12 +9,48 @@
   padding: 60px 0 40px;
   text-align: center;
 
+  ul.filterButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0 35px;
+
+    li {
+      font: 300 16px $text-font;
+      padding: 7px 15px;
+      border: 1px solid $gary-dark-text;
+      border-radius: 50px;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        background-color: $main-color;
+        color: $light-bg;
+        border-color: $main-color;
+      }
+    }
+
+    li.active {
+      background-color: $main-color;
+      color: $light-bg;
+      border-color: $main-color;
+    }
+  }
+
   .productsBox {
     padding: 0 30px 30px 30px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
     flex-wrap: wrap;
+    min-height: 400px;
+
+    @include lg {
+      justify-content: center;
+    }
 
     .product {
       display: flex;
@@ -25,8 +61,8 @@
       border-radius: 15px;
       border: 1px solid $dark-text;
       width: 254px;
+      height: fit-content;
       overflow: hidden;
-      transition: all 0.15s ease-in-out;
 
       &:hover figure img {
         transform: translateZ(17px);
