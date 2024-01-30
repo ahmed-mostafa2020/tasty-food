@@ -9,14 +9,18 @@ import { useTranslation } from "next-i18next";
 const Products = ({ data }) => {
   const { t } = useTranslation();
 
+  const allData = data.data;
+  const allCategories = allData.category;
+  const brand = allData.brand;
+
   return (
     <>
-      <Helmet pageName={t("Navbar.links.products")} />
+      <Helmet brand={brand} pageName={t("Navbar.links.products")} />
 
       <Layout>
         <LayoutTopWrapper title={t("Navbar.links.products")} />
         <main className="products">
-          <FilterGallery />
+          <FilterGallery allCategories={allCategories} />
         </main>
       </Layout>
     </>

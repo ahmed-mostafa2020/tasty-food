@@ -19,7 +19,7 @@ const Custom404 = ({ data }) => {
 
   return (
     <>
-      <Helmet pageName={t("404.name")} />
+      <Helmet brand={brand} pageName={t("404.name")} />
 
       <Layout>
         <LayoutTopWrapper />

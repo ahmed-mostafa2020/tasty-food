@@ -15,22 +15,27 @@ import Gallery from "../src/components/Gallery";
 const About = ({ data }) => {
   const { t } = useTranslation();
 
+  const allData = data.data;
+  const about = allData.about;
+  const brand = allData.brand;
+  const allGallery = allData.images;
+
   return (
     <>
-      <Helmet pageName={t("Navbar.links.about")} />
+      <Helmet brand={brand} pageName={t("Navbar.links.about")} />
 
       <Layout>
         <LayoutTopWrapper title={t("Navbar.links.about")} />
         <main className="about">
-          <AboutUs />
+          <AboutUs about={about} brand={brand} />
 
           <Video />
 
           <Feedback background={false} />
 
-          <Delivery />
+          <Delivery allData={allData} />
 
-          <Gallery />
+          <Gallery allGallery={allGallery} />
         </main>
       </Layout>
     </>

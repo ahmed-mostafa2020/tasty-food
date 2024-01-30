@@ -9,11 +9,13 @@ import { useTranslation } from "next-i18next";
 const Terms = ({ data }) => {
   const { t } = useTranslation();
 
-  const terms = data.data.terms;
+  const allData = data.data;
+  const terms = allData.terms;
+  const brand = allData.brand;
 
   return (
     <>
-      <Helmet pageName={t("Navbar.links.terms")} />
+      <Helmet brand={brand} pageName={t("Navbar.links.terms")} />
 
       <Layout>
         <LayoutTopWrapper title={terms.title} />

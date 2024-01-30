@@ -19,23 +19,28 @@ import Gallery from "../src/components/Gallery";
 const Home = ({ data }) => {
   const { t } = useTranslation();
 
-  const allCategories = data.data.category;
+  const allData = data.data;
+  const allCategories = allData.category;
+  const allOffers = allData.offers;
+  const about = allData.about;
+  const brand = allData.brand;
+  const allGallery = allData.images;
 
   return (
     <>
-      <Helmet pageName={t("Navbar.links.home")} />
+      <Helmet brand={brand} pageName={t("Navbar.links.home")} />
 
       <HomeLayout>
         <main className="home">
-          <Items />
+          <Items allCategories={allCategories} />
 
-          <Offers />
+          <Offers allOffers={allOffers} />
 
-          <AboutUs />
+          <AboutUs about={about} brand={brand} />
 
-          <Delivery />
+          <Delivery allData={allData} />
 
-          <FilterGallery />
+          <FilterGallery allCategories={allCategories} />
 
           <Feedback background={true} />
 
@@ -84,7 +89,7 @@ const Home = ({ data }) => {
             </Grid>
           </Container> */}
 
-          <Gallery />
+          <Gallery allGallery={allGallery} />
         </main>
       </HomeLayout>
     </>

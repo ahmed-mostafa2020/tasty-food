@@ -1,14 +1,13 @@
 import Image from "next/image";
-import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+// import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import { Container } from "@mui/material";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Offers = () => {
-  const { homeEndPointData } = FetchingAllEndPointsData();
-
-  const allOffers = homeEndPointData.data.offers;
+const Offers = ({ allOffers }) => {
+  // const { homeEndPointData } = FetchingAllEndPointsData();
+  // const allOffers = homeEndPointData.data.offers;
 
   AOS.init();
 

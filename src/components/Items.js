@@ -1,15 +1,15 @@
 import { Container } from "@mui/material";
 import { ChangeTheme } from "../context/ThemeContext";
-import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
+// import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import Image from "next/image";
 import DownShapedBorder from "../atomicDesign/atoms/DownShapedBorder";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Items = () => {
+const Items = ({ allCategories }) => {
   const { myPalette } = ChangeTheme();
-  const { homeEndPointData } = FetchingAllEndPointsData();
-  const allItems = homeEndPointData && homeEndPointData.data.category;
+  // const { homeEndPointData } = FetchingAllEndPointsData();
+  // const allItems = homeEndPointData.data.category;
 
   AOS.init();
 
@@ -20,7 +20,7 @@ const Items = () => {
         style={{ backgroundColor: myPalette.background.shaped_border }}
       >
         <Container fixed className="container">
-          {allItems.map((item) => {
+          {allCategories.map((item) => {
             if (item.products.length > 0) {
               return (
                 <div className="item" key={item.name}>

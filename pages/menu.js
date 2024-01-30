@@ -13,11 +13,15 @@ import Delivery from "../src/components/Delivery";
 
 const Menu = ({ data }) => {
   const { t } = useTranslation();
-  const allCategories = data.data.category;
+
+  const allData = data.data;
+  const allCategories = allData.category;
+  const brand = allData.brand;
+  const allGallery = allData.images;
 
   return (
     <>
-      <Helmet pageName={t("Navbar.links.menu")} />
+      <Helmet brand={brand} pageName={t("Navbar.links.menu")} />
 
       <Layout>
         <LayoutTopWrapper title={t("Navbar.links.menu")} />
@@ -48,9 +52,9 @@ const Menu = ({ data }) => {
             })}
           </Container>
 
-          <Delivery />
+          <Delivery allData={allData} />
 
-          <Gallery />
+          <Gallery allGallery={allGallery} />
         </main>
       </Layout>
     </>
