@@ -10,7 +10,9 @@ import { useTranslation } from "next-i18next";
 import UpShapedBorder from "../atomicDesign/atoms/UpShapedBorder";
 import DownShapedBorder from "../atomicDesign/atoms/DownShapedBorder";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
-import CircularProgress from "@mui/material/CircularProgress";
+// import CircularProgress from "@mui/material/CircularProgress";
+import Image from "next/image";
+import loadingImage from "../../public/assets/images/55e005bc11b9ce2a539ecedc40091761.gif";
 
 const HomeLayout = ({ children }) => {
   const { myMode, lightTheme, darkTheme, myPalette } = ChangeTheme();
@@ -57,7 +59,9 @@ const HomeLayout = ({ children }) => {
             alignItems: "center",
           }}
         >
-          <CircularProgress />
+          {/* <CircularProgress /> */}
+
+          <Image src={loadingImage} alt="loading" width={300} height={300} />
         </Box>
       )}
     </ThemeProvider>
