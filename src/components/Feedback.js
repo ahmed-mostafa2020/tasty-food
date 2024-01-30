@@ -5,7 +5,7 @@ import DownShapedBorder from "../atomicDesign/atoms/DownShapedBorder";
 import UpShapedBorder from "../atomicDesign/atoms/UpShapedBorder";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Image } from "../../public/assets/images/footerTexture.png";
+import Image from "../../public/assets/images/footerTexture.png";
 import SectionCrown from "../atomicDesign/molecules/SectionCrown";
 import { useTranslation } from "next-i18next";
 

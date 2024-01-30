@@ -17,6 +17,9 @@ const Custom404 = ({ data }) => {
   const { myMode, myPalette } = ChangeTheme();
   const { t } = useTranslation();
 
+  const allData = data.data;
+  const brand = allData.brand;
+
   return (
     <>
       <Helmet brand={brand} pageName={t("404.name")} />
