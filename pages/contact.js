@@ -88,7 +88,10 @@ const ContactUs = ({ data }) => {
 export default ContactUs;
 
 export async function getServerSideProps({ locale }) {
-  const res = await fetch(API_URLS.HOME, API_URLS.HEADER_GET);
+  const res = await fetch(
+    API_URLS.HOME + "?lang=" + locale,
+    API_URLS.HEADER_GET
+  );
   const data = await res.json();
   return {
     props: {

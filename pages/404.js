@@ -63,7 +63,10 @@ const Custom404 = ({ data }) => {
 export default Custom404;
 
 export async function getStaticProps({ locale }) {
-  const res = await fetch(API_URLS.HOME, API_URLS.HEADER_GET);
+  const res = await fetch(
+    API_URLS.HOME + "?lang=" + locale,
+    API_URLS.HEADER_GET
+  );
   const data = await res.json();
   return {
     props: {

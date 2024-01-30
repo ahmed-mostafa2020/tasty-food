@@ -23,25 +23,29 @@ const Menu = ({ data }) => {
         <LayoutTopWrapper title={t("Navbar.links.menu")} />
         <main className="menu">
           <Container fixed className="container">
-            {allCategories.map((category, index) => (
-              <section key={index} className="category">
-                <SectionCrown title={category.name} />
+            {allCategories.map((category, index) => {
+              if (category.products.length > 0) {
+                return (
+                  <section key={index} className="category">
+                    <SectionCrown title={category.name} />
 
-                <div className="productsContainer">
-                  {category.products.map((product) => (
-                    <div key={product.id} className="product">
-                      <div className="productDetails">
-                        <h4>{product.name}</h4>
-                        <span></span>
-                        <h5>{product.price}</h5>
-                      </div>
+                    <div className="productsContainer">
+                      {category.products.map((product) => (
+                        <div key={product.id} className="product">
+                          <div className="productDetails">
+                            <h4>{product.name}</h4>
+                            <span></span>
+                            <h5>{product.price}</h5>
+                          </div>
 
-                      <p>{product.description}</p>
+                          <p>{product.description}</p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </section>
-            ))}
+                  </section>
+                );
+              }
+            })}
           </Container>
 
           <Delivery />

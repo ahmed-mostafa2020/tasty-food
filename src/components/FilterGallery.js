@@ -26,18 +26,20 @@ const FilterGallery = () => {
         <FilterButtons />
 
         <div className="productsBox">
-          {allCategories.map((category, index) =>
-            category.products.map((product, index) => (
-              <Product
-                key={index}
-                loader={product.image}
-                image={product.image}
-                name={product.name}
-                description={product.description}
-                price={product.price}
-              />
-            ))
-          )}
+          {allCategories.map((category) => {
+            if (category.products.length > 0) {
+              return category.products.map((product, index) => (
+                <Product
+                  key={index}
+                  loader={product.image}
+                  image={product.image}
+                  name={product.name}
+                  description={product.description}
+                  price={product.price}
+                />
+              ));
+            }
+          })}
         </div>
       </Container>
     </section>

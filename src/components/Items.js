@@ -20,30 +20,34 @@ const Items = () => {
         style={{ backgroundColor: myPalette.background.shaped_border }}
       >
         <Container fixed className="container">
-          {allItems.map((item) => (
-            <div className="item" key={item.name}>
-              <div
-                className="item-box"
-                data-aos="zoom-in"
-                data-aos-duration="700"
-                data-aos-easing="linear"
-                data-aos-once="true"
-              >
-                <figure>
-                  <Image
-                    className="item-image"
-                    loader={() => `${item.image}`}
-                    src={item.image}
-                    alt="item"
-                    width={180}
-                    height={90}
-                  />
-                </figure>
+          {allItems.map((item) => {
+            if (item.products.length > 0) {
+              return (
+                <div className="item" key={item.name}>
+                  <div
+                    className="item-box"
+                    data-aos="zoom-in"
+                    data-aos-duration="700"
+                    data-aos-easing="linear"
+                    data-aos-once="true"
+                  >
+                    <figure>
+                      <Image
+                        className="item-image"
+                        loader={() => `${item.image}`}
+                        src={item.image}
+                        alt="item"
+                        width={180}
+                        height={90}
+                      />
+                    </figure>
 
-                <h4 className="item-name">{item.name}</h4>
-              </div>
-            </div>
-          ))}
+                    <h4 className="item-name">{item.name}</h4>
+                  </div>
+                </div>
+              );
+            }
+          })}
         </Container>
       </div>
       <DownShapedBorder fill={myPalette.background.shaped_border} />
