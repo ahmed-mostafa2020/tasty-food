@@ -3,7 +3,7 @@ const SectionCrown = ({ title, description }) => {
     <div className="sectionCrown">
       <h2>{title}</h2>
 
-      {description && <article> {description} </article>}
+      {description && <p> {description} </p>}
     </div>
   );
 };

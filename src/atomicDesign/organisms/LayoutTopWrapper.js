@@ -16,7 +16,7 @@ const LayoutTopWrapper = ({ title }) => {
       >
         <Header />
         <Navbar />
-        {title && <h2>{title}</h2>}
+        {title && <h1>{title}</h1>}
       </div>
 
       <UpShapedBorder fill={myPalette.background.default} />
