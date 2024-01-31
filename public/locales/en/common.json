@@ -77,7 +77,10 @@
 
     "phone": {
       "name": "Phone",
-      "error": "Number should be more than 10"
+      "error": {
+        "min": "Number should be more than 10",
+        "max": "Number should be less than 14"
+      }
     },
 
     "message": {

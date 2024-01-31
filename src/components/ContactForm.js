@@ -24,7 +24,8 @@ const ContactForm = () => {
       .min(3, t("Forms.name.error"))
       .required(t("Forms.validation.require")),
     phone: Yup.string()
-      .min(10, t("Forms.phone.error"))
+      .min(10, t("Forms.phone.error.min"))
+      .max(14, t("Forms.phone.error.max"))
       .required(t("Forms.validation.require")),
     message: Yup.string()
       .required(t("Forms.validation.require"))

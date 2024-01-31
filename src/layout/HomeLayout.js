@@ -12,7 +12,7 @@ import DownShapedBorder from "../atomicDesign/atoms/DownShapedBorder";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 // import CircularProgress from "@mui/material/CircularProgress";
 import Image from "next/image";
-import loadingImage from "../../public/assets/images/55e005bc11b9ce2a539ecedc40091761.gif";
+import loadingImage from "../../public/assets/images/output-onlinegiftools.gif";
 
 const HomeLayout = ({ children }) => {
   const { myMode, lightTheme, darkTheme, myPalette } = ChangeTheme();
