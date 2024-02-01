@@ -2,7 +2,7 @@
   "Navbar": {
     "links": {
       "home": "Home",
-      "about": "About",
+      "about": "About Us",
       "menu": "Menu",
       "products": "Products",
       "terms": "Terms",
@@ -83,20 +83,28 @@
       }
     },
 
-    "message": {
-      "name": "Message",
-      "error": {
-        "min": "Message should be more than 5 characters",
-        "max": "Message should be less than 225 characters"
-      }
-    },
-
     "email": {
       "name": "Email",
       "error": "Please enter a valid email address",
       "is_exists": " This email address already exists",
       "done": "Your account has been added",
       "mailing": " Keep sending email"
+    },
+
+    "subject": {
+      "name": "Subject",
+      "error": {
+        "min": "Subject should be more than 5 characters",
+        "max": "Subject should be less than 50 characters"
+      }
+    },
+
+    "message": {
+      "name": "Message",
+      "error": {
+        "min": "Message should be more than 5 characters",
+        "max": "Message should be less than 225 characters"
+      }
     }
   },
 

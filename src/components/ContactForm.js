@@ -8,7 +8,6 @@ import { useState } from "react";
 import { ChangeTheme } from "../context/ThemeContext";
 import { getApi } from "../util/getApi";
 import { API_URLS } from "../util/API_URL";
-// import { API_URLS } from "../util/API_URL";
 import { useTranslation } from "next-i18next";
 
 const ContactForm = () => {
@@ -23,14 +22,25 @@ const ContactForm = () => {
     name: Yup.string()
       .min(3, t("Forms.name.error"))
       .required(t("Forms.validation.require")),
+
     phone: Yup.string()
       .min(10, t("Forms.phone.error.min"))
       .max(14, t("Forms.phone.error.max"))
       .required(t("Forms.validation.require")),
+
+    email: Yup.string()
+      .email(t("Forms.email.error"))
+      .required(t("Forms.validation.require")),
+
+    subject: Yup.string()
+      .required(t("Forms.validation.require"))
+      .min(5, t("Forms.subject.error.min"))
+      .max(50, t("Forms.subject.error.max")),
+
     message: Yup.string()
       .required(t("Forms.validation.require"))
       .min(5, t("Forms.message.error.min"))
-      .max(255, t("Forms..message.error.max")),
+      .max(255, t("Forms.message.error.max")),
   });
 
   const formErrorsList = formErrors.map((formError) => (
@@ -42,6 +52,8 @@ const ContactForm = () => {
       initialValues={{
         name: "",
         phone: "",
+        email: "",
+        subject: "",
         message: "",
       }}
       validationSchema={requestSchema}
@@ -51,38 +63,41 @@ const ContactForm = () => {
         const contactForm = new FormData();
         contactForm.append("name", values.name);
         contactForm.append("phone", values.phone);
+        contactForm.append("email", values.email);
+        contactForm.append("subject", values.subject);
         contactForm.append("message", values.message);
+        console.log(contactForm);
 
         // post data
-        // const sendData = async () => {
-        //   API_URLS.HEADER_POST.body = JSON.stringify(contactForm);
+        const sendData = async () => {
+          API_URLS.HEADER_POST.body = JSON.stringify(contactForm);
 
-        //   getApi(API_URLS.HOME, API_URLS.HEADER_POST)
-        //     .then((res) => {
-        //       if (res.status == 200) {
-        //         setSubmitting(false);
-        //         setStatus(true);
-        //         setFormErrors([]);
+          getApi(API_URLS.CONTACT_US, API_URLS.HEADER_POST)
+            .then((res) => {
+              if (res.status == 200) {
+                setSubmitting(false);
+                setStatus(true);
+                setFormErrors([]);
 
-        //         setTimeout(() => {
-        //           setStatus(false);
-        //           router.reload();
-        //         }, 3000);
-        //         resetForm();
-        //       }
-        //     })
-        //     .catch((error) => {
-        //       setDisabledButton(false);
-        //       setSubmitting(false);
-        //       setStatus(false);
+                setTimeout(() => {
+                  setStatus(false);
+                  router.reload();
+                }, 2000);
+                resetForm();
+              }
+            })
+            .catch((error) => {
+              setDisabledButton(false);
+              setSubmitting(false);
+              setStatus(false);
 
-        //       setFormErrors(
-        //         error.response.data.errors.map(
-        //           (error) => tForms.api_errors[error]
-        //         )
-        //       );
-        //     });
-        // };
+              setFormErrors(
+                error.response.data.errors.map(
+                  (error) => t("Forms.api_errors")[error]
+                )
+              );
+            });
+        };
 
         // sendData();
       }}
@@ -119,30 +134,37 @@ const ContactForm = () => {
             onBlur={handleBlur}
           />
 
-          <div>
-            <div style={{ width: "50%" }}>
-              <TextInputGroup
-                label={t("Forms.phone.name")}
-                type={"number"}
-                name={"phone"}
-                value={values.phone}
-                errors={errors.phone}
-                touched={touched.phone}
-                onChange={handleChange}
-                onBlur={handleBlur}
-              />
-            </div>
+          <TextInputGroup
+            label={t("Forms.email.name")}
+            type={"email"}
+            name={"email"}
+            value={values.email}
+            errors={errors.email}
+            touched={touched.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
 
-            <TextareaGroup
-              label={t("Forms.message.name")}
-              name={"message"}
-              value={values.message}
-              errors={errors.message}
-              touched={touched.message}
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-          </div>
+          <TextInputGroup
+            label={t("Forms.subject.name")}
+            type={"text"}
+            name={"subject"}
+            value={values.subject}
+            errors={errors.subject}
+            touched={touched.subject}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+
+          <TextareaGroup
+            label={t("Forms.message.name")}
+            name={"message"}
+            value={values.message}
+            errors={errors.message}
+            touched={touched.message}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
 
           <SubmitButton
             content={t("Buttons.send_message")}

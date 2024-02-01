@@ -5,7 +5,7 @@ export const API_URLS = {
   // REGISTER: BASE + "user/register",
   // LOGIN: BASE + "user/login",
   HOME: BASE + "home",
-  CONTACT_US: BASE + "contact-us",
+  CONTACT_US: BASE + "contactus",
 
   HEADER_GET: {
     method: "GET",
