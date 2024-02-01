@@ -48,12 +48,12 @@
           text-transform: capitalize;
         }
 
-        p:first-of-type {
+        p {
           color: $gary-dark-text;
           font: 300 14px $text-font;
         }
 
-        p:last-of-type {
+        a {
           color: $main-color;
           font: 400 15px $text-font;
         }

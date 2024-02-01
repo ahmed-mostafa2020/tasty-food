@@ -119,15 +119,30 @@ const ContactForm = () => {
             onBlur={handleBlur}
           />
 
-          <TextareaGroup
-            label={t("Forms.message.name")}
-            name={"message"}
-            value={values.message}
-            errors={errors.message}
-            touched={touched.message}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
+          <div>
+            <div style={{ width: "50%" }}>
+              <TextInputGroup
+                label={t("Forms.phone.name")}
+                type={"number"}
+                name={"phone"}
+                value={values.phone}
+                errors={errors.phone}
+                touched={touched.phone}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+            </div>
+
+            <TextareaGroup
+              label={t("Forms.message.name")}
+              name={"message"}
+              value={values.message}
+              errors={errors.message}
+              touched={touched.message}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+          </div>
 
           <SubmitButton
             content={t("Buttons.send_message")}

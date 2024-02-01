@@ -10,6 +10,7 @@ import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import LayoutTopWrapper from "../src/atomicDesign/organisms/LayoutTopWrapper";
 import ContactForm from "../src/components/ContactForm";
 import SectionCrown from "../src/atomicDesign/molecules/SectionCrown";
+import Link from "next/link";
 
 const ContactUs = ({ data }) => {
   const { t } = useTranslation();
@@ -23,18 +24,21 @@ const ContactUs = ({ data }) => {
       title: t("Forms.email.name"),
       welcomeMsg: t("Contact.welcome_message.email"),
       data: brand.email,
+      link: "https://mail.google.com/mail/u/0/#inbox",
     },
     {
       icon: <LocationOnOutlinedIcon />,
       title: t("Contact.location"),
       welcomeMsg: t("Contact.welcome_message.location"),
       data: brand.address,
+      link: "https://maps.app.goo.gl/46rkvVuK86h9VE948",
     },
     {
       icon: <PhoneInTalkOutlinedIcon />,
       title: t("Forms.phone.name"),
       welcomeMsg: t("Contact.welcome_message.phone"),
       data: brand.mobile,
+      link: "https://chat.whatsapp.com/Hokw6zJMbIF9Z43SUYOZo6",
     },
   ];
 
@@ -59,7 +63,9 @@ const ContactUs = ({ data }) => {
                   <div className="text">
                     <h6>{contactItem.title}</h6>
                     <p>{contactItem.welcomeMsg}</p>
-                    <p> {contactItem.data}</p>
+                    <Link href={`${contactItem.link}`} target="_blank">
+                      {contactItem.data}
+                    </Link>
                   </div>
                 </div>
               ))}
