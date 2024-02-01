@@ -9,9 +9,11 @@ import { ChangeTheme } from "../context/ThemeContext";
 import { getApi } from "../util/getApi";
 import { API_URLS } from "../util/API_URL";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 const ContactForm = () => {
   const { t } = useTranslation();
+  const router = useRouter();
 
   const [formErrors, setFormErrors] = useState([]);
   const [status, setStatus] = useState(false);
@@ -23,7 +25,7 @@ const ContactForm = () => {
       .min(3, t("Forms.name.error"))
       .required(t("Forms.validation.require")),
 
-    phone: Yup.string()
+    mobile: Yup.string()
       .min(10, t("Forms.phone.error.min"))
       .max(14, t("Forms.phone.error.max"))
       .required(t("Forms.validation.require")),
@@ -51,7 +53,7 @@ const ContactForm = () => {
     <Formik
       initialValues={{
         name: "",
-        phone: "",
+        mobile: "",
         email: "",
         subject: "",
         message: "",
@@ -62,44 +64,84 @@ const ContactForm = () => {
 
         const contactForm = new FormData();
         contactForm.append("name", values.name);
-        contactForm.append("phone", values.phone);
+        contactForm.append("mobile", values.mobile);
         contactForm.append("email", values.email);
         contactForm.append("subject", values.subject);
         contactForm.append("message", values.message);
-        console.log(contactForm);
 
         // post data
-        const sendData = async () => {
-          API_URLS.HEADER_POST.body = JSON.stringify(contactForm);
+        // const sendData = async () => {
+        //   API_URLS.HEADER_POST.body = JSON.stringify(contactForm);
 
-          getApi(API_URLS.CONTACT_US, API_URLS.HEADER_POST)
-            .then((res) => {
-              if (res.status == 200) {
-                setSubmitting(false);
-                setStatus(true);
-                setFormErrors([]);
+        //   getApi(API_URLS.CONTACT_US, API_URLS.HEADER_POST)
+        //     .then((res) => {
+        //       if (res.status == 200) {
+        //         setSubmitting(false);
+        //         setStatus(true);
+        //         setFormErrors([]);
 
-                setTimeout(() => {
-                  setStatus(false);
-                  router.reload();
-                }, 2000);
-                resetForm();
-              }
-            })
-            .catch((error) => {
-              setDisabledButton(false);
-              setSubmitting(false);
-              setStatus(false);
+        //         setTimeout(() => {
+        //           setStatus(false);
+        //           router.reload();
+        //         }, 2000);
+        //         resetForm();
+        //       }
+        //     })
+        //     .catch((error) => {
+        //       setDisabledButton(false);
+        //       setSubmitting(false);
+        //       setStatus(false);
 
-              setFormErrors(
-                error.response.data.errors.map(
-                  (error) => t("Forms.api_errors")[error]
-                )
-              );
-            });
+        //       setFormErrors(
+        //         error.response.data.errors.map(
+        //           (error) => t("Forms.api_errors")[error]
+        //         )
+        //       );
+        //     });
+        // };
+
+        var myHeaders = new Headers();
+        myHeaders.append(
+          "Authorization",
+          "Bearer cc1a39ecdca4bcfcad8336eb5484e134"
+        );
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: contactForm,
+          redirect: "follow",
         };
 
-        // sendData();
+        fetch(
+          "https://market.amrbdr.com/public/api/contactus?lang=en",
+          requestOptions
+        )
+          .then((res) => {
+            if (res.status == 200) {
+              setSubmitting(false);
+              setStatus(true);
+              setFormErrors([]);
+
+              setTimeout(() => {
+                setStatus(false);
+                router.reload();
+              }, 2000);
+              resetForm();
+            }
+          })
+          .catch((error) => {
+            setDisabledButton(false);
+            setSubmitting(false);
+            setStatus(false);
+
+            setFormErrors(
+              error.response.data.errors.map(
+                (error) => t("Forms.api_errors")[error]
+              )
+            );
+          })
+          .catch((error) => console.log("error", error));
       }}
     >
       {({
@@ -126,10 +168,10 @@ const ContactForm = () => {
           <TextInputGroup
             label={t("Forms.phone.name")}
             type={"number"}
-            name={"phone"}
-            value={values.phone}
-            errors={errors.phone}
-            touched={touched.phone}
+            name={"mobile"}
+            value={values.mobile}
+            errors={errors.mobile}
+            touched={touched.mobile}
             onChange={handleChange}
             onBlur={handleBlur}
           />
