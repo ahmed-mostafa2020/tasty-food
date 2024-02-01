@@ -6,7 +6,7 @@ import StarIcon from "@mui/icons-material/Star";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Testimonial = ({ rating, opinion, name, disc }) => {
+const Testimonial = ({ rating, text }) => {
   const { myPalette } = ChangeTheme();
 
   AOS.init();
@@ -75,12 +75,7 @@ const Testimonial = ({ rating, opinion, name, disc }) => {
           {badStars}
         </ul>
 
-        <article>{opinion}</article>
-      </div>
-
-      <div className="by">
-        <h6>{name}</h6>
-        <p>{disc}</p>
+        <p>{text}</p>
       </div>
     </div>
   );

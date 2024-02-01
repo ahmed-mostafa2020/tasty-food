@@ -29,13 +29,13 @@ const Offers = ({ allOffers }) => {
             </div>
 
             <figure>
-              {/* <Image
-                src={offer.image ? `${offer.image}` : "/"}
-                loader={() => `${loader}`}
+              <Image
+                src={offer.image}
+                loader={() => `${offer.image}`}
                 alt="discount"
                 width={100}
                 height={100}
-              /> */}
+              />
             </figure>
           </div>
         ))}

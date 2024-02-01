@@ -9,7 +9,7 @@ import Image from "../../public/assets/images/footerTexture.png";
 import SectionCrown from "../atomicDesign/molecules/SectionCrown";
 import { useTranslation } from "next-i18next";
 
-const Feedback = ({ background }) => {
+const Feedback = ({ testimonials, background }) => {
   const { t } = useTranslation();
   const { myPalette } = ChangeTheme();
 
@@ -35,23 +35,17 @@ const Feedback = ({ background }) => {
         </div>
 
         <div className="testimonialBox">
-          <Testimonial
-            rating={2}
-            opinion={
-              "Tellus ultrices egestas justo duis. Leo sit quam ultrices turpis libero facilisis faucibus. Nulla elementum sed senectus nunc dolor augue. Blandit hac tempus id blandit urna libero."
+          {testimonials.map((testimonial, index) => {
+            if (testimonial.text.length > 0) {
+              return (
+                <Testimonial
+                  key={index}
+                  rating={testimonial.rate}
+                  text={testimonial.text}
+                />
+              );
             }
-            name={"Paul K. Selden"}
-            disc={"Dignissim"}
-          />
-
-          <Testimonial
-            rating={3}
-            opinion={
-              "Tellus ultrices egestas justo duis. Leo sit quam ultrices turpis libero facilisis faucibus. Nulla elementum sed senectus nunc dolor augue. Blandit hac tempus id blandit urna libero."
-            }
-            name={"Paul K. Selden"}
-            disc={"Dignissim"}
-          />
+          })}
         </div>
       </Container>
 

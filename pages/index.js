@@ -24,6 +24,7 @@ const Home = ({ data }) => {
   const allOffers = allData.offers;
   const about = allData.about;
   const brand = allData.brand;
+  const testimonials = allData.testimonial;
   const allGallery = allData.images;
 
   return (
@@ -42,7 +43,7 @@ const Home = ({ data }) => {
 
           <FilterGallery allCategories={allCategories} />
 
-          <Feedback background={true} />
+          <Feedback testimonials={testimonials} background={true} />
 
           {/* <Container fixed className="container">
             <Grid

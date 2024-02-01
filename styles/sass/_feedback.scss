@@ -66,27 +66,17 @@
           }
         }
 
-        article {
+        p {
           text-align: start;
           font: 300 15px $text-font;
           letter-spacing: 0.5px;
           line-height: 30px;
           width: 90%;
+          position: relative;
+          z-index: 2;
 
           @include sm {
             line-height: 24px;
-          }
-        }
-
-        .by {
-          z-index: 2;
-          h6 {
-            font: 400 16px $topic-font;
-          }
-          p {
-            font: 300 14px $text-font;
-            color: $gary-dark-bg;
-            text-align: start;
           }
         }
       }
