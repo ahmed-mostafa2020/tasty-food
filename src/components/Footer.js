@@ -10,6 +10,7 @@ import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import Links from "../atomicDesign/molecules/Links";
+import SocialMedia from "../atomicDesign/molecules/SocialMedia";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -46,6 +47,8 @@ const Footer = () => {
                   {data.working_hours}
                 </p>
               </div>
+
+              <SocialMedia />
             </div>
           </Grid>
 

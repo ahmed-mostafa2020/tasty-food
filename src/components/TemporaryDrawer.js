@@ -14,6 +14,7 @@ import { FetchingAllEndPointsData } from "../context/FetchingDataContext";
 import AtomicButton from "../atomicDesign/atoms/AtomicButton";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import Links from "../atomicDesign/molecules/Links";
+import SocialMedia from "../atomicDesign/molecules/SocialMedia";
 
 const TemporaryDrawer = () => {
   const { myMode, myPalette } = ChangeTheme();
@@ -62,6 +63,8 @@ const TemporaryDrawer = () => {
       <Divider />
 
       <div className="callBox">
+        <SocialMedia />
+
         <div className="call">
           <PhoneInTalkOutlinedIcon
             className={`phone-icon ${i18n.language == "ar" && "right"}`}
