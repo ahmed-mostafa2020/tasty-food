@@ -6,7 +6,6 @@ import TextareaGroup from "../atomicDesign/organisms/TextareaGroup";
 import TextInputGroup from "../atomicDesign/organisms/TextInputGroup";
 import { useState } from "react";
 import { ChangeTheme } from "../context/ThemeContext";
-import { getApi } from "../util/getApi";
 import { API_URLS } from "../util/API_URL";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
@@ -69,54 +68,10 @@ const ContactForm = () => {
         contactForm.append("subject", values.subject);
         contactForm.append("message", values.message);
 
-        // post data
-        // const sendData = async () => {
-        //   API_URLS.HEADER_POST.body = JSON.stringify(contactForm);
+        // Post data
+        API_URLS.HEADER_POST.body = contactForm;
 
-        //   getApi(API_URLS.CONTACT_US, API_URLS.HEADER_POST)
-        //     .then((res) => {
-        //       if (res.status == 200) {
-        //         setSubmitting(false);
-        //         setStatus(true);
-        //         setFormErrors([]);
-
-        //         setTimeout(() => {
-        //           setStatus(false);
-        //           router.reload();
-        //         }, 2000);
-        //         resetForm();
-        //       }
-        //     })
-        //     .catch((error) => {
-        //       setDisabledButton(false);
-        //       setSubmitting(false);
-        //       setStatus(false);
-
-        //       setFormErrors(
-        //         error.response.data.errors.map(
-        //           (error) => t("Forms.api_errors")[error]
-        //         )
-        //       );
-        //     });
-        // };
-
-        var myHeaders = new Headers();
-        myHeaders.append(
-          "Authorization",
-          "Bearer cc1a39ecdca4bcfcad8336eb5484e134"
-        );
-
-        var requestOptions = {
-          method: "POST",
-          headers: myHeaders,
-          body: contactForm,
-          redirect: "follow",
-        };
-
-        fetch(
-          "https://market.amrbdr.com/public/api/contactus?lang=en",
-          requestOptions
-        )
+        fetch(`${API_URLS.CONTACT_US}`, API_URLS.HEADER_POST)
           .then((res) => {
             if (res.status == 200) {
               setSubmitting(false);
@@ -125,9 +80,9 @@ const ContactForm = () => {
 
               setTimeout(() => {
                 setStatus(false);
+                resetForm();
                 router.reload();
               }, 2000);
-              resetForm();
             }
           })
           .catch((error) => {
@@ -140,8 +95,7 @@ const ContactForm = () => {
                 (error) => t("Forms.api_errors")[error]
               )
             );
-          })
-          .catch((error) => console.log("error", error));
+          });
       }}
     >
       {({

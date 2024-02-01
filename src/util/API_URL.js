@@ -23,6 +23,7 @@ export const API_URLS = {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
+      Authorization: "Bearer cc1a39ecdca4bcfcad8336eb5484e134",
     },
     body: {
       lang: "",
