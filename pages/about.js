@@ -18,6 +18,7 @@ const About = ({ data }) => {
   const allData = data.data;
   const about = allData.about;
   const brand = allData.brand;
+  const testimonials = allData.testimonial;
   const allGallery = allData.images;
 
   return (
@@ -31,7 +32,7 @@ const About = ({ data }) => {
 
           <Video />
 
-          <Feedback background={false} />
+          <Feedback testimonials={testimonials} background={false} />
 
           <Delivery allData={allData} />
 
