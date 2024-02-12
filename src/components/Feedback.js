@@ -35,7 +35,7 @@ const Feedback = ({ testimonials, background }) => {
         </div>
 
         <div className="testimonialBox">
-          {testimonials.map((testimonial, index) => {
+          {testimonials?.map((testimonial, index) => {
             if (testimonial.text.length > 0) {
               return (
                 <Testimonial
