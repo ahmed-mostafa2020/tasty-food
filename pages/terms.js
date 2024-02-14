@@ -20,7 +20,7 @@ const Terms = ({ data }) => {
       <Layout>
         <LayoutTopWrapper title={terms.title} />
         <main>
-          <Container fixed sx={{ padding: "30px 0" }}>
+          <Container fixed sx={{ paddingBlock: "30px" }}>
             <div dangerouslySetInnerHTML={{ __html: terms.content }} />
           </Container>
         </main>
