@@ -1,4 +1,4 @@
-const BASE = "https://market.amrbdr.com/public/api/";
+const BASE = "https://market.amrbdr.com/api/";
 
 export const API_URLS = {
   BASE,
